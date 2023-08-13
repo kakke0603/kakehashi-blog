@@ -1,3 +1,4 @@
+export const runtime = 'nodejs'
 import { client } from '@/libs/client'
 import React from 'react'
 import { Article, ArticleType } from './Article'
