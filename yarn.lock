@@ -139,7 +139,7 @@
     "@babel/helper-validator-identifier" "^7.22.5"
     to-fast-properties "^2.0.0"
 
-"@cloudflare/next-on-pages@^1.1.0":
+"@cloudflare/next-on-pages@^1.5.0":
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/@cloudflare/next-on-pages/-/next-on-pages-1.5.0.tgz#6e7d54f01015367ddfd8939d86f95bfaccb586fe"
   integrity sha512-Avejy7cgfdTKawoRtCL7vl6PsXoeuUDeYaCqVQ5PLXGfZZraKO4MpqPLMdw4l9MxgOW25YE0VbcX21yAgukhTQ==
