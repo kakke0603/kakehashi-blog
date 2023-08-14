@@ -10,6 +10,7 @@ export default async function page() {
       cache: 'no-cache',
     },
   })
+  // console.log(data)
   return (
     <div className="pt-10 px-2 space-y-10 max-w-2xl mx-auto">
       {data.contents.map((article) => {
