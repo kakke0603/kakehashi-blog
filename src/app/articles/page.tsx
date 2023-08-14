@@ -12,6 +12,7 @@ export default async function page() {
   })
   return (
     <div className="pt-10 px-2 space-y-10 max-w-2xl mx-auto">
+      {process.env.MICROCMS_SERVICE_DOMAIN }
       {data.contents.map((article) => {
         return <Article key={article.id} {...article} />
       })}
