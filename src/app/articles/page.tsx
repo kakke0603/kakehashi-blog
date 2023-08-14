@@ -7,7 +7,7 @@ export default async function page() {
   const data = await client.getList<ArticleType>({
     endpoint: 'articles',
     customRequestInit: {
-      cache: 'no-cache',
+      cache: 'no-store',
     },
   })
   // console.log(data)
