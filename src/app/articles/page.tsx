@@ -1,19 +1,18 @@
-export const runtime = 'edge'
+// export const runtime = 'edge'
 import { client } from '@/libs/client'
 import React from 'react'
 import { Article, ArticleType } from './Article'
 
 export default async function page() {
-  const data = await client.getList<ArticleType>({
+  const data = await client.getList({
     endpoint: 'articles',
     customRequestInit: {
-      cache: 'force-cache',
+      cache: 'no-store',
     },
-  })
-  // console.log(data)
+  }).then((res) => res.contents)
   return (
     <div className="pt-10 px-2 space-y-10 max-w-2xl mx-auto">
-      {data.contents.map((article) => {
+      {data?.map((article:ArticleType) => {
         return <Article key={article.id} {...article} />
       })}
     </div>
