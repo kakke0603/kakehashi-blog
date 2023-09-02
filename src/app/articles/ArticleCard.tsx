@@ -22,11 +22,23 @@ export const ArticleCard: React.FC<ArticleType> = ({ id, title, content, publish
     <Card className="py-4 w-full" isPressable onPress={handleClick}>
       <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
         <small className="text-default-500">{publishedAt}</small>
-        <h4 className="font-bold text-large">{title}</h4>
       </CardHeader>
-      <CardBody className="overflow-visible py-2">
-        <Image alt="Card background" className="object-cover rounded-xl" src={eyecatch.url} width={220} />
+      <CardBody className="overflow-visible py-2 flex flex-row space-x-4">
+        <Image alt="Card background" className="object-cover rounded-xl w-full" src={eyecatch.url} width={220} />
+        <div className="">
+          <h4 className="font-bold text-large mb-2">{title}</h4>
+          <HtmlStringToText htmlString={content.slice(0, 180)} />
+        </div>
       </CardBody>
     </Card>
   )
+}
+
+function HtmlStringToText({ htmlString }: { htmlString: string }) {
+  // ダミーのdiv要素を作成してinnerHTMLを設定し、テキストを取得します。
+  const dummyDiv = document.createElement("div")
+  dummyDiv.innerHTML = htmlString
+  const text = dummyDiv.textContent || dummyDiv.innerText
+
+  return <span className="ml-2 text-sm text-default-500">{text}</span>
 }
