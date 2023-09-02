@@ -1,5 +1,6 @@
 "use client"
 import { Card, CardBody, CardHeader, Image } from "@nextui-org/react"
+import { useRouter } from "next/navigation"
 import React from "react"
 
 export type ArticleType = {
@@ -14,9 +15,11 @@ export type ArticleType = {
     width: number
   }
 }
-export const Article: React.FC<ArticleType> = ({ id, title, content, publishedAt, revisedAt, eyecatch }) => {
+export const ArticleCard: React.FC<ArticleType> = ({ id, title, content, publishedAt, revisedAt, eyecatch }) => {
+  const router = useRouter()
+  const handleClick = () => router.push(`/articles/${id}`)
   return (
-    <Card className="py-4 w-full" isPressable onPress={() => {}}>
+    <Card className="py-4 w-full" isPressable onPress={handleClick}>
       <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
         <small className="text-default-500">{publishedAt}</small>
         <h4 className="font-bold text-large">{title}</h4>

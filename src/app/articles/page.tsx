@@ -1,7 +1,7 @@
 export const runtime = "edge"
 import { client } from "@/libs/client"
 import React from "react"
-import { Article, ArticleType } from "./Article"
+import { ArticleCard, ArticleType } from "./ArticleCard"
 
 export default async function page() {
   const data = await client
@@ -12,7 +12,7 @@ export default async function page() {
   return (
     <div className="pt-10 px-2 space-y-10 max-w-2xl mx-auto">
       {data?.map((article: ArticleType) => {
-        return <Article key={article.id} {...article} />
+        return <ArticleCard key={article.id} {...article} />
       })}
     </div>
   )
