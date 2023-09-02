@@ -1,4 +1,6 @@
 "use client"
+import { RunIcon } from "@/components/Icons/RunIcon"
+import { SmileIcon } from "@/components/Icons/SmileIcon"
 import { Card, CardBody, CardHeader, Image } from "@nextui-org/react"
 import { useRouter } from "next/navigation"
 import React from "react"
@@ -23,10 +25,12 @@ export const ArticleCard: React.FC<ArticleType> = ({ id, title, content, publish
       <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
         <small className="text-default-500">{publishedAt}</small>
       </CardHeader>
-      <CardBody className="overflow-visible py-2 flex flex-row space-x-4">
-        <Image alt="Card background" className="object-cover rounded-xl w-full" src={eyecatch.url} width={220} />
-        <div className="">
-          <h4 className="font-bold text-large mb-2">{title}</h4>
+      <CardBody className="py-2 gap-x-4 flex flex-row">
+        <div className="w-[70px] h-[70px] bg-slate-700 rounded">
+          <RunIcon className="w-full h-full p-2" />
+        </div>
+        <div className="space-y-3  w-full">
+          <h4 className="font-bold text-large block">{title}</h4>
           <HtmlStringToText htmlString={content.slice(0, 180)} />
         </div>
       </CardBody>
@@ -40,5 +44,5 @@ function HtmlStringToText({ htmlString }: { htmlString: string }) {
   dummyDiv.innerHTML = htmlString
   const text = dummyDiv.textContent || dummyDiv.innerText
 
-  return <span className="ml-2 text-sm text-default-500">{text}</span>
+  return <span className="block  text-sm text-default-500">{text}</span>
 }
