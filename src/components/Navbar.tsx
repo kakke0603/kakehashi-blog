@@ -1,18 +1,8 @@
-'use client'
-import React from 'react'
-import {
-  Navbar,
-  NavbarBrand,
-  NavbarContent,
-  NavbarItem,
-  Link,
-  Button,
-  NavbarMenuToggle,
-  NavbarMenu,
-  NavbarMenuItem,
-} from '@nextui-org/react'
-import NavLink from './NavLink'
-import ToggleDarkModeButton from './ToggleDarkModeButton'
+"use client"
+import React from "react"
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from "@nextui-org/react"
+import NavLink from "./NavLink"
+import ToggleDarkModeButton from "./ToggleDarkModeButton"
 
 export default function index() {
   return (
