@@ -6,6 +6,9 @@ import { ArticleCard, ArticleType } from "./ArticleCard"
 export default async function page() {
   const data = await client
     .getList({
+      customRequestInit: {
+        cache: "no-store", // キャッシュを利用せずに常に新しいデータを取得する
+      },
       endpoint: "articles",
     })
     .then((res) => res.contents)
