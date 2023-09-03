@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-head {
-    background-color: black;
+@layer base {
+  h1 {
+    @apply text-2xl font-semibold leading-10 mt-[60px] mb-5 tracking-wide border-b;
+  }
+  h2 {
+    @apply text-xl font-semibold mt-5 mb-2;
+  }
+  h3 {
+    @apply text-lg font-semibold;
+  }
+  h4 {
+    @apply text-sm font-semibold;
+  }
+  a {
+    @apply text-blue-600 underline;
+  }
+  p {
+    @apply text-base leading-7 mb-1;
+  }
+  img {
+    @apply rounded-lg w-full mb-2;
+  }
 }

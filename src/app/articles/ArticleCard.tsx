@@ -1,9 +1,9 @@
 "use client"
-import { RunIcon } from "@/components/Icons/RunIcon"
-import { SmileIcon } from "@/components/Icons/SmileIcon"
+import { DateTime } from "@/components/DateTime"
 import { Card, CardBody, CardHeader, Image } from "@nextui-org/react"
 import { useRouter } from "next/navigation"
 import React from "react"
+import twemoji from "twemoji"
 
 export type ArticleType = {
   id: string
@@ -11,27 +11,24 @@ export type ArticleType = {
   content: string
   publishedAt: string
   revisedAt: string
-  eyecatch: {
-    url: string
-    height: number
-    width: number
-  }
+  tags: Array<{ id: string; name: string; emoji: string }>
 }
-export const ArticleCard: React.FC<ArticleType> = ({ id, title, content, publishedAt, revisedAt, eyecatch }) => {
+
+export const ArticleCard: React.FC<ArticleType> = ({ id, title, content, publishedAt, revisedAt, tags }) => {
   const router = useRouter()
   const handleClick = () => router.push(`/articles/${id}`)
+  const tag = tags?.[0]?.emoji ?? "📝"
+  const emoji = twemoji.parse(tag)
   return (
     <Card className="py-4 w-full" isPressable onPress={handleClick}>
-      <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
-        <small className="text-default-500">{publishedAt}</small>
-      </CardHeader>
       <CardBody className="py-2 gap-x-4 flex flex-row">
-        <div className="w-[70px] h-[70px] bg-slate-700 rounded">
-          <RunIcon className="w-full h-full p-2" />
+        <div className="w-[70px] h-[70px] p-4 bg-gray-100 dark:bg-gray-700 rounded-lg">
+          <div dangerouslySetInnerHTML={{ __html: emoji }}></div>
         </div>
-        <div className="space-y-3  w-full">
+        <div className="space-y-3 flex-1">
           <h4 className="font-bold text-large block">{title}</h4>
           <HtmlStringToText htmlString={content.slice(0, 180)} />
+          <DateTime value={publishedAt} className="text-right" />
         </div>
       </CardBody>
     </Card>
@@ -43,6 +40,5 @@ function HtmlStringToText({ htmlString }: { htmlString: string }) {
   const dummyDiv = document.createElement("div")
   dummyDiv.innerHTML = htmlString
   const text = dummyDiv.textContent || dummyDiv.innerText
-
-  return <span className="block  text-sm text-default-500">{text}</span>
+  return <div className="block text-sm text-default-500 line-clamp-3 h-[60px]">{text}</div>
 }

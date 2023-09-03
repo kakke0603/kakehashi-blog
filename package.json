@@ -10,12 +10,15 @@
   },
   "dependencies": {
     "@nextui-org/react": "^2.1.8",
+    "clsx": "^2.0.0",
     "framer-motion": "^10.15.2",
     "microcms-js-sdk": "^2.5.0",
-    "next": "13.4.13",
+    "microcms-richedit-processer": "^1.2.0",
+    "next": "13.4.19",
     "next-themes": "^0.2.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "twemoji": "^14.0.2"
   },
   "devDependencies": {
     "@cloudflare/next-on-pages": "^1.6.0",
@@ -26,7 +29,7 @@
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.15",
     "eslint": "8.47.0",
-    "eslint-config-next": "13.4.13",
+    "eslint-config-next": "13.4.19",
     "eslint-plugin-next-on-pages": "^1.6.0",
     "postcss": "8.4.27",
     "prettier": "^3.0.1",
