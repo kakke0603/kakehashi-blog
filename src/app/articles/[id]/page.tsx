@@ -39,16 +39,16 @@ export const metadata = {
     canonical: url,
   },
 }
-export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
-  const { title } = await client
-    .get({
-      endpoint: "articles",
-      contentId: params.id,
-    })
-    .then((res) => res)
-  // templateを設定しているので、サイト名は自動で付く
-  return { title }
-}
+// export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
+//   const { title } = await client
+//     .get({
+//       endpoint: "articles",
+//       contentId: params.id,
+//     })
+//     .then((res) => res)
+//   // templateを設定しているので、サイト名は自動で付く
+//   return { title }
+// }
 export default async function Page({ params }: { params: { id: string } }) {
   const data: ArticleType = await client
     .get({
