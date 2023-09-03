@@ -10,6 +10,11 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
     .get({
       endpoint: "articles",
       contentId: params.id,
+      customRequestInit: {
+        next: {
+          revalidate: 10,
+        },
+      },
     })
     .then((res) => res)
   // templateを設定しているので、サイト名は自動で付く
@@ -20,6 +25,11 @@ export default async function Page({ params }: { params: { id: string } }) {
     .get({
       endpoint: "articles",
       contentId: params.id,
+      customRequestInit: {
+        next: {
+          revalidate: 10,
+        },
+      },
     })
     .then((res) => res)
   return (
