@@ -26,7 +26,7 @@ export const Article: React.FC<ArticleType> = ({ id, title, content, publishedAt
           <div className="flex items-center">
             タグ:
             {tags?.map((tag) => (
-              <a key={tag.id} className="flex items-center ml-2">
+              <a key={tag.id} onClick={() => alert("開発中...!")} className="flex items-center ml-2">
                 {tag.name}
               </a>
             ))}
