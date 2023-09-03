@@ -14,7 +14,24 @@ export const Article: React.FC<ArticleType> = ({ id, title, content, publishedAt
         <h1 className="text-3xl font-bold break-words border-none">{title}</h1>
       </div>
       <div>
-        <DateTime value={publishedAt} className="mb-5" />
+        <div className="flex gap-x-4 flex-wrap gap-y-1">
+          <div className="flex items-center">
+            作成日時:
+            <DateTime value={publishedAt} className="ml-2" />
+          </div>
+          <div className="flex items-center">
+            更新日時:
+            <DateTime value={revisedAt} className="ml-2" />
+          </div>
+          <div className="flex items-center">
+            タグ:
+            {tags?.map((tag) => (
+              <a key={tag.id} className="flex items-center ml-2">
+                {tag.name}
+              </a>
+            ))}
+          </div>
+        </div>
         <div className="dark:text-slate-200 mb-[100px]" dangerouslySetInnerHTML={{ __html: content }} />
       </div>
     </div>
