@@ -3,6 +3,7 @@ import { client } from "@/libs/client"
 import React from "react"
 import { ArticleCard, ArticleType } from "./ArticleCard"
 
+export const revalidate = 10
 export default async function page() {
   const data = await client
     .getList({
