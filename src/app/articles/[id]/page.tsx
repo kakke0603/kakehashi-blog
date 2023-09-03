@@ -1,4 +1,3 @@
-export const runtime = "edge"
 import { client } from "@/libs/client"
 import { Article } from "./Article"
 import { ArticleType } from "../ArticleCard"
