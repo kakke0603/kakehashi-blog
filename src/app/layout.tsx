@@ -15,6 +15,7 @@ export const metadata = {
     /** `next-seo`の`titleTemplate`に相当する機能 */
     template: `%s - ${siteName}`,
   },
+  metadataBase: new URL(url ?? "http://localhost:3000"),
   description,
   openGraph: {
     title: siteName,
