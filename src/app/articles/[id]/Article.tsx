@@ -1,11 +1,11 @@
 "use client"
 import React from "react"
-import { ArticleType } from "../ArticleCard"
 import twemoji from "twemoji"
 import { DateTime } from "@/components/DateTime"
 import { Chip } from "@nextui-org/react"
 import { PencilIcon } from "@/components/Icons/PencilIcon"
 import { RefreshIcon } from "@/components/Icons/RefreshIcon"
+import { ArticleType } from "@/libs/client"
 
 export const Article: React.FC<ArticleType> = ({ id, title, content, publishedAt, revisedAt, tags }) => {
   const tag = tags?.[0]?.emoji ?? "📝"
