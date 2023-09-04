@@ -4,6 +4,8 @@ import { ArticleType } from "../ArticleCard"
 import twemoji from "twemoji"
 import { DateTime } from "@/components/DateTime"
 import { Chip } from "@nextui-org/react"
+import { PencilIcon } from "@/components/Icons/PencilIcon"
+import { RefreshIcon } from "@/components/Icons/RefreshIcon"
 
 export const Article: React.FC<ArticleType> = ({ id, title, content, publishedAt, revisedAt, tags }) => {
   const tag = tags?.[0]?.emoji ?? "📝"
@@ -17,13 +19,15 @@ export const Article: React.FC<ArticleType> = ({ id, title, content, publishedAt
       <div>
         <div className="flex justify-between flex-wrap gap-y-2">
           <div className="flex gap-x-4 flex-wrap gap-y-1">
+            {revisedAt !== publishedAt && (
+              <div className="flex items-center">
+                <RefreshIcon />
+                <DateTime value={revisedAt} className="ml-2" />
+              </div>
+            )}
             <div className="flex items-center">
-              作成日時:
+              <PencilIcon />
               <DateTime value={publishedAt} className="ml-2" />
-            </div>
-            <div className="flex items-center">
-              更新日時:
-              <DateTime value={revisedAt} className="ml-2" />
             </div>
           </div>
           <div className="flex items-center">

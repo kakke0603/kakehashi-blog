@@ -5,6 +5,8 @@ import { useRouter } from "next/navigation"
 import React from "react"
 import twemoji from "twemoji"
 import { Chip } from "@nextui-org/react"
+import { PencilIcon } from "@/components/Icons/PencilIcon"
+import { RefreshIcon } from "@/components/Icons/RefreshIcon"
 
 export type ArticleType = {
   id: string
@@ -36,7 +38,18 @@ export const ArticleCard: React.FC<ArticleType> = ({ id, title, content, publish
               </Chip>
             ))}
           </div>
-          <DateTime value={publishedAt} className="text-right" />
+          <div className="flex gap-x-4 flex-wrap gap-y-1 justify-end">
+            {revisedAt !== publishedAt && (
+              <div className="flex items-center">
+                <RefreshIcon />
+                <DateTime value={revisedAt} className="ml-2" />
+              </div>
+            )}
+            <div className="flex items-center">
+              <PencilIcon />
+              <DateTime value={publishedAt} className="ml-2" />
+            </div>
+          </div>
         </div>
       </CardBody>
     </Card>
