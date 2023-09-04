@@ -4,6 +4,7 @@ import { Card, CardBody, CardHeader, Image } from "@nextui-org/react"
 import { useRouter } from "next/navigation"
 import React from "react"
 import twemoji from "twemoji"
+import { Chip } from "@nextui-org/react"
 
 export type ArticleType = {
   id: string
@@ -25,9 +26,16 @@ export const ArticleCard: React.FC<ArticleType> = ({ id, title, content, publish
         <div className="w-[70px] h-[70px] p-4 bg-gray-100 dark:bg-gray-700 rounded-lg">
           <div dangerouslySetInnerHTML={{ __html: emoji }}></div>
         </div>
-        <div className="space-y-3 flex-1">
+        <div className="space-y-2 flex-1">
           <h4 className="font-bold text-large block">{title}</h4>
           <HtmlStringToText htmlString={content.slice(0, 180)} />
+          <div className="flex gap-x-2">
+            {tags?.map((tag) => (
+              <Chip key={tag.id} color="default" size="sm">
+                {tag.name}
+              </Chip>
+            ))}
+          </div>
           <DateTime value={publishedAt} className="text-right" />
         </div>
       </CardBody>
@@ -40,5 +48,5 @@ function HtmlStringToText({ htmlString }: { htmlString: string }) {
   const dummyDiv = document.createElement("div")
   dummyDiv.innerHTML = htmlString
   const text = dummyDiv.textContent || dummyDiv.innerText
-  return <div className="block text-sm text-default-500 line-clamp-3 h-[60px]">{text}</div>
+  return <div className="block text-sm text-default-500 line-clamp-3 h-[40px]">{text}</div>
 }
