@@ -1,7 +1,7 @@
 export const runtime = "edge"
-import { client } from "@/libs/client"
+import { ArticleType, client } from "@/libs/client"
 import React from "react"
-import { ArticleCard, ArticleType } from "./ArticleCard"
+import { ArticleCard } from "./ArticleCard"
 
 export default async function page() {
   const data = await client

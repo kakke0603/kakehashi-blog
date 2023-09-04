@@ -1,29 +1,28 @@
 export const runtime = "edge"
-import { client } from "@/libs/client"
+import { ArticleType, client, getAllArticles, getArticle } from "@/libs/client"
 import { Article } from "./Article"
-import { ArticleType } from "../ArticleCard"
 import { Metadata } from "next"
 
-const fetchArticle = async (id: string) => {
-  const data: ArticleType = await client
-    .get({
-      endpoint: "articles",
-      contentId: id,
-      customRequestInit: {
-        next: {
-          revalidate: 10,
-        },
-      },
-    })
-    .then((res) => res)
-  return data
+/**
+ * パスの事前決定
+ */
+export async function generateStaticParams() {
+  const articles = await getAllArticles()
+  return articles.contents.map(({ id }) => ({
+    id,
+  }))
 }
+
+/**
+ * メタデータの設定
+ */
 export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
-  const { title } = await fetchArticle(params.id)
+  const { title } = await getArticle(params.id)
   return { title }
 }
+
 export default async function Page({ params }: { params: { id: string } }) {
-  const data = await fetchArticle(params.id)
+  const data = await getArticle(params.id)
   return (
     <div>
       <Article {...data} />

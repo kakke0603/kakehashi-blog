@@ -49,9 +49,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <meta property="og:image:height" content="<generated>" />
       <body>
         <Providers>
-          <Navbar />
-          <div className="max-w-[1024px] mx-auto">{children}</div>
-          <Footer />
+          <div className="flex flex-col h-screen">
+            <Navbar />
+            <div className="max-w-[1024px] mx-auto flex-grow">{children}</div>
+            <Footer />
+          </div>
         </Providers>
       </body>
     </html>

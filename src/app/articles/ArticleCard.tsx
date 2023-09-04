@@ -7,15 +7,7 @@ import twemoji from "twemoji"
 import { Chip } from "@nextui-org/react"
 import { PencilIcon } from "@/components/Icons/PencilIcon"
 import { RefreshIcon } from "@/components/Icons/RefreshIcon"
-
-export type ArticleType = {
-  id: string
-  title: string
-  content: string
-  publishedAt: string
-  revisedAt: string
-  tags: Array<{ id: string; name: string; emoji: string }>
-}
+import { ArticleType } from "@/libs/client"
 
 export const ArticleCard: React.FC<ArticleType> = ({ id, title, content, publishedAt, revisedAt, tags }) => {
   const router = useRouter()

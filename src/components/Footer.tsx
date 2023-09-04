@@ -1,5 +1,5 @@
-import React from 'react'
+import React from "react"
 
 export default function Footer() {
-  return <footer className=""></footer>
+  return <footer className="w-full text-center text-default-500 text-sm">© 2023 かっけ</footer>
 }
