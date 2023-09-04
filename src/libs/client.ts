@@ -8,7 +8,7 @@ export const client = createClient({
 
 export const getAllArticles = async () => {
   return await client.getList<ArticleType>({
-    endpoint: "article",
+    endpoint: "articles",
     queries: {
       limit: 1000,
       fields: "id",
