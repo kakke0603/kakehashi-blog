@@ -1,5 +1,5 @@
 export const runtime = "edge"
-import { ArticleType, client, getAllArticles, getArticle } from "@/libs/client"
+import { getAllArticles, getArticle } from "@/libs/client"
 import { Article } from "./Article"
 import { Metadata } from "next"
 

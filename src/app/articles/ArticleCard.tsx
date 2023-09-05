@@ -1,6 +1,6 @@
 "use client"
 import { DateTime } from "@/components/DateTime"
-import { Card, CardBody, CardHeader, Image } from "@nextui-org/react"
+import { Card, CardBody } from "@nextui-org/react"
 import { useRouter } from "next/navigation"
 import React from "react"
 import twemoji from "twemoji"
