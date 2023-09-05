@@ -8,6 +8,7 @@ import { Chip } from "@nextui-org/react"
 import { PencilIcon } from "@/components/Icons/PencilIcon"
 import { RefreshIcon } from "@/components/Icons/RefreshIcon"
 import { ArticleType } from "@/libs/client"
+import { Tag } from "@/components/Tag"
 
 export const ArticleCard: React.FC<ArticleType> = ({ id, title, content, publishedAt, revisedAt, tags }) => {
   const router = useRouter()
@@ -24,13 +25,7 @@ export const ArticleCard: React.FC<ArticleType> = ({ id, title, content, publish
           <div className="space-y-4 flex-1">
             <h4 className="font-bold text-large block">{title}</h4>
             <HtmlStringToText htmlString={content.slice(0, 180)} />
-            <div className="flex gap-x-2 overflow-scroll">
-              {tags?.map((tag) => (
-                <Chip key={tag.id} color="default" size="sm" className="whitespace-nowrap">
-                  {tag.name}
-                </Chip>
-              ))}
-            </div>
+            <div className="flex gap-x-2 overflow-scroll">{tags?.map((tag) => <Tag id={tag.id} name={tag.name} />)}</div>
           </div>
         </div>
         <div className="mt-4 flex gap-x-4 flex-wrap gap-y-1 justify-end">
