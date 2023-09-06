@@ -1,8 +1,10 @@
-import "./globals.css"
+import "../globals.css"
 import { Noto_Sans_JP } from "next/font/google"
 import { Providers } from "./providers"
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
+import { dir } from "i18next"
+import { languages } from "../i18n/settings"
 
 const inter = Noto_Sans_JP({ subsets: ["latin"], display: "swap" })
 
@@ -40,9 +42,13 @@ export const metadata = {
   },
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export async function generateStaticParams() {
+  return languages.map((lng) => ({ lng }))
+}
+
+export default function RootLayout({ children, params: { lng } }: { children: React.ReactNode; params: { lng: string } }) {
   return (
-    <html lang="ja" className={inter.className}>
+    <html lang={lng} dir={dir(lng)} className={inter.className}>
       <meta property="og:image" content="<generated>" />
       <meta property="og:image:type" content="<generated>" />
       <meta property="og:image:width" content="<generated>" />

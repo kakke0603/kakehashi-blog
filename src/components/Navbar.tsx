@@ -3,6 +3,7 @@ import React from "react"
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from "@nextui-org/react"
 import NavLink from "./NavLink"
 import ToggleDarkModeButton from "./ToggleDarkModeButton"
+import { ToggleTranslateModeButton } from "./ToggleTranslateModeButton"
 
 export default function index() {
   return (
@@ -27,6 +28,9 @@ export default function index() {
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
+        <NavbarItem>
+          <ToggleTranslateModeButton />
+        </NavbarItem>
         <NavbarItem>
           <ToggleDarkModeButton />
         </NavbarItem>
