@@ -13,9 +13,9 @@ export const Article: React.FC<ArticleType> = ({ id, title, content, publishedAt
   const emoji = twemoji.parse(tag)
   return (
     <div className="mx-5 ">
-      <div className="flex justify-center py-10 bg-gray-100 dark:bg-gray-700 my-5  rounded-lg flex-col items-center space-y-5">
+      <div className="flex justify-center py-10 bg-gray-100 dark:bg-gray-700 my-5 rounded-lg flex-col items-center space-y-5">
         <div dangerouslySetInnerHTML={{ __html: emoji }}></div>
-        <h1 className="text-3xl font-bold break-words border-none">{title}</h1>
+        <h1 className="text-3xl font-bold break-words border-none text-center">{title}</h1>
       </div>
       <div>
         <div className="flex justify-between flex-wrap gap-y-2">

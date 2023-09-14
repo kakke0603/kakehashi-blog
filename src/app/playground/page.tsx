@@ -7,7 +7,7 @@ const pages = [
     id: "eva-timer",
     image: "",
     title: "eva-timer",
-    content: "contentcontentcontentcontentcontent",
+    content: "content",
     publishedAt: "2021-10-10",
     revisedAt: "2021-10-10",
   },
@@ -16,9 +16,9 @@ export default function page() {
   return (
     <div className="">
       <div className="">
-        {pages.map((page) => (
+        {/* {pages.map((page) => (
           <PlaygroundCard {...page} />
-        ))}
+        ))} */}
       </div>
     </div>
   )
