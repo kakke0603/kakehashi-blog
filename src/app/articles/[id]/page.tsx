@@ -1,24 +1,24 @@
 export const runtime = "edge"
 import { getAllArticles, getArticle } from "@/libs/client"
 import { Article } from "./Article"
-import { Metadata } from "next"
-
-/**
- * パスの事前決定
- */
-export async function generateStaticParams() {
-  const articles = await getAllArticles()
-  return articles.contents.map(({ id }) => ({
-    id,
-  }))
-}
+import { Metadata, ResolvingMetadata } from "next"
 
 /**
  * メタデータの設定
  */
-export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
-  const { title } = await getArticle(params.id)
-  return { title }
+type Props = {
+  params: { id: string }
+}
+export async function generateMetadata({ params }: Props, parent: ResolvingMetadata): Promise<Metadata> {
+  const id = params.id
+  const { title } = await getArticle(id)
+  const previousImages = (await parent).openGraph?.images || []
+  return {
+    title,
+    openGraph: {
+      images: [...previousImages],
+    },
+  }
 }
 
 export default async function Page({ params }: { params: { id: string } }) {
