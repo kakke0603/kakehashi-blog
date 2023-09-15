@@ -1,25 +1,27 @@
 "use client"
+import clsx from "clsx"
 import React from "react"
 import { useState } from "react"
 import { Button } from "@nextui-org/react"
 
 import { Input } from "@nextui-org/react"
+import { useTimer } from "use-timer"
 import { Timer } from "./components/Timer"
-import { useTimer } from "react-timer-hook"
 
 export type TimerMode = "stop" | "start" | "reset" | "racing"
 export const EvaTimer = () => {
-  const time = new Date()
   const [min, setMin] = useState(0)
   const [sec, setSec] = useState(15)
-  time.setSeconds(time.getSeconds() + min * 60 + sec)
   const [randomNum, setRandomNum] = useState(0)
-  const { totalSeconds, seconds, minutes, hours, days, isRunning, start, pause, resume, restart } = useTimer({
-    expiryTimestamp: time,
-    onExpire: () => console.warn("onExpire called"),
-    autoStart: false,
+  const { time, start, pause, reset, status } = useTimer({
+    initialTime: sec + min * 60,
+    timerType: "DECREMENTAL",
+    endTime: 0,
+    interval: 1000,
+    onTimeOver: () => {
+      setRandomNum(0)
+    },
   })
-
   const [timerMode, setTimerMode] = useState<TimerMode>("stop")
   const onClickTimerButton = (type: TimerMode) => {
     if (type === "start") {
@@ -29,7 +31,7 @@ export const EvaTimer = () => {
     } else if (type === "stop") {
       pause()
     } else if (type === "reset") {
-      // restart(time)
+      reset()
       setRandomNum(0)
     } else if (type === "racing") {
       return
@@ -37,7 +39,7 @@ export const EvaTimer = () => {
     setTimerMode("stop")
   }
   React.useEffect(() => {
-    if (isRunning === false) return
+    if (status === "STOPPED" || status === "PAUSED") return
     const id = setInterval(() => {
       setRandomNum(Math.floor(Math.random() * 100))
     }, 10)
@@ -45,10 +47,10 @@ export const EvaTimer = () => {
   })
   return (
     <div className="pt-10">
-      <Timer time={totalSeconds} randomNum={randomNum} timerMode={timerMode} onClick={onClickTimerButton} />
+      <Timer time={time} randomNum={randomNum} timerMode={timerMode} onClick={onClickTimerButton} />
       <div className="pt-[30px] flex flex-col space-y-[20px]">
-        <div className="flex items-center">
-          {/* <Input
+        {/* <div className="flex items-center">
+          <Input
             value={min.toString()}
             onChange={(e) => setMin(e.target.valueAsNumber)}
             variant="bordered"
@@ -70,8 +72,8 @@ export const EvaTimer = () => {
             min={0}
             step={1}
             label="sec"
-          /> */}
-        </div>
+          />
+        </div> */}
         <div className="flex justify-between">
           <Button onClick={() => onClickTimerButton("start")} color={status === "RUNNING" ? "primary" : "default"}>
             START
