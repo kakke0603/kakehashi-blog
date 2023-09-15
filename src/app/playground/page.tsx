@@ -9,8 +9,8 @@ const pages = [
     image: ThumEva,
     title: "EVA-Timer",
     content: "エヴァっぽいタイマー作ってみた",
-    publishedAt: "2023-9-15",
-    revisedAt: "2023-9-15",
+    publishedAt: "2023-09-15T11:59:34.925Z",
+    revisedAt: "2023-09-15T11:59:34.925Z",
   },
 ]
 export default function page() {

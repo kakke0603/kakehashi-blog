@@ -19,8 +19,10 @@ export const TimerButton: React.FC<TimerButtonProps> = ({ type, timerMode, onCli
   return (
     <button
       className={clsx(
-        "h-[21px] w-[33px] bg-black hover:opacity-70 blur-[0.5px] border border-amber-500 rounded-sm flex flex-col items-center hover:border-amber-300 z-10 text-yellow-400 hover:text-yellow-200",
-        isDanger && "text-red-500 hover:text-red-300 border-red-500 hover:border-red-300"
+        "h-[21px] w-[33px] bg-black hover:opacity-70 blur-[0.5px] border  rounded-sm flex flex-col items-center z-10 ",
+        isDanger
+          ? "text-red-500 hover:text-red-300 border-red-500 hover:border-red-300"
+          : "border-amber-500 hover:border-amber-300 text-yellow-400 hover:text-yellow-200"
       )}
       onClick={() => onClick(type)}
     >

@@ -96,8 +96,8 @@ export const Timer: React.FC<Props> = ({ time, randomNum, timerMode, onClick }) 
                     <TimerNumber num={minNum1} isDanger={isDanger} />
                     <TimerNumber num={minNum2} isDanger={isDanger} />
                     <div className=" w-[25px] h-[67px] flex flex-col justify-between py-[15px]">
-                      <div className={clsx("w-[5px] h-[10px] bg-amber-400 -skew-x-[4deg] ml-[5px]", isDanger && "bg-red-600")}></div>
-                      <div className={clsx("w-[5px] h-[10px] bg-amber-400 -skew-x-[4deg] ml-[4px]", isDanger && "bg-red-600")}></div>
+                      <div className={clsx("w-[5px] h-[10px]  -skew-x-[4deg] ml-[5px]", isDanger ? "bg-red-600" : "bg-amber-400")}></div>
+                      <div className={clsx("w-[5px] h-[10px]  -skew-x-[4deg] ml-[4px]", isDanger ? "bg-red-600" : "bg-amber-400")}></div>
                     </div>
                     <TimerNumber num={secNum1} isDanger={isDanger} />
                     <TimerNumber num={secNum2} isDanger={isDanger} />
@@ -107,8 +107,8 @@ export const Timer: React.FC<Props> = ({ time, randomNum, timerMode, onClick }) 
                   <div className="h-[18px]"></div>
                   <div className="z-10 flex">
                     <div className=" w-[15px] h-[65px] flex flex-col justify-between pl-[3px] py-[16px]">
-                      <div className={clsx("w-[4px] h-[8px] bg-amber-400 -skew-x-[4deg] ml-[5px]", isDanger && "bg-red-600")}></div>
-                      <div className={clsx("w-[4px] h-[8px] bg-amber-400 -skew-x-[4deg] ml-[4px]", isDanger && "bg-red-600")}></div>
+                      <div className={clsx("w-[4px] h-[8px]  -skew-x-[4deg] ml-[5px]", isDanger ? "bg-red-600" : "bg-amber-400")}></div>
+                      <div className={clsx("w-[4px] h-[8px]  -skew-x-[4deg] ml-[4px]", isDanger ? "bg-red-600" : "bg-amber-400")}></div>
                     </div>
                     <TimerNumber num={randomNum1} size="mini" isDanger={isDanger} />
                     <TimerNumber num={randomNum2} size="mini" isDanger={isDanger} />
@@ -265,8 +265,8 @@ export const Timer: React.FC<Props> = ({ time, randomNum, timerMode, onClick }) 
                           </div>
                           <div
                             className={clsx(
-                              "absolute bottom-0 h-[51px] w-[2px] bg-black rotate-[22deg] origin-bottom-right  border-l border-yellow-200",
-                              isDanger && "border-red-600"
+                              "absolute bottom-0 h-[51px] w-[2px] bg-black rotate-[22deg] origin-bottom-right  border-l ",
+                              isDanger ? "border-red-600" : "border-yellow-200"
                             )}
                           ></div>
                         </div>

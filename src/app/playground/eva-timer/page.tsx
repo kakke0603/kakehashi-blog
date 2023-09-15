@@ -20,7 +20,6 @@ export async function generateMetadata({}: any, parent: ResolvingMetadata): Prom
   }
 }
 export default async function Page() {
-  //3.25
   return (
     <div>
       <EvaTimer />
