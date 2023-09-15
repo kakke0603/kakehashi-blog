@@ -1,10 +1,6 @@
 "use client"
-import clsx from "clsx"
 import React from "react"
 import { useState } from "react"
-import { Line } from "./components/Line"
-import { TimerButton } from "./components/TimerButton"
-import { TimerNumber } from "./components/TimerNumber"
 import { Button } from "@nextui-org/react"
 
 import { Input } from "@nextui-org/react"
@@ -23,7 +19,6 @@ export const EvaTimer = () => {
     interval: 1000,
     onTimeOver: () => {
       setRandomNum(0)
-      alert("TIME OVER")
     },
   })
   const [timerMode, setTimerMode] = useState<TimerMode>("stop")
