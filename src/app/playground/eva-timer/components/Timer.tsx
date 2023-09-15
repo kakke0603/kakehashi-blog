@@ -70,13 +70,13 @@ export const Timer: React.FC<Props> = ({ time, randomNum, timerMode, onClick }) 
                 <div className="w-[41px] -ml-[0.5px] h-[2px] bg-black blur-[0.5px] border-l border-amber-700"></div>
                 <div className="w-[12px] h-[5px] bg-black blur-[0.5px] rotate-[45deg] origin-top-left"></div>
               </div>
-              <div className={clsx("flex text-yellow-400", isDanger && "text-red-600")}>
+              <div className={clsx("flex", isDanger ? "text-red-600" : "text-yellow-400")}>
                 <div className="w-[41px] -ml-[0.5px] -mt-[3.5px] h-[18px] bg-black blur-[0.5px] text-[10px] border-l border-amber-700">活動限界</div>
                 <div className="w-[181px] -ml-[0.5px] mt-[2.5px] pl-[2px] h-[12px] bg-black blur-[0.5px]  text-[7px] ">ACTIVE TIME REMAIN</div>
               </div>
               <div className="flex -mt-[1px]">
                 <div className="h-[83px] w-[15px] bg-black blur-[0.5px] z-10 mr-[1px]">
-                  <div className={clsx("h-[14px] text-[6px] pl-[1px] text-yellow-400 border-l border-amber-700", isDanger && "text-red-600")}>
+                  <div className={clsx("h-[14px] text-[6px] pl-[1px]  border-l border-amber-700", isDanger ? "text-red-600" : "text-yellow-400")}>
                     あと
                   </div>
                   <div className="h-full w-full flex flex-col space-y-[60px] border-t border-r border-amber-700">
@@ -127,8 +127,8 @@ export const Timer: React.FC<Props> = ({ time, randomNum, timerMode, onClick }) 
               </div>
               <div
                 className={clsx(
-                  "border border-amber-500 text-yellow-400  flex mx-[1px] rounded-[2px] space-x-[4px] text-center",
-                  isDanger && "border-red-600 text-red-600"
+                  "border  flex mx-[1px] rounded-[2px] space-x-[4px] text-center",
+                  isDanger ? "border-red-600 text-red-600" : "border-amber-500 text-yellow-400 "
                 )}
               >
                 <div className="w-[59px] p-[1px]">
@@ -180,8 +180,8 @@ export const Timer: React.FC<Props> = ({ time, randomNum, timerMode, onClick }) 
               </div>
               <div
                 className={clsx(
-                  "border border-amber-500 mx-[1px] rounded-[2px] text-center text-yellow-400",
-                  isDanger && "border-red-600 text-red-600"
+                  "border  mx-[1px] rounded-[2px] text-center ",
+                  isDanger ? "border-red-600 text-red-600" : "border-amber-500 text-yellow-400"
                 )}
               >
                 <div className="text-[9px] font-bold">主電源供給システム</div>
@@ -222,16 +222,16 @@ export const Timer: React.FC<Props> = ({ time, randomNum, timerMode, onClick }) 
                     <div className="flex flex-col">
                       <div
                         className={clsx(
-                          "h-[110px] mb-[2px] bg-black blur-[0.5px] border-l border-b border-yellow-200 z-10 w-[9px] relative",
-                          isDanger && "border-red-600"
+                          "h-[110px] mb-[2px] bg-black blur-[0.5px] border-l border-b  z-10 w-[9px] relative",
+                          isDanger ? "border-red-600" : "border-yellow-200"
                         )}
                       >
                         <Line className="absolute bottom-[1px] left-[1px]" color={isDanger ? "red" : "blue"} />
                       </div>
                       <div
                         className={clsx(
-                          "h-[36px] w-[10px] bg-black -ml-[1px] blur-[0.5px] border-l border-t border-yellow-200 relative",
-                          isDanger && "border-red-600"
+                          "h-[36px] w-[10px] bg-black -ml-[1px] blur-[0.5px] border-l border-t  relative",
+                          isDanger ? "border-red-600" : "border-yellow-200"
                         )}
                       >
                         <Line className="absolute top-[1px] left-[1px]" color={isDanger ? "red" : "blue"} />
@@ -240,8 +240,8 @@ export const Timer: React.FC<Props> = ({ time, randomNum, timerMode, onClick }) 
                     <div className="flex flex-col">
                       <div
                         className={clsx(
-                          "h-[110px] mb-[2px] bg-black blur-[0.5px] -ml-[1px] border-b border-yellow-200 relative",
-                          isDanger && "border-red-600"
+                          "h-[110px] mb-[2px] bg-black blur-[0.5px] -ml-[1px] border-b  relative",
+                          isDanger ? "border-red-600" : "border-yellow-200"
                         )}
                       >
                         <Line className="absolute bottom-[1px] left-[2px]" color={isDanger ? "red" : "blue"} />
@@ -249,7 +249,10 @@ export const Timer: React.FC<Props> = ({ time, randomNum, timerMode, onClick }) 
                       </div>
                       <div className="flex flex-col h-[37px] w-[5px] -ml-[1px] ">
                         <div
-                          className={clsx("h-[30px] w-[4px] bg-black blur-[0.5px] border-t border-yellow-200 relative", isDanger && "border-red-600")}
+                          className={clsx(
+                            "h-[30px] w-[4px] bg-black blur-[0.5px] border-t  relative",
+                            isDanger ? "border-red-600" : "border-yellow-200"
+                          )}
                           style={{
                             background:
                               "linear-gradient(to bottom right, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%)",
@@ -257,8 +260,8 @@ export const Timer: React.FC<Props> = ({ time, randomNum, timerMode, onClick }) 
                         >
                           <Line className="absolute top-[1px] left-[1px]" color={isDanger ? "red" : "blue"} />
                           <div className="absolute bottom-0 left-[1px] h-[69px] w-[2px]  rotate-[6deg] origin-bottom-left">
-                            <div className={clsx("h-[37px] w-[2px] border-l border-yellow-200 mb-[2px]", isDanger && "border-red-600")}></div>
-                            <div className={clsx("h-[29px] w-[2px] border-l border-yellow-200", isDanger && "border-red-600")}></div>
+                            <div className={clsx("h-[37px] w-[2px] border-l  mb-[2px]", isDanger ? "border-red-600" : "border-yellow-200")}></div>
+                            <div className={clsx("h-[29px] w-[2px] border-l ", isDanger ? "border-red-600" : "border-yellow-200")}></div>
                           </div>
                           <div
                             className={clsx(
@@ -273,7 +276,10 @@ export const Timer: React.FC<Props> = ({ time, randomNum, timerMode, onClick }) 
                 </div>
               </div>
               <div
-                className={clsx("absolute top-[132px] left-[46px] w-[220px] h-[23px] flex border-t border-yellow-200", isDanger && "border-red-600")}
+                className={clsx(
+                  "absolute top-[132px] left-[46px] w-[220px] h-[23px] flex border-t ",
+                  isDanger ? "border-red-600" : "border-yellow-200"
+                )}
               >
                 <div className="w-[13px] h-full">
                   <div className="flex justify-end pt-[1px] w-full space-x-[1px]">
@@ -342,14 +348,17 @@ export const Timer: React.FC<Props> = ({ time, randomNum, timerMode, onClick }) 
           <div className="flex flex-col w-[5px] -ml-[1px]">
             <div className="flex w-[310px] items-end">
               <div
-                className={clsx("w-[4px] -mb-[1px] h-[6px] bg-black blur-[0.5px] border-t border-yellow-200 relative", isDanger && "border-red-600")}
+                className={clsx(
+                  "w-[4px] -mb-[1px] h-[6px] bg-black blur-[0.5px] border-t  relative",
+                  isDanger ? "border-red-600" : "border-yellow-200"
+                )}
               >
                 <Line className="absolute top-[1px] left-[1px]" color={isDanger ? "red" : "blue"} type="mini" />
               </div>
               <div
                 className={clsx(
-                  "w-[213px] -mb-[1px] -ml-[1px] h-[6px] bg-black blur-[0.5px] border-t border-yellow-200 border-b flex",
-                  isDanger && "border-red-600"
+                  "w-[213px] -mb-[1px] -ml-[1px] h-[6px] bg-black blur-[0.5px] border-t  border-b flex",
+                  isDanger ? "border-red-600" : "border-yellow-200"
                 )}
               >
                 <Line className="absolute top-[1px] left-[4px]" color={isDanger ? "red" : "blue"} type="mini" />
@@ -362,11 +371,11 @@ export const Timer: React.FC<Props> = ({ time, randomNum, timerMode, onClick }) 
               </div>
               <div
                 className={clsx(
-                  "w-[110px] h-[23px]  -mb-[1px] -ml-[1px] bg-black blur-[0.5px] border-t border-b border-r border-yellow-200 flex flex-col",
-                  isDanger && "border-red-600"
+                  "w-[110px] h-[23px]  -mb-[1px] -ml-[1px] bg-black blur-[0.5px] border-t border-b border-r flex flex-col",
+                  isDanger ? "border-red-600" : "border-yellow-200 "
                 )}
               >
-                <div className={clsx("border-l border-yellow-200  h-[19px] w-[110px]", isDanger && "border-red-600")}>
+                <div className={clsx("border-l   h-[19px] w-[110px]", isDanger ? "border-red-600" : "border-yellow-200 ")}>
                   <Line className="pt-[1px] pl-[30px]" color="orange" type="double" />
                 </div>
                 <div className="h-[4px] w-[110px] flex">
@@ -375,15 +384,17 @@ export const Timer: React.FC<Props> = ({ time, randomNum, timerMode, onClick }) 
                 </div>
               </div>
             </div>
-            <div className={clsx("w-[4px] -mb-[1px] h-[3px] bg-black blur-[0.5px] border-r border-yellow-200", isDanger && "border-red-600")}></div>
+            <div
+              className={clsx("w-[4px] -mb-[1px] h-[3px] bg-black blur-[0.5px] border-r ", isDanger ? "border-red-600" : "border-yellow-200 ")}
+            ></div>
             <div className="w-[4px] -mb-[1px] h-[39px] bg-black blur-[0.5px]">
               <Line className="pl-[1px] pt-[2px]" color={isDanger ? "red" : "blue"} type="mini" />
             </div>
           </div>
           <div
             className={clsx(
-              "h-[39px] w-[307px] -ml-[2px] -mb-[1px] bg-black blur-[0.5px] border-r border-t border-yellow-200 flex",
-              isDanger && "border-red-600"
+              "h-[39px] w-[307px] -ml-[2px] -mb-[1px] bg-black blur-[0.5px] border-r border-t  flex",
+              isDanger ? "border-red-600" : "border-yellow-200 "
             )}
           >
             <Line className="pl-[4px] pt-[1px]" color={isDanger ? "red" : "blue"} type="mini" />

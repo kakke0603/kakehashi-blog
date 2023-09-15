@@ -10,8 +10,12 @@ export async function generateMetadata({}: any, parent: ResolvingMetadata): Prom
   const previousImages = (await parent).openGraph?.images || []
   return {
     title: "eva-timer:エヴァっぽいタイマー作ってみた",
+    twitter: {
+      title: "eva-timer:エヴァっぽいタイマー作ってみた",
+      images: ["./ogp-eva-timer.png", ...previousImages],
+    },
     openGraph: {
-      images: ["/ogp-eva-timer.png", ...previousImages],
+      images: ["./ogp-eva-timer.png", ...previousImages],
     },
   }
 }
