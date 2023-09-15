@@ -5,10 +5,11 @@ const colors = {
   blue: "bg-cyan-400",
   yellow: "bg-yellow-500",
   orange: "bg-orange-400",
+  red: "bg-red-500",
 }
 type LineProps = {
   type?: "vertical" | "horizontal" | "double" | "double-space-mini" | "mini"
-  color?: "black" | "blue" | "yellow" | "orange"
+  color?: "black" | "blue" | "yellow" | "orange" | "red"
   className?: string
 }
 export const Line: React.FC<LineProps> = ({ type = "vertical", color = "black", className = "" }) => {

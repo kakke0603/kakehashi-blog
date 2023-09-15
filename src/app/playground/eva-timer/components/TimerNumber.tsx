@@ -1,14 +1,16 @@
+import clsx from "clsx"
 import React from "react"
 
 type Props = {
   num: number
   size?: "default" | "mini"
+  isDanger?: boolean
 }
-export const TimerNumber: React.FC<Props> = ({ num, size = "default" }) => {
+export const TimerNumber: React.FC<Props> = ({ num, size = "default", isDanger = false }) => {
   return (
-    <div className="relative ml-[2px]">
+    <div className={clsx("relative ml-[2px]", size === "mini" && "scale-75 ml-0")}>
       <div
-        className="w-[25px] h-[67px] bg-amber-400 -skew-x-[4deg]"
+        className={clsx("w-[25px] h-[67px]  -skew-x-[4deg]", isDanger ? "bg-red-600" : "bg-amber-400")}
         style={{
           borderTopLeftRadius: "4px 8px",
           borderTopRightRadius: "4px 8px",
@@ -27,7 +29,7 @@ export const TimerNumber: React.FC<Props> = ({ num, size = "default" }) => {
       <div className="w-[8px] h-[8px] bg-black -rotate-[48deg] absolute top-[30px] -left-[5px]"></div>
       <div className="w-[1.5px] h-[11px] bg-black skew-x-[35deg] absolute top-[28px] left-[21px]"></div>
       <div className="w-[1.5px] h-[13px] bg-black -skew-x-[36deg] absolute top-[27px] left-[21px]"></div>
-      <div className="w-[8px] h-[11px] bg-black -rotate-[53deg] absolute top-[29px] left-[24px]"></div>
+      <div className="w-[5px] h-[6px] bg-black -rotate-[53deg] absolute top-[31px] left-[23px]"></div>
       {/* 下部 */}
       <div className="w-[6px] h-[3px] bg-black -skew-x-[78deg] absolute top-[55px] -left-[1px]"></div>
       <div className="w-[1.5px] h-[11px] bg-black skew-x-[13deg] absolute top-[58px] left-[16px]"></div>
@@ -53,7 +55,7 @@ export const TimerNumber: React.FC<Props> = ({ num, size = "default" }) => {
         </>
       )}
       {/* マスク中部 */}
-      {(num === 7 || num === 1) && (
+      {(num === 7 || num === 1 || num === 0) && (
         <>
           <div className="w-[5px] h-[11px] bg-black rotate-[48deg] absolute top-[26px] left-[7px]"></div>
           <div className="w-[10px] h-[12px] bg-black absolute top-[28px] left-[7px]"></div>

@@ -1,24 +1,25 @@
 export const runtime = "edge"
 import React from "react"
 import { PlaygroundCard } from "./PlaygroundCard"
+import ThumEva from "./thum-eva-timer.png"
 
 const pages = [
   {
     id: "eva-timer",
-    image: "",
-    title: "eva-timer",
-    content: "content",
-    publishedAt: "2021-10-10",
-    revisedAt: "2021-10-10",
+    image: ThumEva,
+    title: "EVA-Timer",
+    content: "エヴァっぽいタイマー作ってみた",
+    publishedAt: "2023-9-15",
+    revisedAt: "2023-9-15",
   },
 ]
 export default function page() {
   return (
     <div className="">
       <div className="">
-        {/* {pages.map((page) => (
-          <PlaygroundCard {...page} />
-        ))} */}
+        {pages.map((page) => (
+          <PlaygroundCard {...page} key={page.id} />
+        ))}
       </div>
     </div>
   )

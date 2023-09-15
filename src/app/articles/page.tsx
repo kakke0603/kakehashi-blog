@@ -17,7 +17,7 @@ export default async function page() {
   return (
     <div className="pt-10 px-2 space-y-10 max-w-2xl mx-auto">
       {data?.map((article: ArticleType) => {
-        return <ArticleCard key={article.id} {...article} />
+        return <ArticleCard {...article} key={article.id} />
       })}
     </div>
   )

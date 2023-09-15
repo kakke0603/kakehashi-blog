@@ -12,7 +12,9 @@ export default function index() {
       </NavbarContent>
       <NavbarContent>
         <NavbarBrand className="justify-center sm:justify-start">
-          <p className="font-bold text-inherit">Kakke-Blog</p>
+          <a className="font-bold text-inherit no-underline" href="/articles">
+            Kakke-Blog
+          </a>
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className="hidden sm:flex gap-4">

@@ -25,7 +25,7 @@ export const ArticleCard: React.FC<ArticleType> = ({ id, title, content, publish
           <div className="space-y-4 flex-1">
             <h4 className="font-bold text-large block">{title}</h4>
             <HtmlStringToText htmlString={content.slice(0, 180)} />
-            <div className="flex gap-x-2 overflow-scroll">{tags?.map((tag) => <Tag id={tag.id} name={tag.name} />)}</div>
+            <div className="flex gap-x-2 overflow-scroll">{tags?.map((tag) => <Tag id={tag.id} name={tag.name} key={tag.id} />)}</div>
           </div>
         </div>
         <div className="mt-4 flex gap-x-4 flex-wrap gap-y-1 justify-end">
