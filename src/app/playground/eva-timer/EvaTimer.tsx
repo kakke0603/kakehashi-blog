@@ -37,6 +37,7 @@ export const EvaTimer = () => {
       pause()
     } else if (type === "reset") {
       reset()
+      setSec(10)
       setRandomNum(0)
     } else if (type === "racing") {
       return
