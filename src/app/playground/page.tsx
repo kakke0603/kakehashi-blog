@@ -8,7 +8,7 @@ const pages = [
     id: "eva-timer",
     image: ThumEva,
     title: "EVA-Timer",
-    content: "エヴァっぽいタイマー作ってみた",
+    content: "エヴァっぽいタイマー",
     publishedAt: "2023-09-15T11:59:34.925Z",
     revisedAt: "2023-09-15T11:59:34.925Z",
   },

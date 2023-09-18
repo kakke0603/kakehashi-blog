@@ -1,5 +1,5 @@
 "use client"
-import { Avatar, Link, User } from "@nextui-org/react"
+import { Link, User } from "@nextui-org/react"
 import React from "react"
 
 export default function Profile() {
@@ -21,14 +21,15 @@ export default function Profile() {
         />
       </div>
       <pre className="mt-10">
-        {`\n  
+        <code>
+          {`\n  
   { \n
     Name: "かっけ", \n
     Age: 31, \n
     Like: { \n
       Music: ["back number", "Perfume", "Creepy Nuts", "新しい学校のリーダーズ"], \n
       Game: ["モンスターハンター"], \n
-      Anime: ["呪術廻戦", "新世紀エヴァンゲリオン", "僕のヒーローアカデミア"], \n
+      Anime: ["新世紀エヴァンゲリオン", "僕のヒーローアカデミア", "呪術廻戦"], \n
       Movie: ["Marvel", "Star Wars"], \n
       Technology: ["React", "TypeScript", "javaScript", "AWS", "Laravel", "PHP"], \n
       YouTube: ["東海オンエア(虫眼鏡さん推し)", "匿名ラジオ", "板橋ハウス"], \n
@@ -38,6 +39,7 @@ export default function Profile() {
   } \n
   
   `}
+        </code>
       </pre>
     </div>
   )

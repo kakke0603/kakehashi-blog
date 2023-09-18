@@ -25,7 +25,7 @@ export const PlaygroundCard: React.FC<PlaygroundType> = ({ id, image, title, con
           <div className="w-[70px] h-[70px] border-[4px] bg-gray-100 dark:bg-gray-700 rounded-lg">
             <Image src={image.src} width={70} height={70} />
           </div>
-          <div className="space-y-4 w-[300px]">
+          <div className="space-y-4 w-[230px]">
             <h4 className="font-bold text-large block">{title}</h4>
             <div className="">{content}</div>
           </div>
