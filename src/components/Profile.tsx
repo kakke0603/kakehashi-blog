@@ -27,7 +27,7 @@ export default function Profile() {
     Name: "かっけ", \n
     Age: 31, \n
     Like: { \n
-      Music: ["back number", "Perfume", "Creepy Nuts", "新しい学校のリーダーズ"], \n
+      Music: ["back number", "Perfume", "saucy dog", "Creepy Nuts", "新しい学校のリーダーズ"], \n
       Game: ["モンスターハンター"], \n
       Anime: ["新世紀エヴァンゲリオン", "僕のヒーローアカデミア", "呪術廻戦"], \n
       Movie: ["Marvel", "Star Wars"], \n
