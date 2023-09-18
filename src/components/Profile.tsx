@@ -26,13 +26,13 @@ export default function Profile() {
     Name: "かっけ", \n
     Age: 31, \n
     Like: { \n
-      Music: ["back number", "Perfume", "Creepy Nuts", "新しい学校のリーダーズ"] \n
-      Game: ["モンスターハンター"] \n
-      Anime: ["呪術廻戦", "エヴァンゲリオン", "僕のヒーローアカデミア"] \n
-      Movie: ["Marvel", "Star Wars"] \n
-      Technology: ["React", "TypeScript", "javaScript", "AWS", "Laravel", "PHP"] \n
-      YouTube: ["東海オンエア(虫眼鏡さん推し)", "匿名ラジオ", "板橋ハウス"] \n
-      Food: ["麺類全般", "程よく辛いもの", "明太子"] \n
+      Music: ["back number", "Perfume", "Creepy Nuts", "新しい学校のリーダーズ"], \n
+      Game: ["モンスターハンター"], \n
+      Anime: ["呪術廻戦", "新世紀エヴァンゲリオン", "僕のヒーローアカデミア"], \n
+      Movie: ["Marvel", "Star Wars"], \n
+      Technology: ["React", "TypeScript", "javaScript", "AWS", "Laravel", "PHP"], \n
+      YouTube: ["東海オンエア(虫眼鏡さん推し)", "匿名ラジオ", "板橋ハウス"], \n
+      Food: ["麺類全般", "程よく辛いもの", "明太子"], \n
       Other: ["京都巡り", "カフェ巡り", "旅行"] \n
     } \n
   } \n
