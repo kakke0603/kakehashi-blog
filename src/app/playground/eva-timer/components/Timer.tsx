@@ -30,7 +30,7 @@ export const Timer: React.FC<Props> = ({ time, randomNum, timerMode, onClick }) 
   const randomNum1 = Math.floor(randomNum / 10)
   const randomNum2 = randomNum - randomNum1 * 10
 
-  const isDanger = sec <= 10
+  const isDanger = sec <= 5
 
   return (
     <div>

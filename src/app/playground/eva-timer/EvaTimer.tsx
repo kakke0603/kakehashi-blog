@@ -11,7 +11,7 @@ import { Timer } from "./components/Timer"
 export type TimerMode = "stop" | "start" | "reset" | "racing"
 export const EvaTimer = () => {
   const [min, setMin] = useState(0)
-  const [sec, setSec] = useState(15)
+  const [sec, setSec] = useState(10)
   const [randomNum, setRandomNum] = useState(0)
   const { time, start, pause, reset, status } = useTimer({
     initialTime: sec + min * 60,
@@ -20,6 +20,9 @@ export const EvaTimer = () => {
     interval: 1000,
     onTimeOver: () => {
       setRandomNum(0)
+      setTimeout(() => {
+        alert("活動限界です！")
+      }, 10)
     },
   })
   const [timerMode, setTimerMode] = useState<TimerMode>("stop")
