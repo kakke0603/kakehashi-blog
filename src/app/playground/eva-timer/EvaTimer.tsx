@@ -20,8 +20,6 @@ export const EvaTimer = () => {
     interval: 1000,
     onTimeOver: () => {
       setRandomNum(0)
-      setMin(0)
-      setSec(0)
       setTimeout(() => {
         alert("活動限界です！")
       }, 100)
