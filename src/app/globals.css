@@ -32,6 +32,6 @@
     @apply text-sm font-mono bg-gray-800 rounded p-1;
   }
   code {
-    @apply p-2 w-[90dvw] break-all inline-block overflow-scroll;
+    @apply p-2 w-[88dvw] break-all inline-block overflow-scroll;
   }
 }
