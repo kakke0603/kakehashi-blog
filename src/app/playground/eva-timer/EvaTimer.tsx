@@ -24,7 +24,7 @@ export const EvaTimer = () => {
       setSec(0)
       setTimeout(() => {
         alert("活動限界です！")
-      }, 10)
+      }, 100)
     },
   })
   const [timerMode, setTimerMode] = useState<TimerMode>("stop")
