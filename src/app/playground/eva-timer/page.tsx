@@ -1,5 +1,6 @@
 import { Metadata, ResolvingMetadata } from "next"
 import { EvaTimer } from "./EvaTimer"
+import GoogleAd from "@/components/GoogleAd"
 
 export const runtime = "edge"
 
