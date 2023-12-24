@@ -48,6 +48,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <meta property="og:image:type" content="<generated>" />
       <meta property="og:image:width" content="<generated>" />
       <meta property="og:image:height" content="<generated>" />
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1124456984547171"
+     crossorigin="anonymous"></script>
       <body>
         <ScriptGoogleAd />
         <Providers>
