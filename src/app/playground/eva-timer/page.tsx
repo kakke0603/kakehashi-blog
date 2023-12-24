@@ -33,6 +33,7 @@ export default async function Page() {
   return (
     <div>
       <EvaTimer /> 
+      <GoogleAd slotId="9278854527"/>
     </div>
   )
 }
