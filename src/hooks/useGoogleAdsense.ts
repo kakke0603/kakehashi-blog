@@ -8,16 +8,22 @@ export const useGoogleAdsense = () => {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const component = window.document.getElementById("__next").querySelector(`.adsbygoogle`)
-      if (component) {
-        component.addEventListener("load", loadAd)
+      const nextElement = window.document.getElementById("__next")
+      if (nextElement) {
+        const component = nextElement.querySelector(`.adsbygoogle`)
+        if (component) {
+          component.addEventListener("load", loadAd)
+        }
       }
     }
     return () => {
       if (typeof window !== "undefined") {
-        const component = window.document.getElementById("__next").querySelector(`.adsbygoogle`)
-        if (component) {
-          component.removeEventListener("load", loadAd)
+        const nextElement = window.document.getElementById("__next")
+        if (nextElement) {
+          const component = nextElement.querySelector(`.adsbygoogle`)
+          if (component) {
+            component.removeEventListener("load", loadAd)
+          }
         }
       }
     }
