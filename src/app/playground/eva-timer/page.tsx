@@ -1,7 +1,6 @@
 import { Metadata, ResolvingMetadata } from "next"
 import { EvaTimer } from "./EvaTimer"
 import GoogleAdsense from "@/components/GoogleAdsense"
-import { useGoogleAdsense } from "@/hooks/useGoogleAdsense"
 
 export const runtime = "edge"
 
@@ -32,7 +31,6 @@ export const metadata = {
   },
 }
 export default async function Page() {
-  useGoogleAdsense()
   return (
     <div>
       <EvaTimer />
