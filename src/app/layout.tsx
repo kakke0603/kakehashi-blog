@@ -1,4 +1,5 @@
 import "./globals.css"
+import Script from "next/script"
 import { Noto_Sans_JP } from "next/font/google"
 import { Providers } from "./providers"
 import Navbar from "@/components/Navbar"
@@ -50,6 +51,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta property="og:image:width" content="<generated>" />
         <meta property="og:image:height" content="<generated>" />
         <meta name="google-adsense-account" content="ca-pub-1124456984547171"></meta>
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1124456984547171"
+          crossOrigin="anonymous"
+        ></Script>
       </Head>
       <body>
         <Providers>
