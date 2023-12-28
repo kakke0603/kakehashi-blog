@@ -34,7 +34,7 @@ export default async function Page() {
   return (
     <div>
       <EvaTimer />
-      <GoogleAdsense client="1124456984547171" slot="9278854527" />
+      <GoogleAdsense client="ca-pub-1124456984547171" slot="9278854527" style={{ display: "block" }} />
     </div>
   )
 }
