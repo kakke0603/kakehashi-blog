@@ -1,6 +1,6 @@
 import { Metadata, ResolvingMetadata } from "next"
 import { EvaTimer } from "./EvaTimer"
-import GoogleAd from "@/components/GoogleAd"
+import GoogleAdsense from "@/components/GoogleAdsense"
 
 export const runtime = "edge"
 
@@ -33,8 +33,8 @@ export const metadata = {
 export default async function Page() {
   return (
     <div>
-      <EvaTimer /> 
-      <GoogleAd slotId="9278854527"/>
+      <EvaTimer />
+      <GoogleAdsense client="ca-pub-1124456984547171" slot="9278854527" />
     </div>
   )
 }

@@ -3,8 +3,7 @@ import { Noto_Sans_JP } from "next/font/google"
 import { Providers } from "./providers"
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
-import ScriptGoogleAd from "@/components/ScriptGoogleAd"
-import Head from 'next/head'
+import Head from "next/head"
 
 const inter = Noto_Sans_JP({ subsets: ["latin"], display: "swap" })
 
@@ -46,14 +45,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ja" className={inter.className}>
       <Head>
-      <meta property="og:image" content="<generated>" />
-      <meta property="og:image:type" content="<generated>" />
-      <meta property="og:image:width" content="<generated>" />
-      <meta property="og:image:height" content="<generated>" />
-      <ScriptGoogleAd />
+        <meta property="og:image" content="<generated>" />
+        <meta property="og:image:type" content="<generated>" />
+        <meta property="og:image:width" content="<generated>" />
+        <meta property="og:image:height" content="<generated>" />
+        <meta name="google-adsense-account" content="ca-pub-1124456984547171"></meta>
       </Head>
       <body>
-
         <Providers>
           <div className="flex flex-col h-screen">
             <Navbar />
