@@ -1,11 +1,9 @@
 "use client"
-import { useEffect } from "react"
 
-type GoogleAdsenseProps = {
-  client: string
-  slot: string
-  style?: React.CSSProperties
-}
+import { useEffect } from "react"
+import { usePathname } from "next/navigation"
+
+const PUBLISHER_ID = "1124456984547171"
 
 declare global {
   interface Window {
@@ -13,36 +11,37 @@ declare global {
   }
 }
 
-const GoogleAdsense = ({ client, slot, style }: GoogleAdsenseProps) => {
-  useEffect(() => {
-    const adsScript = document.createElement("script")
-    adsScript.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-    adsScript.async = true
-    document.body.appendChild(adsScript)
+type GoogleAdProps = {
+  slot: string
+  format?: string
+  responsive?: string
+  style?: any
+}
 
+const GoogleAd = ({ slot, format = "auto", responsive = "true", style }: GoogleAdProps) => {
+  let pathname = usePathname()
+  pathname = pathname ? pathname : ""
+
+  useEffect(() => {
     try {
       ;(window.adsbygoogle = window.adsbygoogle || []).push({})
     } catch (err) {
       console.error(err)
     }
-
-    return () => {
-      document.body.removeChild(adsScript)
-    }
-  }, [])
+  }, [pathname])
 
   return (
-    <div className="align-center text-center">
+    <div key={pathname.replace(/\//g, "-") + "-" + slot}>
       <ins
         className="adsbygoogle"
-        style={style}
-        data-ad-client={client}
+        style={{ display: "block", width: "100%", ...style }}
+        data-ad-client={`ca-pub-${PUBLISHER_ID}`}
         data-ad-slot={slot}
-        data-ad-format="auto"
-        data-full-width-responsive="true"
-      ></ins>
+        data-ad-format={format}
+        data-full-width-responsive={responsive}
+      />
     </div>
   )
 }
 
-export default GoogleAdsense
+export default GoogleAd

@@ -1,6 +1,7 @@
 import { Metadata, ResolvingMetadata } from "next"
 import { EvaTimer } from "./EvaTimer"
 import GoogleAdsense from "@/components/GoogleAdsense"
+import GoogleAd from "@/components/GoogleAdsense"
 
 export const runtime = "edge"
 
@@ -34,7 +35,7 @@ export default async function Page() {
   return (
     <div>
       <EvaTimer />
-      <GoogleAdsense client="ca-pub-1124456984547171" slot="9278854527" style={{ display: "block" }} />
+      <GoogleAd slot="9278854527" style={{ display: "block" }} />
     </div>
   )
 }
