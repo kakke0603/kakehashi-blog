@@ -35,7 +35,7 @@ export default async function Page() {
   return (
     <div>
       <EvaTimer />
-      <GoogleAd slot="9278854527" style={{ display: "block" }} />
+      <GoogleAd slot="9278854527" style={{ display: "block", height: "200px" }} />
     </div>
   )
 }
