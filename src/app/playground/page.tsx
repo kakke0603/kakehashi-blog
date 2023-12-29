@@ -25,7 +25,7 @@ const pages = [
 export default function page() {
   return (
     <div className="">
-      <div className="flex space-x-5">
+      <div className="flex flex-col space-y-5">
         {pages.map((page) => (
           <PlaygroundCard {...page} key={page.id} />
         ))}
