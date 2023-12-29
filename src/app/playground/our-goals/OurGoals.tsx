@@ -386,14 +386,14 @@ export const OurGoals = () => {
               <ModalHeader className="flex flex-col gap-1">Our Goals</ModalHeader>
               <ModalBody>
                 <p>
-                  1.中心に主題や目標を記述する: チャートの中心に、取り組みたい主題や達成したい目標を書きます。
-                  <p className="text-red-500">赤枠</p>
+                  1.<label className="text-red-500">赤枠:</label>
+                  チャートの中心に一番達成したい目標を書きます。
                 </p>
                 <p>
-                  2.主題や目標を達成するために必要な行動を記述する
-                  <p className="text-blue-500">青枠</p>
+                  2.<label className="text-blue-500">青枠:</label>
+                  目標を達成するために必要な事を記載します。
                 </p>
-                <p>3.2.で記載した行動を達成するために必要な具体的な行動を記述する</p>
+                <p>3.2.で記載した事を達成するために必要な具体的な行動を記述します。</p>
               </ModalBody>
               <ModalFooter>
                 <Button color="primary" variant="light" onPress={onClose}>
