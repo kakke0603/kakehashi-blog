@@ -264,10 +264,10 @@ export const OurGoals = () => {
   return (
     <div>
       <div className="flex justify-between mb-5">
-        <Button onClick={onOpen}>info</Button>
+        <Button onClick={onOpen}>使い方</Button>
         <div className="pt-1 text-xl font-bold">Our Goals</div>
         <Button onClick={onSave} color="primary">
-          save
+          保存
         </Button>
       </div>
       <div className="border w-full" id="target-component">
