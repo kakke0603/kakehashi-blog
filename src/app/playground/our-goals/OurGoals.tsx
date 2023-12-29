@@ -394,6 +394,9 @@ export const OurGoals = () => {
                   目標を達成するために必要な事を記載します。
                 </p>
                 <p>3.2.で記載した事を達成するために必要な具体的な行動を記述します。</p>
+                <p></p>
+                <p>保存ボタン：ブラウザのローカルストレージにデータを保存します。</p>
+                <p>画像化ボタン：チャートを画像化してダウンロードします。</p>
               </ModalBody>
               <ModalFooter>
                 <Button color="primary" variant="light" onPress={onClose}>
