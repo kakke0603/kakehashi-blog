@@ -2,8 +2,17 @@ export const runtime = "edge"
 import React from "react"
 import { PlaygroundCard } from "./PlaygroundCard"
 import ThumEva from "./thum-eva-timer.png"
+import ThumOurGoals from "./thum-our-goals.png"
 
 const pages = [
+  {
+    id: "our-goals",
+    image: ThumOurGoals,
+    title: "Our Goals",
+    content: "目標作成ツール",
+    publishedAt: "2023-12-31T11:59:34.925Z",
+    revisedAt: "2023-12-31T11:59:34.925Z",
+  },
   {
     id: "eva-timer",
     image: ThumEva,
@@ -16,7 +25,7 @@ const pages = [
 export default function page() {
   return (
     <div className="">
-      <div className="">
+      <div className="flex space-x-5">
         {pages.map((page) => (
           <PlaygroundCard {...page} key={page.id} />
         ))}
