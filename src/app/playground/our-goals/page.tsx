@@ -8,10 +8,10 @@ export const runtime = "edge"
 /**
  * メタデータの設定
  */
-const siteName = "eva-timer:エヴァっぽいタイマー作ってみた"
+const siteName = "our-goals:目標作成ツール"
 export const metadata = {
   title: {
-    default: "eva-timer:エヴァっぽいタイマー作ってみた",
+    default: "our-goals:目標作成ツール",
   },
   metadataBase: new URL(process.env.URL ?? "http://localhost:3000"),
   openGraph: {
@@ -19,7 +19,7 @@ export const metadata = {
     siteName,
     locale: "ja_JP",
     type: "website",
-    images: "/ogp-eva-timer.png",
+    images: "/ogp-our-goals.png",
   },
   twitter: {
     card: "summary_large_image",
