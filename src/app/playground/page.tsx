@@ -6,12 +6,20 @@ import ThumOurGoals from "./thum-our-goals.png"
 
 const pages = [
   {
+    id: "eva-title-maker",
+    image: ThumOurGoals,
+    title: "Eva Title Maker",
+    content: "エヴァのタイトルメーカー",
+    publishedAt: "2023-12-31T11:59:34.925Z",
+    revisedAt: "2023-12-31T11:59:34.925Z",
+  },
+  {
     id: "our-goals",
     image: ThumOurGoals,
     title: "Our Goals",
     content: "目標作成ツール",
-    publishedAt: "2023-12-31T11:59:34.925Z",
-    revisedAt: "2023-12-31T11:59:34.925Z",
+    publishedAt: "2023-12-29T11:59:34.925Z",
+    revisedAt: "2023-12-29T11:59:34.925Z",
   },
   {
     id: "eva-timer",
