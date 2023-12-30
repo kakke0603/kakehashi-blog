@@ -6,6 +6,14 @@ import ThumOurGoals from "./thum-our-goals.png"
 
 const pages = [
   {
+    id: "face-pomodoro",
+    image: ThumOurGoals,
+    title: "Face Detected Pomodoro Timer",
+    content: "顔認証のポモドーロタイマー",
+    publishedAt: "2023-12-31T11:59:34.925Z",
+    revisedAt: "2023-12-31T11:59:34.925Z",
+  },
+  {
     id: "our-goals",
     image: ThumOurGoals,
     title: "Our Goals",
