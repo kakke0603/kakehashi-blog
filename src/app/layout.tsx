@@ -3,7 +3,6 @@ import { Noto_Sans_JP } from "next/font/google"
 import { Providers } from "./providers"
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
-import Head from "next/head"
 import { GoogleAdScript } from "@/components/googleads-script"
 
 const inter = Noto_Sans_JP({ subsets: ["latin"], display: "swap" })
