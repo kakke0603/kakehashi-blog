@@ -3,15 +3,24 @@ import React from "react"
 import { PlaygroundCard } from "./PlaygroundCard"
 import ThumEva from "./thum-eva-timer.png"
 import ThumOurGoals from "./thum-our-goals.png"
+import ThumThreeJs from "./thum-three-js.png"
 
 const pages = [
+  {
+    id: "threejs",
+    image: ThumThreeJs,
+    title: "Three.js",
+    content: "Three.jsのサンプル",
+    publishedAt: "2023-12-31T11:59:34.925Z",
+    revisedAt: "2023-12-31T11:59:34.925Z",
+  },
   {
     id: "our-goals",
     image: ThumOurGoals,
     title: "Our Goals",
     content: "目標作成ツール",
-    publishedAt: "2023-12-31T11:59:34.925Z",
-    revisedAt: "2023-12-31T11:59:34.925Z",
+    publishedAt: "2023-12-30T11:59:34.925Z",
+    revisedAt: "2023-12-30T11:59:34.925Z",
   },
   {
     id: "eva-timer",

@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@nextui-org/react": "^2.2.9",
+    "@react-three/fiber": "^8.15.12",
+    "@types/three": "^0.160.0",
     "clsx": "^2.0.0",
     "framer-motion": "^10.15.2",
     "highlight.js": "^11.8.0",
@@ -21,6 +23,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-timer-hook": "^3.0.7",
+    "three": "^0.160.0",
     "twemoji": "^14.0.2",
     "use-timer": "^2.0.1"
   },
