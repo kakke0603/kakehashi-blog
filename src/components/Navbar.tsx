@@ -12,7 +12,7 @@ export default function index() {
       </NavbarContent>
       <NavbarContent>
         <NavbarBrand className="justify-center sm:justify-start">
-          <a className="font-bold text-inherit no-underline" href="/articles">
+          <a className="font-bold text-inherit no-underline" href="/">
             Kakke-Blog
           </a>
         </NavbarBrand>
