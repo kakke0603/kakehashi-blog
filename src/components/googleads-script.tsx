@@ -3,8 +3,6 @@ import Script from "next/script"
 const PUBLISHER_ID = "1124456984547171"
 
 export const GoogleAdScript = () => {
-  //   if (process.env.VERCEL_ENV === "production") {
-  // }
   return (
     <Script
       async
@@ -13,5 +11,4 @@ export const GoogleAdScript = () => {
       strategy="afterInteractive"
     />
   )
-  //   return <></>
 }
