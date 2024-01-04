@@ -8,7 +8,7 @@ export const GoogleAdScript = () => {
       async
       src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-${PUBLISHER_ID}`}
       crossOrigin="anonymous"
-      strategy="lazyOnload"
+      strategy="afterInteractive"
     />
   )
 }

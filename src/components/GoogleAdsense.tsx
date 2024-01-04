@@ -1,39 +1,32 @@
-"use client"
+"use client";
 
-import { useEffect } from "react"
-import { usePathname } from "next/navigation"
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
-const PUBLISHER_ID = "1124456984547171"
+const PUBLISHER_ID = "1124456984547171";
 
 declare global {
   interface Window {
-    adsbygoogle: { [key: string]: unknown }[]
+    adsbygoogle: { [key: string]: unknown }[];
   }
 }
 
 type GoogleAdProps = {
-  slot: string
-  style?: any
-}
+  slot: string;
+  style?: any;
+};
 
 const GoogleAd = ({ slot, style }: GoogleAdProps) => {
-  let pathname = usePathname()
-  pathname = pathname ? pathname : ""
+  let pathname = usePathname();
+  pathname = pathname ? pathname : "";
 
   useEffect(() => {
-    const adsScript = document.createElement("script")
-    adsScript.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-    adsScript.async = true
-    document.body.appendChild(adsScript)
     try {
-      (window.adsbygoogle = window.adsbygoogle || []).push({})
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
     } catch (err) {
-      console.error(err)
+      console.error(err);
     }
-    return () => {
-      document.body.removeChild(adsScript)
-    }
-  }, [pathname])
+  }, [pathname]);
 
   return (
     <div key={pathname.replace(/\//g, "-") + "-" + slot}>
@@ -46,7 +39,7 @@ const GoogleAd = ({ slot, style }: GoogleAdProps) => {
         data-full-width-responsive="true"
       />
     </div>
-  )
-}
+  );
+};
 
-export default GoogleAd
+export default GoogleAd;
