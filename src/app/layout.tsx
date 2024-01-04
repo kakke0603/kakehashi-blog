@@ -49,13 +49,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <meta property="og:image:width" content="<generated>" />
       <meta property="og:image:height" content="<generated>" />
       <meta name="google-adsense-account" content="ca-pub-1124456984547171"></meta>
+      <head>
+        <GoogleAdScript />
+      </head>
       <body>
         <Providers>
           <div className="flex flex-col h-screen">
             <Navbar />
             <div className="max-w-[1024px] mx-auto flex-grow">{children}</div>
             <Footer />
-            <GoogleAdScript />
           </div>
         </Providers>
       </body>
