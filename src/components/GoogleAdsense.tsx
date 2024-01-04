@@ -26,7 +26,7 @@ const GoogleAd = ({ slot, style }: GoogleAdProps) => {
     adsScript.async = true
     document.body.appendChild(adsScript)
     try {
-      ;(window.adsbygoogle = window.adsbygoogle || []).push({})
+      (window.adsbygoogle = window.adsbygoogle || []).push({})
     } catch (err) {
       console.error(err)
     }
