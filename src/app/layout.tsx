@@ -1,15 +1,15 @@
-import "./globals.css"
-import { Noto_Sans_JP } from "next/font/google"
-import { Providers } from "./providers"
-import Navbar from "@/components/Navbar"
-import Footer from "@/components/Footer"
-import { GoogleAdScript } from "@/components/googleads-script"
+import "./globals.css";
+import { Noto_Sans_JP } from "next/font/google";
+import { Providers } from "./providers";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import { GoogleAdScript } from "@/components/googleads-script";
 
-const inter = Noto_Sans_JP({ subsets: ["latin"], display: "swap" })
+const inter = Noto_Sans_JP({ subsets: ["latin"], display: "swap" });
 
-const siteName = "Kakke Blog"
-const description = "This is a blog by kakke"
-const url = "https://kakke.site"
+const siteName = "Kakke Blog";
+const description = "This is a blog by kakke";
+const url = "https://kakke.site";
 export const metadata = {
   title: {
     default: siteName,
@@ -39,7 +39,7 @@ export const metadata = {
   alternates: {
     canonical: url,
   },
-}
+};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -49,18 +49,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <meta property="og:image:width" content="<generated>" />
       <meta property="og:image:height" content="<generated>" />
       <meta name="google-adsense-account" content="ca-pub-1124456984547171"></meta>
-      <head>
-        <GoogleAdScript />
-      </head>
       <body>
         <Providers>
           <div className="flex flex-col h-screen">
             <Navbar />
             <div className="max-w-[1024px] mx-auto flex-grow">{children}</div>
             <Footer />
+            <GoogleAdScript />
           </div>
         </Providers>
       </body>
     </html>
-  )
+  );
 }
