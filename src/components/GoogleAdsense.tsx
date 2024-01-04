@@ -13,20 +13,25 @@ declare global {
 
 type GoogleAdProps = {
   slot: string
-  format?: string
-  responsive?: string
   style?: any
 }
 
-const GoogleAd = ({ slot, format = "auto", responsive = "true", style }: GoogleAdProps) => {
+const GoogleAd = ({ slot, style }: GoogleAdProps) => {
   let pathname = usePathname()
   pathname = pathname ? pathname : ""
 
   useEffect(() => {
+    const adsScript = document.createElement("script")
+    adsScript.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    adsScript.async = true
+    document.body.appendChild(adsScript)
     try {
       ;(window.adsbygoogle = window.adsbygoogle || []).push({})
     } catch (err) {
       console.error(err)
+    }
+    return () => {
+      document.body.removeChild(adsScript)
     }
   }, [pathname])
 
@@ -37,8 +42,8 @@ const GoogleAd = ({ slot, format = "auto", responsive = "true", style }: GoogleA
         style={{ display: "block", width: "100%", ...style }}
         data-ad-client={`ca-pub-${PUBLISHER_ID}`}
         data-ad-slot={slot}
-        data-ad-format={format}
-        data-full-width-responsive={responsive}
+        data-ad-format="auto"
+        data-full-width-responsive="true"
       />
     </div>
   )
