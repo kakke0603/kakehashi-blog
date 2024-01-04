@@ -1,6 +1,7 @@
 "use client"
 import { Link, User } from "@nextui-org/react"
 import React from "react"
+import GoogleAd from "./GoogleAdsense"
 
 export default function Profile() {
   return (
@@ -20,6 +21,7 @@ export default function Profile() {
           avatarProps={{ name: "K" }}
         />
       </div>
+      <GoogleAd slot="4735525151" style={{ display: "block" }} />
       <pre className="mt-10">
         <code>
           {`\n  
