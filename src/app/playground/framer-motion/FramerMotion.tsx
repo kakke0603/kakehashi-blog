@@ -2,7 +2,6 @@
 import { Button, Divider, Link } from "@nextui-org/react";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
-import { useAnimate } from "framer-motion";
 
 export const FramerMotion = () => {
   const [flg, setFlg] = useState(false);
@@ -13,6 +12,8 @@ export const FramerMotion = () => {
       <Link isExternal href="https://www.framer.com/motion/" showAnchorIcon>
         Framer Motion
       </Link>
+      <br />
+      アニメーションのライブラリ
       <div className="mt-5">
         1.ボタンを押すと回転する。
         <br />
@@ -72,6 +73,29 @@ export const FramerMotion = () => {
         </motion.div>
       </div>
       <Divider className="my-4" />
+      <div>
+        5.タップすると縮む
+        <motion.div className="bg-cyan-500 w-20 h-20 mt-2" whileTap={{ scale: 0.5 }} transition={{ type: "spring", stiffness: 400, damping: 17 }}>
+          tap me
+        </motion.div>
+      </div>
+      <Divider className="my-4" />
+      <div>
+        6.タップすると広がる
+        <motion.div whileTap={{ scale: 1.5 }} transition={{ type: "spring", stiffness: 200, damping: 8 }}>
+          <motion.div className="flex">
+            <motion.div className="bg-white w-10 h-10 mt-2 rounded-full relative">
+              <motion.div className="bg-black h-5 w-4 absolute left-2 top-1 rounded-lg"></motion.div>
+            </motion.div>
+            <motion.div className="bg-white w-10 h-10 mt-2 rounded-full relative">
+              <motion.div className="bg-black h-5 w-4 absolute left-2 top-1 rounded-lg"></motion.div>
+            </motion.div>
+          </motion.div>
+          <motion.div className="flex">
+            <motion.div className="bg-red-500 h-3 w-10 ml-5 mt-2 rounded-lg"></motion.div>
+          </motion.div>
+        </motion.div>
+      </div>
     </div>
   );
 };
