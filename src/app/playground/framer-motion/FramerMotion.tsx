@@ -1,5 +1,5 @@
 "use client";
-import { Button, Divider } from "@nextui-org/react";
+import { Button, Divider, Link } from "@nextui-org/react";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { useAnimate } from "framer-motion";
@@ -10,7 +10,10 @@ export const FramerMotion = () => {
 
   return (
     <div>
-      <div>
+      <Link isExternal href="https://www.framer.com/motion/" showAnchorIcon>
+        Framer Motion
+      </Link>
+      <div className="mt-5">
         1.ボタンを押すと回転する。
         <br />
         <Button color="primary" fullWidth onClick={onClick}>
