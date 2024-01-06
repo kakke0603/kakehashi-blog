@@ -4,6 +4,7 @@ import { Providers } from "./providers";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { GoogleAdScript } from "@/components/googleads-script";
+import Head from "next/head";
 
 const inter = Noto_Sans_JP({ subsets: ["latin"], display: "swap" });
 
@@ -49,9 +50,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <meta property="og:image:width" content="<generated>" />
       <meta property="og:image:height" content="<generated>" />
       <meta name="google-adsense-account" content="ca-pub-1124456984547171"></meta>
-      <head>
+      <Head>
         <GoogleAdScript />
-      </head>
+      </Head>
       <body>
         <Providers>
           <div className="flex flex-col h-screen">
