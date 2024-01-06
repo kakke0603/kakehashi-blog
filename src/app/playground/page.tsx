@@ -1,11 +1,20 @@
-export const runtime = "edge"
-import React from "react"
-import { PlaygroundCard } from "./PlaygroundCard"
-import ThumEva from "./thum-eva-timer.png"
-import ThumOurGoals from "./thum-our-goals.png"
-import ThumThreeJs from "./thum-three-js.png"
+export const runtime = "edge";
+import React from "react";
+import { PlaygroundCard } from "./PlaygroundCard";
+import ThumEva from "./thum-eva-timer.png";
+import ThumOurGoals from "./thum-our-goals.png";
+import ThumThreeJs from "./thum-three-js.png";
+import ThumFramerMotion from "./thum-framer-motion.png";
 
 const pages = [
+  {
+    id: "framer-motion",
+    image: ThumFramerMotion,
+    title: "Framer Motion",
+    content: "Framer Motionのサンプル",
+    publishedAt: "2024-01-06T02:00:34.925Z",
+    revisedAt: "2024-01-06T02:00:34.925Z",
+  },
   {
     id: "threejs",
     image: ThumThreeJs,
@@ -30,7 +39,7 @@ const pages = [
     publishedAt: "2023-09-15T11:59:34.925Z",
     revisedAt: "2023-09-15T11:59:34.925Z",
   },
-]
+];
 export default function page() {
   return (
     <div className="">
@@ -40,5 +49,5 @@ export default function page() {
         ))}
       </div>
     </div>
-  )
+  );
 }

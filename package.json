@@ -14,7 +14,7 @@
     "@react-three/fiber": "^8.15.12",
     "@types/three": "^0.160.0",
     "clsx": "^2.0.0",
-    "framer-motion": "^10.15.2",
+    "framer-motion": "^10.17.9",
     "highlight.js": "^11.8.0",
     "html2canvas": "^1.4.1",
     "microcms-js-sdk": "^2.6.1",
