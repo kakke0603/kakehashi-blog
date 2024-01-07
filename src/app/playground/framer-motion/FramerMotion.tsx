@@ -5,7 +5,9 @@ import React, { useState } from "react";
 
 export const FramerMotion = () => {
   const [flg, setFlg] = useState(false);
+  const [flg2, setFlg2] = useState(false);
   const onClick = () => setFlg(!flg);
+  const onClick2 = () => setFlg2(!flg2);
 
   return (
     <div>
@@ -93,6 +95,38 @@ export const FramerMotion = () => {
           </motion.div>
           <motion.div className="flex">
             <motion.div className="bg-red-500 h-3 w-10 ml-5 mt-2 rounded-lg"></motion.div>
+          </motion.div>
+        </motion.div>
+      </div>
+      <Divider className="my-4" />
+      <div className="mb-20">
+        7.ボタンを押すと浮かび、タップすると回転する
+        <Button color="primary" fullWidth onClick={onClick2}>
+          😄
+        </Button>
+        <motion.div
+          className="flex bg-emerald-500"
+          whileTap={{
+            scale: 0.8,
+            rotate: -90,
+            borderRadius: "100%",
+          }}
+        >
+          tap me
+          <motion.div className="text-5xl" animate={flg2 ? { y: -360, opacity: [10, 100, 50] } : { y: 0 }} transition={{ duration: 1 }}>
+            😄
+          </motion.div>
+          <motion.div className="text-5xl" animate={flg2 ? { y: -360, opacity: [10, 100, 50, 0] } : { y: 50 }} transition={{ duration: 1 }}>
+            😄
+          </motion.div>
+          <motion.div className="text-5xl" animate={flg2 ? { y: -360, opacity: [10, 100, 50, 0] } : { y: 30 }} transition={{ duration: 1 }}>
+            😄
+          </motion.div>
+          <motion.div className="text-5xl" animate={flg2 ? { y: -360, opacity: [10, 100, 50] } : { y: 30 }} transition={{ duration: 1 }}>
+            😄
+          </motion.div>
+          <motion.div className="text-5xl" animate={flg2 ? { y: -360, opacity: [10, 100, 50, 0] } : { y: 40 }} transition={{ duration: 1 }}>
+            😄
           </motion.div>
         </motion.div>
       </div>
