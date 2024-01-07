@@ -10,6 +10,9 @@ export const GoogleAdScript = () => {
         src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-${PUBLISHER_ID}`}
         crossOrigin="anonymous"
         strategy="lazyOnload"
+        onError={(e) => console.error(e)}
+        onLoad={(e) => console.log(e)}
+        onReady={() => console.log("ready")}
       />
     );
   }
