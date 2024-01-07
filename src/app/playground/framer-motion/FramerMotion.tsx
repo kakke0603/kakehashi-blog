@@ -37,11 +37,11 @@ export const FramerMotion = () => {
         2.X方向にドラッグできる。
         <motion.div
           className="bg-red-500 w-20 h-20 mt-2"
-          animate={{ x: 0 }}
+          animate={{ x: 100 }}
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 1.1 }}
           drag="x"
-          dragConstraints={{ left: -100, right: 100 }}
+          dragConstraints={{ left: 0, right: 200 }}
         >
           drag me
         </motion.div>
@@ -69,7 +69,7 @@ export const FramerMotion = () => {
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 1.1 }}
           drag={true}
-          dragConstraints={{ left: -100, right: 100, top: -100, bottom: 100 }}
+          dragConstraints={{ left: 0, right: 200, top: -100, bottom: 100 }}
         >
           drag me
         </motion.div>
@@ -84,7 +84,7 @@ export const FramerMotion = () => {
       <Divider className="my-4" />
       <div>
         6.タップすると広がる
-        <motion.div whileTap={{ scale: 1.5 }} transition={{ type: "spring", stiffness: 200, damping: 8 }}>
+        <motion.div className="ml-20" whileTap={{ scale: 1.5 }} transition={{ type: "spring", stiffness: 200, damping: 8 }}>
           <motion.div className="flex">
             <motion.div className="bg-white w-10 h-10 mt-2 rounded-full relative">
               <motion.div className="bg-black h-5 w-4 absolute left-2 top-1 rounded-lg"></motion.div>
