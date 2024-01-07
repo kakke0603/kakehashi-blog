@@ -13,7 +13,7 @@ const pages = [
     title: "Framer Motion",
     content: "Framer Motionのサンプル",
     publishedAt: "2024-01-06T02:00:34.925Z",
-    revisedAt: "2024-01-06T02:00:34.925Z",
+    revisedAt: "2024-01-07T05:00:34.925Z",
   },
   {
     id: "threejs",
