@@ -21,6 +21,7 @@ export default function Profile() {
           avatarProps={{ name: "K" }}
         />
       </div>
+      <GoogleAd slot={"4735525151"} />
       <pre className="mt-10">
         <code>
           {`\n  
