@@ -24,6 +24,7 @@ const GoogleAd = ({ slot, style, responsive = "true" }: GoogleAdProps) => {
   useEffect(() => {
     try {
       (window.adsbygoogle = window.adsbygoogle || []).push({});
+      console.log("adsbygoogle.push");
     } catch (err) {
       console.error(err);
     }

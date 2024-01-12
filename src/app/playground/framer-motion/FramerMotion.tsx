@@ -11,9 +11,9 @@ export const FramerMotion = () => {
 
   return (
     <div>
-      <Link isExternal href="https://www.framer.com/motion/" showAnchorIcon>
+      <a href="https://www.framer.com/motion/" target="_blank" rel="noopener noreferrer">
         Framer Motion
-      </Link>
+      </a>
       <br />
       アニメーションのライブラリ
       <div className="mt-5">

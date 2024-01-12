@@ -1,20 +1,14 @@
-import { Link, NavbarItem } from '@nextui-org/react'
-import { usePathname } from 'next/navigation'
-import React from 'react'
+import clsx from "clsx";
+import { usePathname } from "next/navigation";
+import React from "react";
 
-export default function NavLink({
-  href,
-  children,
-}: {
-  href: string
-  children: React.ReactNode
-}) {
-  const pathname = usePathname()
-  const isActive = pathname === href
+export default function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
+  const pathname = usePathname();
+  const isActive = pathname === href;
 
   return (
-    <Link href={href} color={isActive ? 'primary' : 'foreground'}>
+    <a href={href} className={clsx("text-sm", isActive ? "text-cyan-500" : "text-normal no-underline")}>
       {children}
-    </Link>
-  )
+    </a>
+  );
 }

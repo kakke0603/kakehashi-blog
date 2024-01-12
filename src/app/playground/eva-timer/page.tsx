@@ -1,6 +1,4 @@
-import { Metadata, ResolvingMetadata } from "next";
 import { EvaTimer } from "./EvaTimer";
-import GoogleAdsense from "@/components/GoogleAdsense";
 import GoogleAd from "@/components/GoogleAdsense";
 
 export const runtime = "edge";

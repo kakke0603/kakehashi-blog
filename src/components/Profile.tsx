@@ -1,5 +1,5 @@
 "use client";
-import { Link, User } from "@nextui-org/react";
+import { User } from "@nextui-org/react";
 import React from "react";
 import GoogleAd from "./GoogleAdsense";
 
@@ -13,9 +13,9 @@ export default function Profile() {
             <div>
               ふるすたっくえんじにあ(仮)
               <br />
-              <Link href="https://twitter.com/kkhs0603" size="sm" isExternal>
+              <a href="https://twitter.com/kkhs0603" target="_blank" rel="noopener noreferrer">
                 @kkhs0603
-              </Link>
+              </a>
             </div>
           }
           avatarProps={{ name: "K" }}
