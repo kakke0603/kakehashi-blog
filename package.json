@@ -17,10 +17,10 @@
     "framer-motion": "^10.17.9",
     "highlight.js": "^11.8.0",
     "html2canvas": "^1.4.1",
-    "microcms-js-sdk": "^2.6.1",
+    "microcms-js-sdk": "^2.7.0",
     "microcms-richedit-processer": "^1.2.0",
     "next": "14.0.4",
-    "next-themes": "^0.2.1",
+    "next-themes": "^0.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-timer-hook": "^3.0.7",
@@ -29,7 +29,7 @@
     "use-timer": "^2.0.1"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^1.8.1",
+    "@cloudflare/next-on-pages": "^1.8.5",
     "@cloudflare/workers-types": "^3.19.0",
     "@trivago/prettier-plugin-sort-imports": "^4.2.0",
     "@types/node": "20.5.0",

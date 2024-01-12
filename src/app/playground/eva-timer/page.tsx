@@ -1,14 +1,14 @@
-import { Metadata, ResolvingMetadata } from "next"
-import { EvaTimer } from "./EvaTimer"
-import GoogleAdsense from "@/components/GoogleAdsense"
-import GoogleAd from "@/components/GoogleAdsense"
+import { Metadata, ResolvingMetadata } from "next";
+import { EvaTimer } from "./EvaTimer";
+import GoogleAdsense from "@/components/GoogleAdsense";
+import GoogleAd from "@/components/GoogleAdsense";
 
-export const runtime = "edge"
+export const runtime = "edge";
 
 /**
  * メタデータの設定
  */
-const siteName = "eva-timer:エヴァっぽいタイマー作ってみた"
+const siteName = "eva-timer:エヴァっぽいタイマー作ってみた";
 export const metadata = {
   title: {
     default: "eva-timer:エヴァっぽいタイマー作ってみた",
@@ -30,12 +30,12 @@ export const metadata = {
   verification: {
     google: "",
   },
-}
+};
 export default async function Page() {
   return (
     <div>
       <EvaTimer />
-      <GoogleAd slot="9278854527" style={{ display: "block", height: "200px" }} />
+      <GoogleAd slot="9278854527" style={{ display: "block", height: "60px" }} responsive="false" />
     </div>
-  )
+  );
 }

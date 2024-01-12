@@ -13,10 +13,11 @@ declare global {
 
 type GoogleAdProps = {
   slot: string;
+  responsive?: string;
   style?: any;
 };
 
-const GoogleAd = ({ slot, style }: GoogleAdProps) => {
+const GoogleAd = ({ slot, style, responsive = "true" }: GoogleAdProps) => {
   let pathname = usePathname();
   pathname = pathname ? pathname : "";
 
@@ -36,7 +37,7 @@ const GoogleAd = ({ slot, style }: GoogleAdProps) => {
         data-ad-client={`ca-pub-${PUBLISHER_ID}`}
         data-ad-slot={slot}
         data-ad-format="auto"
-        data-full-width-responsive="true"
+        data-full-width-responsive={responsive}
       />
     </div>
   );
