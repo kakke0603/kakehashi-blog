@@ -5,7 +5,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { GoogleAdScript } from "@/components/googleads-script";
 import Head from "next/head";
-import { GoogleAdSense } from "nextjs-google-adsense";
 
 const inter = Noto_Sans_JP({ subsets: ["latin"], display: "swap" });
 
@@ -59,7 +58,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <div className="max-w-[1024px] mx-auto flex-grow">{children}</div>
             </main>
             <Footer />
-            <GoogleAdSense publisherId="ca-pub-1124456984547171" />
+            <GoogleAdScript />
           </div>
         </Providers>
       </body>
