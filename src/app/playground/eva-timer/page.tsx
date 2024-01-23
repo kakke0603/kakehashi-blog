@@ -33,7 +33,6 @@ export default async function Page() {
   return (
     <div>
       <EvaTimer />
-      <GoogleAd slot="9278854527" style={{ display: "block", height: "60px" }} responsive="false" />
     </div>
   );
 }
