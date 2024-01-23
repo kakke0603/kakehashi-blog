@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 
@@ -7,8 +8,8 @@ export default function NavLink({ href, children }: { href: string; children: Re
   const isActive = pathname === href;
 
   return (
-    <a href={href} className={clsx("text-sm", isActive ? "text-cyan-500" : "text-normal no-underline")}>
+    <Link href={href} className={clsx("text-sm", isActive ? "text-cyan-500" : "text-normal no-underline")}>
       {children}
-    </a>
+    </Link>
   );
 }
