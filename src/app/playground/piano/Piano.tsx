@@ -1,15 +1,14 @@
 "use client";
 import React from "react";
-import useSound from "use-sound";
-
-import pianoDo from "../piano/piano-do.mp3";
+import { RecoilRoot, atom, useRecoilState } from "recoil";
 
 export const Piano = () => {
-  const [play] = useSound(pianoDo);
+  const audioHooks = useAudio();
+
   return (
     <div>
       <div className="flex relative">
-        <button onClick={() => play()} className="w-10 h-20 bg-white border"></button>
+        <button onClick={() => audioHooks.audio.play()} className="w-10 h-20 bg-white border"></button>
         <button className="w-10 h-20 bg-white border"></button>
         <button className="w-10 h-20 bg-white border"></button>
         <button className="w-10 h-20 bg-white border"></button>
@@ -25,4 +24,14 @@ export const Piano = () => {
       </div>
     </div>
   );
+};
+
+const audioState = atom<HTMLAudioElement>({
+  key: "audio-state",
+  default: typeof window !== "undefined" ? new Audio("./piano.mp3") : undefined,
+});
+
+export const useAudio = () => {
+  const [audio, setAudio] = useRecoilState(audioState);
+  return { audio };
 };

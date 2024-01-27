@@ -5,15 +5,16 @@ import ThumEva from "./thum-eva-timer.png";
 import ThumOurGoals from "./thum-our-goals.png";
 import ThumThreeJs from "./thum-three-js.png";
 import ThumFramerMotion from "./thum-framer-motion.png";
+import ThumPiano from "./thum-piano.png";
 
 const pages = [
   {
     id: "piano",
-    image: ThumFramerMotion,
+    image: ThumPiano,
     title: "piano",
     content: "pianoのサンプル",
-    publishedAt: "2024-01-24T02:00:34.925Z",
-    revisedAt: "2024-01-24T02:00:34.925Z",
+    publishedAt: "2024-01-27T02:00:34.925Z",
+    revisedAt: "2024-01-27T02:00:34.925Z",
   },
   {
     id: "framer-motion",
