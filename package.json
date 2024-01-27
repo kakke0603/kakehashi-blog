@@ -26,6 +26,7 @@
     "react-timer-hook": "^3.0.7",
     "three": "^0.160.0",
     "twemoji": "^14.0.2",
+    "use-sound": "^4.0.1",
     "use-timer": "^2.0.1"
   },
   "devDependencies": {

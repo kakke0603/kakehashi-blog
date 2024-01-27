@@ -8,6 +8,14 @@ import ThumFramerMotion from "./thum-framer-motion.png";
 
 const pages = [
   {
+    id: "piano",
+    image: ThumFramerMotion,
+    title: "piano",
+    content: "pianoのサンプル",
+    publishedAt: "2024-01-24T02:00:34.925Z",
+    revisedAt: "2024-01-24T02:00:34.925Z",
+  },
+  {
     id: "framer-motion",
     image: ThumFramerMotion,
     title: "Framer Motion",
