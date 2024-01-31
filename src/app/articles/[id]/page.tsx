@@ -25,7 +25,7 @@ export default async function Page({ params }: { params: { id: string } }) {
   const data = await getArticle(params.id)
   return (
     <div>
-      <Article {...data} />
+      <Article {...data} key={data.id}/>
     </div>
   )
 }
