@@ -1,16 +1,16 @@
-"use client"
-import React from "react"
-import twemoji from "twemoji"
-import { DateTime } from "@/components/DateTime"
-import { Chip } from "@nextui-org/react"
-import { PencilIcon } from "@/components/Icons/PencilIcon"
-import { RefreshIcon } from "@/components/Icons/RefreshIcon"
-import { ArticleType } from "@/libs/client"
-import { Tag } from "@/components/Tag"
+"use client";
+import React from "react";
+import twemoji from "twemoji";
+import { DateTime } from "@/components/DateTime";
+import { Chip } from "@nextui-org/react";
+import { PencilIcon } from "@/components/Icons/PencilIcon";
+import { RefreshIcon } from "@/components/Icons/RefreshIcon";
+import { ArticleType } from "@/libs/client";
+import { Tag } from "@/components/Tag";
 
 export const Article: React.FC<ArticleType> = ({ id, title, content, publishedAt, revisedAt, tags }) => {
-  const tag = tags?.[0]?.emoji ?? "📝"
-  const emoji = twemoji.parse(tag)
+  const tag = tags?.[0]?.emoji ?? "📝";
+  const emoji = twemoji.parse(tag);
   return (
     <div className="mx-5 ">
       <div className="flex justify-center py-10 bg-gray-100 dark:bg-gray-700 my-5 rounded-lg flex-col items-center space-y-5">
@@ -32,11 +32,15 @@ export const Article: React.FC<ArticleType> = ({ id, title, content, publishedAt
             </div>
           </div>
           <div className="flex items-center">
-            <div className="flex gap-x-2">{tags?.map((tag) => <Tag id={tag.id} name={tag.name} key={tag.id}/>)}</div>
+            <div className="flex gap-x-2">{tags?.map((tag) => <Tag id={tag.id} name={tag.name} key={tag.id} />)}</div>
           </div>
         </div>
         <div className="dark:text-slate-200 mb-[100px]" dangerouslySetInnerHTML={{ __html: content }} />
+        <a href="https://px.a8.net/svt/ejp?a8mat=3Z0CMV+2Z6SY+5GDG+ZTNGX" rel="nofollow">
+          <img width="300" height="250" alt="" src="https://www23.a8.net/svt/bgt?aid=240201463005&wid=001&eno=01&mid=s00000025450006017000&mc=1" />
+        </a>
+        <img width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=3Z0CMV+2Z6SY+5GDG+ZTNGX" alt="" />
       </div>
     </div>
-  )
-}
+  );
+};
