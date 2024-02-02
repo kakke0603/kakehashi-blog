@@ -4,18 +4,11 @@ import React from "react";
 import { ArticleCard } from "./ArticleCard";
 
 export default async function Articles() {
-  const ids = await client.getAllContentIds({
-    endpoint: "articles",
-  });
   const data = await client
-    .getList({
+    .getAllContents({
       endpoint: "articles",
-      queries: {
-        ids: ids,
-        limit: 10,
-      },
     })
-    .then((res) => res.contents);
+    .then((res) => res);
   return (
     <div className="pt-10 px-2 space-y-10 max-w-2xl mx-auto">
       {data?.map((article: ArticleType) => {
