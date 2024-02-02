@@ -3,8 +3,6 @@ import { Noto_Sans_JP } from "next/font/google";
 import { Providers } from "./providers";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { GoogleAdScript } from "@/components/googleads-script";
-import Head from "next/head";
 
 const inter = Noto_Sans_JP({ subsets: ["latin"], display: "swap" });
 
@@ -58,7 +56,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <div className="max-w-[1024px] mx-auto flex-grow">{children}</div>
             </main>
             <Footer />
-            <GoogleAdScript />
           </div>
         </Providers>
       </body>
