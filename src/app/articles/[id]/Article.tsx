@@ -7,6 +7,7 @@ import { PencilIcon } from "@/components/Icons/PencilIcon";
 import { RefreshIcon } from "@/components/Icons/RefreshIcon";
 import { ArticleType } from "@/libs/client";
 import { Tag } from "@/components/Tag";
+import { Advertisements } from "@/components/Advertisements";
 
 export const Article: React.FC<ArticleType> = ({ id, title, content, publishedAt, revisedAt, tags }) => {
   const tag = tags?.[0]?.emoji ?? "📝";
@@ -36,10 +37,7 @@ export const Article: React.FC<ArticleType> = ({ id, title, content, publishedAt
           </div>
         </div>
         <div className="dark:text-slate-200 mb-[100px]" dangerouslySetInnerHTML={{ __html: content }} />
-        <a href="https://px.a8.net/svt/ejp?a8mat=3Z0CMV+2Z6SY+5GDG+ZTNGX" rel="nofollow">
-          <img width="300" height="250" alt="" src="https://www23.a8.net/svt/bgt?aid=240201463005&wid=001&eno=01&mid=s00000025450006017000&mc=1" />
-        </a>
-        <img width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=3Z0CMV+2Z6SY+5GDG+ZTNGX" alt="" />
+        <Advertisements />
       </div>
     </div>
   );
