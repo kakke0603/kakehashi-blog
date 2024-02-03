@@ -7,6 +7,7 @@ import ThumThreeJs from "./thum-three-js.png";
 import ThumFramerMotion from "./thum-framer-motion.png";
 import ThumPiano from "./thum-piano.png";
 import ThumAlert from "./thum-alert.png";
+import { Advertisements } from "@/components/Advertisements";
 
 const pages = [
   {
@@ -66,6 +67,7 @@ export default function page() {
           <PlaygroundCard {...page} key={page.id} />
         ))}
       </div>
+      <Advertisements />
     </div>
   );
 }
