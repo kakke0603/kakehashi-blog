@@ -1,14 +1,12 @@
-import { Metadata, ResolvingMetadata } from "next"
-import GoogleAdsense from "@/components/GoogleAdsense"
-import GoogleAd from "@/components/GoogleAdsense"
-import { OurGoals } from "./OurGoals"
+import { Metadata, ResolvingMetadata } from "next";
+import { OurGoals } from "./OurGoals";
 
-export const runtime = "edge"
+export const runtime = "edge";
 
 /**
  * メタデータの設定
  */
-const siteName = "our-goals:目標作成ツール"
+const siteName = "our-goals:目標作成ツール";
 export const metadata = {
   title: {
     default: "our-goals:目標作成ツール",
@@ -30,11 +28,11 @@ export const metadata = {
   verification: {
     google: "",
   },
-}
+};
 export default async function Page() {
   return (
     <div>
       <OurGoals />
     </div>
-  )
+  );
 }
