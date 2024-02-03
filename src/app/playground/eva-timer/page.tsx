@@ -1,5 +1,4 @@
 import { EvaTimer } from "./EvaTimer";
-import GoogleAd from "@/components/GoogleAdsense";
 
 export const runtime = "edge";
 
