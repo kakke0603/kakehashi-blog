@@ -7,9 +7,18 @@ import ThumThreeJs from "./thum-three-js.png";
 import ThumFramerMotion from "./thum-framer-motion.png";
 import ThumPiano from "./thum-piano.png";
 import ThumAlert from "./thum-alert.png";
+import ThumFaceDetect from "./thum-face-detect.png";
 import { Advertisements } from "@/components/Advertisements";
 
 const pages = [
+  {
+    id: "face-detect",
+    image: ThumFaceDetect,
+    title: "顔認証",
+    content: "カメラで顔認証",
+    publishedAt: "2024-02-05T02:00:34.925Z",
+    revisedAt: "2024-02-05T02:00:34.925Z",
+  },
   {
     id: "alert",
     image: ThumAlert,
