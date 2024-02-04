@@ -10,7 +10,7 @@ export default async function Articles() {
     })
     .then((res) => res);
   return (
-    <div className="pt-10 px-2 space-y-10 max-w-2xl mx-auto">
+    <div className="pt-10 px-2 space-y-10  mx-auto">
       {data?.map((article: ArticleType) => {
         return <ArticleCard {...article} key={article.id} />;
       })}

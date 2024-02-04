@@ -58,7 +58,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <div className="flex justify-between">
                 <div className="hidden xl:flex flex-col"></div>
                 <div className="max-w-[1024px] mx-auto flex-grow">{children}</div>
-                <div className="hidden xl:flex flex-col fixed">
+                <div className="hidden lg:flex flex-col fixed">
                   <SideAdvertisements />
                 </div>
               </div>
