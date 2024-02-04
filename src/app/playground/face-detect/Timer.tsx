@@ -37,7 +37,7 @@ export const Timer = () => {
   return (
     <div>
       {isLoading && <Spinner />}
-      <div style={{ width: 500, height: 500, position: "relative" }}>
+      <div style={{ width: "100%", height: 500, position: "relative" }}>
         {boundingBox.map((box, index) => (
           <div
             key={`${index + 1}`}
@@ -57,7 +57,7 @@ export const Timer = () => {
           forceScreenshotSourceSize
           style={{
             height: 500,
-            width: 500,
+            width: "100%",
             position: "absolute",
           }}
         />
@@ -67,7 +67,7 @@ export const Timer = () => {
       </Button>
       {Math.floor(time / 60)} : {time} */}
 
-      {detected ? <div>Face detected</div> : <div>Face not detected</div>}
+      {detected ? <div className="text-4xl text-center">Face detected</div> : <div className="text-4xl text-center">Face not detected</div>}
     </div>
   );
 };
