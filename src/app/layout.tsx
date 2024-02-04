@@ -3,6 +3,8 @@ import { Noto_Sans_JP } from "next/font/google";
 import { Providers } from "./providers";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Advertisements } from "@/components/Advertisements";
+import { SideAdvertisements } from "@/components/SideAdvertisements";
 
 const inter = Noto_Sans_JP({ subsets: ["latin"], display: "swap" });
 
@@ -53,7 +55,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="flex flex-col h-screen">
             <Navbar />
             <main>
-              <div className="max-w-[1024px] mx-auto flex-grow">{children}</div>
+              <div className="flex justify-between">
+                <div className="hidden xl:flex flex-col"></div>
+                <div className="max-w-[1024px] mx-auto flex-grow">{children}</div>
+                <div className="hidden xl:flex flex-col fixed">
+                  <SideAdvertisements />
+                </div>
+              </div>
             </main>
             <Footer />
           </div>
