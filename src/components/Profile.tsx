@@ -12,8 +12,19 @@ export default function Profile() {
             <div>
               ふるすたっくえんじにあ(仮)
               <br />
+              Twitter:
               <a href="https://twitter.com/kkhs0603" target="_blank" rel="noopener noreferrer">
                 @kkhs0603
+              </a>
+              <br />
+              GitHub:
+              <a href="https://github.com/kakke0603" target="_blank" rel="noopener noreferrer">
+                kakke0603
+              </a>
+              <br />
+              くるっぷ:
+              <a href="https://crepu.net/user/kake" target="_blank" rel="noopener noreferrer">
+                @kake
               </a>
             </div>
           }
