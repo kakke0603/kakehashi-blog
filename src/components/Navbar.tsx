@@ -3,8 +3,9 @@ import React from "react";
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from "@nextui-org/react";
 import NavLink from "./NavLink";
 import ToggleDarkModeButton from "./ToggleDarkModeButton";
+import ToggleLanguageButton from "./ToggleLanguageButton";
 
-export default function index() {
+export default function index({ params: { lang } }) {
   return (
     <Navbar shouldHideOnScroll>
       <NavbarContent className="sm:hidden" justify="start">
@@ -31,6 +32,9 @@ export default function index() {
       <NavbarContent justify="end">
         <NavbarItem>
           <ToggleDarkModeButton />
+        </NavbarItem>
+        <NavbarItem>
+          <ToggleLanguageButton params={{ lang: "ja" }} />
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>

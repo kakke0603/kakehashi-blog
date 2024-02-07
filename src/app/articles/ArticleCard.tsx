@@ -4,7 +4,6 @@ import { Card, CardBody } from "@nextui-org/react";
 import { useRouter } from "next/navigation";
 import React from "react";
 import twemoji from "twemoji";
-import { Chip } from "@nextui-org/react";
 import { PencilIcon } from "@/components/Icons/PencilIcon";
 import { RefreshIcon } from "@/components/Icons/RefreshIcon";
 import { ArticleType } from "@/libs/client";

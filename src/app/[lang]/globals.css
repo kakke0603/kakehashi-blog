@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-2xl font-semibold leading-10 mt-[60px] mb-5 tracking-wide border-b;
+  }
+  h2 {
+    @apply text-xl font-semibold mt-7 mb-2;
+  }
+  h3 {
+    @apply text-lg font-semibold;
+  }
+  h4 {
+    @apply text-sm font-semibold;
+  }
+  h5 {
+    @apply mt-12;
+  }
+  a {
+    @apply text-blue-600 underline;
+  }
+  p {
+    @apply text-base leading-7 mb-1;
+  }
+  img {
+    @apply rounded-lg w-full mb-2;
+  }
+
+  pre {
+    @apply text-sm font-mono dark:bg-gray-800 bg-slate-200 rounded p-1;
+  }
+  code {
+    @apply p-2 max-w-[88dvw] break-all inline-block overflow-scroll;
+  }
+}
