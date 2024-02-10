@@ -68,7 +68,7 @@ export const EvaTimer = () => {
           </Button>
         </div>
         <div>制作過程は以下の記事で紹介しています🥳</div>
-        <Link href={url + "articles/phth-0wg-1a"}>{url + "articles/phth-0wg-1a"}</Link>
+        <Link href={"https://kakke.site/articles/phth-0wg-1a"}>https://kakke.site/articles/phth-0wg-1a</Link>
         <div></div>
       </div>
     </div>
