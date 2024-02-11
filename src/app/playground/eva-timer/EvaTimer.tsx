@@ -1,83 +1,58 @@
-"use client"
-import clsx from "clsx"
-import React from "react"
-import { useState } from "react"
-import { Button } from "@nextui-org/react"
+"use client";
+import clsx from "clsx";
+import React from "react";
+import { useState } from "react";
+import { Button } from "@nextui-org/react";
 
-import { Input } from "@nextui-org/react"
-import { useTimer } from "use-timer"
-import { Timer } from "./components/Timer"
+import { Input } from "@nextui-org/react";
+import { useTimer } from "use-timer";
+import { Timer } from "./components/Timer";
 
-export type TimerMode = "stop" | "start" | "reset" | "racing"
+export type TimerMode = "stop" | "start" | "reset" | "racing";
 export const EvaTimer = () => {
-  const [min, setMin] = useState(0)
-  const [sec, setSec] = useState(10)
-  const [randomNum, setRandomNum] = useState(0)
+  const [min, setMin] = useState(0);
+  const [sec, setSec] = useState(10);
+  const [randomNum, setRandomNum] = useState(0);
   const { time, start, pause, reset, status } = useTimer({
     initialTime: sec + min * 60,
     timerType: "DECREMENTAL",
     endTime: 0,
     interval: 1000,
     onTimeOver: () => {
-      setRandomNum(0)
+      setRandomNum(0);
       setTimeout(() => {
-        alert("活動限界です！")
-      }, 100)
+        alert("活動限界です！");
+      }, 100);
     },
-  })
-  const [timerMode, setTimerMode] = useState<TimerMode>("stop")
+  });
+  const [timerMode, setTimerMode] = useState<TimerMode>("stop");
   const onClickTimerButton = (type: TimerMode) => {
     if (type === "start") {
-      start()
-      setTimerMode("start")
-      return
+      start();
+      setTimerMode("start");
+      return;
     } else if (type === "stop") {
-      pause()
+      pause();
     } else if (type === "reset") {
-      reset()
-      setSec(10)
-      setRandomNum(0)
+      reset();
+      setSec(10);
+      setRandomNum(0);
     } else if (type === "racing") {
-      return
+      return;
     }
-    setTimerMode("stop")
-  }
+    setTimerMode("stop");
+  };
   React.useEffect(() => {
-    if (status === "STOPPED" || status === "PAUSED") return
+    if (status === "STOPPED" || status === "PAUSED") return;
     const id = setInterval(() => {
-      setRandomNum(Math.floor(Math.random() * 100))
-    }, 10)
-    return () => clearInterval(id)
-  })
+      setRandomNum(Math.floor(Math.random() * 100));
+    }, 10);
+    return () => clearInterval(id);
+  });
   return (
     <div className="pt-10">
       <Timer time={time} randomNum={randomNum} timerMode={timerMode} onClick={onClickTimerButton} />
       <div className="pt-[30px] flex flex-col space-y-[20px]">
-        {/* <div className="flex items-center">
-          <Input
-            value={min.toString()}
-            onChange={(e) => setMin(e.target.valueAsNumber)}
-            variant="bordered"
-            size="lg"
-            type="number"
-            max={99}
-            min={0}
-            step={1}
-            label="min"
-          />
-          ：<div className="flex items-center"></div>
-          <Input
-            value={sec.toString()}
-            onChange={(e) => setSec(e.target.valueAsNumber)}
-            variant="bordered"
-            size="lg"
-            type="number"
-            max={59}
-            min={0}
-            step={1}
-            label="sec"
-          />
-        </div> */}
         <div className="flex justify-between">
           <Button onClick={() => onClickTimerButton("start")} color={status === "RUNNING" ? "primary" : "default"}>
             START
@@ -91,5 +66,5 @@ export const EvaTimer = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
