@@ -1,42 +1,42 @@
-"use client"
-import React, { useState } from "react"
-import { useTimer } from "use-timer"
-import { TimerMode } from "../EvaTimer"
-import { Line } from "./Line"
-import { TimerButton } from "./TimerButton"
-import { TimerNumber } from "./TimerNumber"
-import clsx from "clsx"
+"use client";
+import React, { useState } from "react";
+import { useTimer } from "use-timer";
+import { TimerMode } from "../EvaTimer";
+import { Line } from "./Line";
+import { TimerButton } from "./TimerButton";
+import { TimerNumber } from "./TimerNumber";
+import clsx from "clsx";
 
 type Props = {
-  time: number
-  randomNum: number
-  timerMode: TimerMode
-  onClick: (type: TimerMode) => void
-}
+  time: number;
+  randomNum: number;
+  timerMode: TimerMode;
+  onClick: (type: TimerMode) => void;
+};
 export const Timer: React.FC<Props> = ({ time, randomNum, timerMode, onClick }) => {
   const createArray = (length: number) => {
-    return new Array(length).fill(0)
-  }
-  const sec = time
-  const min = Math.floor(sec / 60)
-  const secString = ("0" + (sec - min * 60).toString()).slice(-2)
-  const minString = ("0" + min.toString()).slice(-2)
-  const secNum = Number(secString)
-  const minNum = Number(minString)
-  const secNum1 = Math.floor(secNum / 10)
-  const secNum2 = secNum - secNum1 * 10
-  const minNum1 = Math.floor(minNum / 10)
-  const minNum2 = minNum - minNum1 * 10
-  const randomNum1 = Math.floor(randomNum / 10)
-  const randomNum2 = randomNum - randomNum1 * 10
+    return new Array(length).fill(0);
+  };
+  const sec = time;
+  const min = Math.floor(sec / 60);
+  const secString = ("0" + (sec - min * 60).toString()).slice(-2);
+  const minString = ("0" + min.toString()).slice(-2);
+  const secNum = Number(secString);
+  const minNum = Number(minString);
+  const secNum1 = Math.floor(secNum / 10);
+  const secNum2 = secNum - secNum1 * 10;
+  const minNum1 = Math.floor(minNum / 10);
+  const minNum2 = minNum - minNum1 * 10;
+  const randomNum1 = Math.floor(randomNum / 10);
+  const randomNum2 = randomNum - randomNum1 * 10;
 
-  const isDanger = sec <= 5
+  const isDanger = sec <= 5;
 
   return (
-    <div>
+    <div className="flex justify-center">
       <div
         className={clsx(
-          "md:scale-150 md:my-10  bg-gradient-to-r  h-[200px] w-[370px] flex relative",
+          "md:my-10  bg-gradient-to-r  h-[200px] w-[370px] flex relative",
           isDanger ? "bg-red-600" : "from-orange-300 via-yellow-200 to-green-400"
         )}
       >
@@ -407,5 +407,5 @@ export const Timer: React.FC<Props> = ({ time, randomNum, timerMode, onClick }) 
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
