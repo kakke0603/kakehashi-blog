@@ -11,7 +11,7 @@ export default function Profile() {
           name="かっけ"
           description={
             <div>
-              ふるすたっくえんじにあ(仮)
+              ふるすたっくえんじにあ
               <br />
               Twitter:
               <a href="https://twitter.com/kkhs0603" target="_blank" rel="noopener noreferrer">
