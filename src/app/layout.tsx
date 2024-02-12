@@ -1,10 +1,11 @@
 import "./globals.css";
 import { Noto_Sans_JP } from "next/font/google";
 import { Providers } from "./providers";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import { Advertisements } from "@/components/Advertisements";
-import { SideAdvertisements } from "@/components/SideAdvertisements";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import { Advertisements } from "../components/Advertisements";
+import { SideAdvertisements } from "../components/SideAdvertisements";
+import React from "react";
 
 const inter = Noto_Sans_JP({ subsets: ["latin"], display: "swap" });
 

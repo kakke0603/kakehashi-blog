@@ -1,5 +1,5 @@
 "use client";
-import { useLang } from "@/hooks/useLang";
+import { useLang } from "../hooks/useLang";
 import React from "react";
 
 export default function Footer() {
