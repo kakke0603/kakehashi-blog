@@ -4,7 +4,7 @@ import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, NavbarMen
 import NavLink from "./NavLink";
 import ToggleDarkModeButton from "./ToggleDarkModeButton";
 import ToggleLanguageButton from "./ToggleLanguageButton";
-import { useLang } from "@/hooks/useLang";
+import { useLang } from "../hooks/useLang";
 
 export default function index() {
   const { isJapanese } = useLang();

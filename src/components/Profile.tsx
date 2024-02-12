@@ -2,7 +2,7 @@
 import { User } from "@nextui-org/react";
 import React from "react";
 import { WideAdvertisements } from "./WideAdvertisements";
-import { useLang } from "@/hooks/useLang";
+import { useLang } from "../hooks/useLang";
 
 export default function Profile() {
   const { isJapanese } = useLang();
