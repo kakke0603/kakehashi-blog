@@ -8,14 +8,11 @@ import { Input } from "@nextui-org/react";
 import { useTimer } from "use-timer";
 import { Timer } from "./components/Timer";
 
-import { useUrl } from "@/hooks/useUrl";
-
 export type TimerMode = "stop" | "start" | "reset" | "racing";
 export const EvaTimer = () => {
   const [min, setMin] = useState(0);
   const [sec, setSec] = useState(10);
   const [randomNum, setRandomNum] = useState(0);
-  const { url } = useUrl();
   const { time, start, pause, reset, status } = useTimer({
     initialTime: sec + min * 60,
     timerType: "DECREMENTAL",
