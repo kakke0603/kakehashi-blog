@@ -1,28 +1,11 @@
-let locales = ["en", "ja"];
-
-// Get the preferred locale, similar to the above or using a library
-function getLocale(request) {}
+import { i18nRouter } from "next-i18n-router";
+import i18nConfig from "./i18nConfig";
 
 export function middleware(request) {
-  // Check if there is any supported locale in the pathname
-  const { pathname } = request.nextUrl;
-  const pathnameHasLocale = locales.some((locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`);
-
-  if (pathnameHasLocale) return;
-
-  // Redirect if there is no locale
-  const locale = getLocale(request);
-  request.nextUrl.pathname = `/${locale}${pathname}`;
-  // e.g. incoming request is /products
-  // The new URL is now /en-US/products
-  return Response.redirect(request.nextUrl);
+  return i18nRouter(request, i18nConfig);
 }
 
+// only applies this middleware to files in the app directory
 export const config = {
-  matcher: [
-    // Skip all internal paths (_next)
-    "/((?!_next).*)",
-    // Optional: only run on root (/) URL
-    // '/'
-  ],
+  matcher: "/((?!api|static|.*\\..*|_next).*)",
 };

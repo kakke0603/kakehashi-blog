@@ -1,14 +1,8 @@
 import { Home } from "../Home";
-import { getDictionary } from "../dictionaries";
 
 export const runtime = "edge";
 
-export async function generateStaticParams() {
-  return [{ lang: "en" }, { lang: "ja" }];
-}
-export default async function Page({ params: { lang } }) {
-  const dict = await getDictionary(lang);
-  console.log(dict);
+export default async function Page() {
   return (
     <main className="flex flex-col items-center justify-between">
       <Home />

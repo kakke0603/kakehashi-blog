@@ -42,7 +42,7 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children, params }: { children: React.ReactNode; params: any }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ja" className={inter.className}>
       <meta property="og:image" content="<generated>" />
@@ -50,15 +50,19 @@ export default function RootLayout({ children, params }: { children: React.React
       <meta property="og:image:width" content="<generated>" />
       <meta property="og:image:height" content="<generated>" />
       <meta name="google-adsense-account" content="ca-pub-1124456984547171"></meta>
-      <body>
+      <body id="output">
         <Providers>
           <div className="flex flex-col h-screen">
-            <Navbar params={params} />
+            <Navbar />
             <main>
               <div className="flex justify-between">
-                <div className="hidden xl:flex flex-col"></div>
+                <div className="hidden xl:flex flex-col">
+                  <Advertisements />
+                </div>
                 <div className="max-w-[1024px] mx-auto flex-grow">{children}</div>
-                <div className="hidden lg:flex flex-col fixed">{/* <SideAdvertisements /> */}</div>
+                <div className="hidden lg:flex flex-col fixed">
+                  <SideAdvertisements />
+                </div>
               </div>
             </main>
             <Footer />
