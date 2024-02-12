@@ -1,5 +1,4 @@
 export const runtime = "edge";
-import styles from "./index.module.css";
 import React from "react";
 
 export default async function Page() {

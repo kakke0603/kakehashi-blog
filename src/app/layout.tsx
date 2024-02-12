@@ -50,13 +50,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <meta property="og:image:width" content="<generated>" />
       <meta property="og:image:height" content="<generated>" />
       <meta name="google-adsense-account" content="ca-pub-1124456984547171"></meta>
-      <body>
+      <body id="output">
         <Providers>
           <div className="flex flex-col h-screen">
             <Navbar />
             <main>
               <div className="flex justify-between">
-                <div className="hidden xl:flex flex-col"></div>
+                <div className="hidden xl:flex flex-col">
+                  <Advertisements />
+                </div>
                 <div className="max-w-[1024px] mx-auto flex-grow">{children}</div>
                 <div className="hidden lg:flex flex-col fixed">
                   <SideAdvertisements />
