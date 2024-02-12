@@ -4,8 +4,10 @@ import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, NavbarMen
 import NavLink from "./NavLink";
 import ToggleDarkModeButton from "./ToggleDarkModeButton";
 import ToggleLanguageButton from "./ToggleLanguageButton";
+import { useLang } from "../hooks/useLang";
 
-export default function index({ params: { lang } }) {
+export default function index() {
+  const { isJapanese } = useLang();
   return (
     <Navbar shouldHideOnScroll>
       <NavbarContent className="sm:hidden" justify="start">
@@ -20,7 +22,7 @@ export default function index({ params: { lang } }) {
       </NavbarContent>
       <NavbarContent className="hidden sm:flex gap-4">
         <NavbarItem>
-          <NavLink href="/about">About</NavLink>
+          <NavLink href={isJapanese ? "about" : "en/about"}>About</NavLink>
         </NavbarItem>
         <NavbarItem>
           <NavLink href="/articles">Articles</NavLink>

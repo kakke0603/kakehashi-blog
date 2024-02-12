@@ -2,7 +2,7 @@
 import clsx from "clsx";
 import React from "react";
 import { useState } from "react";
-import { Button } from "@nextui-org/react";
+import { Button, Link } from "@nextui-org/react";
 
 import { Input } from "@nextui-org/react";
 import { useTimer } from "use-timer";
@@ -64,6 +64,9 @@ export const EvaTimer = () => {
             RESET
           </Button>
         </div>
+        <div>制作過程は以下の記事で紹介しています🥳</div>
+        <Link href={"https://kakke.site/articles/phth-0wg-1a"}>https://kakke.site/articles/phth-0wg-1a</Link>
+        <div></div>
       </div>
     </div>
   );

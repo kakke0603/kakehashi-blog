@@ -2,16 +2,18 @@
 import { User } from "@nextui-org/react";
 import React from "react";
 import { WideAdvertisements } from "./WideAdvertisements";
+import { useLang } from "../hooks/useLang";
 
 export default function Profile() {
+  const { isJapanese } = useLang();
   return (
     <div>
       <div className="mt-5 flex justify-center">
         <User
-          name="かっけ"
+          name={isJapanese ? "かっけ" : "Kakke"}
           description={
             <div>
-              ふるすたっくえんじにあ(仮)
+              ふるすたっくえんじにあ
               <br />
               Twitter:
               <a href="https://twitter.com/kkhs0603" target="_blank" rel="noopener noreferrer">
