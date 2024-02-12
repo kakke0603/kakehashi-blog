@@ -13,7 +13,7 @@ export default function Profile() {
           name={isJapanese ? "かっけ" : "Kakke"}
           description={
             <div>
-              ふるすたっくえんじにあ
+              {isJapanese ? "ふるすたっくえんじにあ" : "Full stack engineer"}
               <br />
               Twitter:
               <a href="https://twitter.com/kkhs0603" target="_blank" rel="noopener noreferrer">
@@ -25,7 +25,7 @@ export default function Profile() {
                 kakke0603
               </a>
               <br />
-              くるっぷ:
+              {isJapanese ? "くるっぷ" : "crepu"}
               <a href="https://crepu.net/user/kake" target="_blank" rel="noopener noreferrer">
                 @kake
               </a>
@@ -34,9 +34,16 @@ export default function Profile() {
           avatarProps={{ name: "K" }}
         />
       </div>
-      <pre className="mt-10">
-        <code>
-          {`\n  
+      <pre className="mt-10">{isJapanese ? codeJp() : codeEn()}</pre>
+      <WideAdvertisements />
+    </div>
+  );
+}
+
+const codeJp = () => {
+  return (
+    <code>
+      {`\n  
   { \n
     Name: "かっけ", \n
     Age: 31, \n
@@ -47,49 +54,104 @@ export default function Profile() {
       Movie: ["Marvel", "Star Wars"], \n
       Technology: ["React", "TypeScript", "javaScript", "AWS", "Laravel", "PHP"], \n
       YouTube: ["`}
-          <a href="https://www.youtube.com/@TokaiOnAir" target="_blank" rel="noopener noreferrer">
-            東海オンエア
-          </a>
-          (
-          {
-            <a href="https://www.youtube.com/@mushimeganeradio" target="_blank" rel="noopener noreferrer">
-              虫眼鏡さん
-            </a>
-          }
-          推し)", "
-          {
-            <a href="https://www.youtube.com/@tokumei_radio" target="_blank" rel="noopener noreferrer">
-              匿名ラジオ
-            </a>
-          }
-          ", "
-          {
-            <a href="https://www.youtube.com/@itabasihausu" target="_blank" rel="noopener noreferrer">
-              板橋ハウス
-            </a>
-          }
-          ", "
-          {
-            <a href="https://www.youtube.com/@nekoten_zzz" target="_blank" rel="noopener noreferrer">
-              ねこてん
-            </a>
-          }
-          ", "
-          {
-            <a href="https://www.youtube.com/@omocorochannel" target="_blank" rel="noopener noreferrer">
-              オモコロチャンネル
-            </a>
-          }
-          {`"], \n
+      <a href="https://www.youtube.com/@TokaiOnAir" target="_blank" rel="noopener noreferrer">
+        東海オンエア
+      </a>
+      (
+      {
+        <a href="https://www.youtube.com/@mushimeganeradio" target="_blank" rel="noopener noreferrer">
+          虫眼鏡さん
+        </a>
+      }
+      推し)", "
+      {
+        <a href="https://www.youtube.com/@tokumei_radio" target="_blank" rel="noopener noreferrer">
+          匿名ラジオ
+        </a>
+      }
+      ", "
+      {
+        <a href="https://www.youtube.com/@itabasihausu" target="_blank" rel="noopener noreferrer">
+          板橋ハウス
+        </a>
+      }
+      ", "
+      {
+        <a href="https://www.youtube.com/@nekoten_zzz" target="_blank" rel="noopener noreferrer">
+          ねこてん
+        </a>
+      }
+      ", "
+      {
+        <a href="https://www.youtube.com/@omocorochannel" target="_blank" rel="noopener noreferrer">
+          オモコロチャンネル
+        </a>
+      }
+      {`"], \n
       Food: ["麺類全般", "程よく辛いもの", "明太子"], \n
       Other: ["京都巡り", "カフェ巡り", "旅行"] \n
     } \n
   } \n
   
   `}
-        </code>
-      </pre>
-      <WideAdvertisements />
-    </div>
+    </code>
   );
-}
+};
+
+const codeEn = () => {
+  return (
+    <code>
+      {`\n  
+  { \n
+    Name: "kakke", \n
+    Age: 31, \n
+    Like: { \n
+      Music: ["back number", "Perfume", "saucy dog", "Creepy Nuts", "ATARASHII GAKKO!"], \n
+      Game: ["monster hunter"], \n
+      Anime: ["Neon Genesis Evangelion", "My Hero Academia", "Jujutsu Kaisen"], \n
+      Movie: ["Marvel", "Star Wars"], \n
+      Technology: ["React", "TypeScript", "javaScript", "AWS", "Laravel", "PHP"], \n
+      YouTube: ["`}
+      <a href="https://www.youtube.com/@TokaiOnAir" target="_blank" rel="noopener noreferrer">
+        TokaiOnAir
+      </a>
+      (
+      {
+        <a href="https://www.youtube.com/@mushimeganeradio" target="_blank" rel="noopener noreferrer">
+          Mushimegane-san
+        </a>
+      }
+      fan of )", "
+      {
+        <a href="https://www.youtube.com/@tokumei_radio" target="_blank" rel="noopener noreferrer">
+          tokumei_radio
+        </a>
+      }
+      ", "
+      {
+        <a href="https://www.youtube.com/@itabasihausu" target="_blank" rel="noopener noreferrer">
+          itabasihausu
+        </a>
+      }
+      ", "
+      {
+        <a href="https://www.youtube.com/@nekoten_zzz" target="_blank" rel="noopener noreferrer">
+          nekoten
+        </a>
+      }
+      ", "
+      {
+        <a href="https://www.youtube.com/@omocorochannel" target="_blank" rel="noopener noreferrer">
+          omocorochannel
+        </a>
+      }
+      {`"], \n
+      Food: ["Noodles in general", "moderately spicy food", "walleye pollack roe"], \n
+      Other: ["tour of Kyoto", "cafe crawl", "travel"] \n
+    } \n
+  } \n
+  
+  `}
+    </code>
+  );
+};

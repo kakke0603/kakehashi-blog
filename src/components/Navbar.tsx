@@ -36,7 +36,7 @@ export default function index() {
           <ToggleDarkModeButton />
         </NavbarItem>
         <NavbarItem>
-          <ToggleLanguageButton params={{ lang: "ja" }} />
+          <ToggleLanguageButton />
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
