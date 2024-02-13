@@ -10,7 +10,7 @@ import { ArticleType } from "../../../libs/client";
 import { Tag } from "../../../components/Tag";
 import { useLang } from "../../../hooks/useLang";
 
-export const ArticleCard: React.FC<ArticleType> = ({ id, title, content, publishedAt, revisedAt, tags }) => {
+export const ArticleCard: React.FC<ArticleType> = ({ id, title, content, publishedAt, revisedAt, tags, title_en, content_en }) => {
   const router = useRouter();
   const handleClick = () => router.push(`/articles/${id}`);
   const tag = tags?.[0]?.emoji ?? "📝";
@@ -24,8 +24,8 @@ export const ArticleCard: React.FC<ArticleType> = ({ id, title, content, publish
             <div dangerouslySetInnerHTML={{ __html: emoji }}></div>
           </div>
           <div className="space-y-4 flex-1">
-            <h4 className="font-bold text-large block">{title}</h4>
-            <HtmlStringToText htmlString={content.slice(0, 180)} />
+            <h4 className="font-bold text-large block">{isJapanese ? title : title_en}</h4>
+            <HtmlStringToText htmlString={isJapanese ? content.slice(0, 180) : content_en.slice(0, 180)} />
             <div className="flex gap-x-2 overflow-scroll">{tags?.map((tag) => <Tag id={tag.id} name={tag.name} key={tag.id} />)}</div>
           </div>
         </div>
