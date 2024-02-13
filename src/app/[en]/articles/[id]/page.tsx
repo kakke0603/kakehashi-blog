@@ -1,8 +1,9 @@
 export const runtime = "edge";
-import { getAllArticles, getArticle } from "@/libs/client";
+import { getAllArticles, getArticle } from "../../../../libs/client";
 import { Article } from "./Article";
 import { Metadata, ResolvingMetadata } from "next";
-import { Advertisements } from "@/components/Advertisements";
+import { Advertisements } from "../../../../components/Advertisements";
+import React from "react";
 
 /**
  * メタデータの設定
@@ -27,6 +28,7 @@ export default async function Page({ params }: { params: { id: string } }) {
   return (
     <div>
       <Article {...data} key={data.id} />
+      <Advertisements />
     </div>
   );
 }
