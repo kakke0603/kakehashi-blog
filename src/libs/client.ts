@@ -30,11 +30,11 @@ export const getArticle = async (id: string) => {
 
 export type ArticleType = {
   id: string;
-  title: string;
-  content: string;
+  title?: string;
+  content?: string;
   publishedAt: string;
   revisedAt: string;
   tags: Array<{ id: string; name: string; emoji: string }>;
-  title_en: string;
-  content_en: string;
+  title_en?: string;
+  content_en?: string;
 };
