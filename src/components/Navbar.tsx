@@ -3,8 +3,10 @@ import React from "react";
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from "@nextui-org/react";
 import ToggleDarkModeButton from "./ToggleDarkModeButton";
 import ToggleLanguageButton from "./ToggleLanguageButton";
+import { usePathname } from "next/navigation";
 
 export default function index() {
+  const pathname = usePathname();
   return (
     <Navbar shouldHideOnScroll>
       <NavbarContent className="sm:hidden" justify="start">
@@ -19,17 +21,17 @@ export default function index() {
       </NavbarContent>
       <NavbarContent className="hidden sm:flex gap-4">
         <NavbarItem>
-          <Link href="/about" isDisabled={window.location.href.includes("about")}>
+          <Link href="/about" isDisabled={pathname.includes("about")}>
             About
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="/articles" isDisabled={window.location.href.includes("articles")}>
+          <Link href="/articles" isDisabled={pathname.includes("articles")}>
             Articles
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="/playground" isDisabled={window.location.href.includes("playground")}>
+          <Link href="/playground" isDisabled={pathname.includes("playground")}>
             Playground
           </Link>
         </NavbarItem>
@@ -44,17 +46,17 @@ export default function index() {
       </NavbarContent>
       <NavbarMenu>
         <NavbarMenuItem>
-          <Link href="/about" isDisabled={window.location.href.includes("about")}>
+          <Link href="/about" isDisabled={pathname.includes("about")}>
             About
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link href="/articles" isDisabled={window.location.href.includes("articles")}>
+          <Link href="/articles" isDisabled={pathname.includes("articles")}>
             Articles
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link href="/playground" isDisabled={window.location.href.includes("playground")}>
+          <Link href="/playground" isDisabled={pathname.includes("playground")}>
             Playground
           </Link>
         </NavbarMenuItem>
