@@ -7,7 +7,7 @@ export default function ToggleLanguageButton() {
   const pathname = usePathname();
   const { isJapanese } = useLang();
   const router = useRouter();
-  const url = isJapanese ? pathname.replace("/", "/en/") : pathname.replace("/en/", "/");
+  const url = isJapanese ? pathname.replace("/", "/en") : pathname.replace("/en", "/");
   return (
     <div>
       {isJapanese ? (
