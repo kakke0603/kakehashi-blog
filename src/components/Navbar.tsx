@@ -1,13 +1,10 @@
 "use client";
 import React from "react";
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from "@nextui-org/react";
-import NavLink from "./NavLink";
 import ToggleDarkModeButton from "./ToggleDarkModeButton";
 import ToggleLanguageButton from "./ToggleLanguageButton";
-import { useLang } from "../hooks/useLang";
 
 export default function index() {
-  const { isJapanese } = useLang();
   return (
     <Navbar shouldHideOnScroll>
       <NavbarContent className="sm:hidden" justify="start">
@@ -22,13 +19,19 @@ export default function index() {
       </NavbarContent>
       <NavbarContent className="hidden sm:flex gap-4">
         <NavbarItem>
-          <NavLink href={isJapanese ? "about" : "en/about"}>About</NavLink>
+          <Link href="/about" isDisabled={window.location.href.includes("about")}>
+            About
+          </Link>
         </NavbarItem>
         <NavbarItem>
-          <NavLink href="/articles">Articles</NavLink>
+          <Link href="/articles" isDisabled={window.location.href.includes("articles")}>
+            Articles
+          </Link>
         </NavbarItem>
         <NavbarItem>
-          <NavLink href="/playground">Playground</NavLink>
+          <Link href="/playground" isDisabled={window.location.href.includes("playground")}>
+            Playground
+          </Link>
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
@@ -41,13 +44,19 @@ export default function index() {
       </NavbarContent>
       <NavbarMenu>
         <NavbarMenuItem>
-          <NavLink href="/about">About</NavLink>
+          <Link href="/about" isDisabled={window.location.href.includes("about")}>
+            About
+          </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <NavLink href="/articles">Articles</NavLink>
+          <Link href="/articles" isDisabled={window.location.href.includes("articles")}>
+            Articles
+          </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <NavLink href="/playground">Playground</NavLink>
+          <Link href="/playground" isDisabled={window.location.href.includes("playground")}>
+            Playground
+          </Link>
         </NavbarMenuItem>
       </NavbarMenu>
     </Navbar>
