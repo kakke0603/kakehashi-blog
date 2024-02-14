@@ -52,7 +52,7 @@ const codeJp = () => {
       Game: ["モンスターハンター"], \n
       Anime: ["新世紀エヴァンゲリオン", "僕のヒーローアカデミア", "呪術廻戦"], \n
       Movie: ["Marvel", "Star Wars"], \n
-      Technology: ["React", "TypeScript", "javaScript", "AWS", "Laravel", "PHP"], \n
+      Technology: ["Next.js", "React", "TypeScript", "javaScript", "AWS", "Laravel", "PHP"], \n
       YouTube: ["`}
       <a href="https://www.youtube.com/@TokaiOnAir" target="_blank" rel="noopener noreferrer">
         東海オンエア
@@ -110,7 +110,7 @@ const codeEn = () => {
       Game: ["monster hunter"], \n
       Anime: ["Neon Genesis Evangelion", "My Hero Academia", "Jujutsu Kaisen"], \n
       Movie: ["Marvel", "Star Wars"], \n
-      Technology: ["React", "TypeScript", "javaScript", "AWS", "Laravel", "PHP"], \n
+      Technology: ["Next.js", "React", "TypeScript", "javaScript", "AWS", "Laravel", "PHP"], \n
       YouTube: ["`}
       <a href="https://www.youtube.com/@TokaiOnAir" target="_blank" rel="noopener noreferrer">
         TokaiOnAir
