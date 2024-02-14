@@ -1,13 +1,12 @@
 "use client";
 import React from "react";
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from "@nextui-org/react";
-import NavLink from "./NavLink";
 import ToggleDarkModeButton from "./ToggleDarkModeButton";
 import ToggleLanguageButton from "./ToggleLanguageButton";
-import { useLang } from "../hooks/useLang";
+import { usePathname } from "next/navigation";
 
 export default function index() {
-  const { isJapanese } = useLang();
+  const pathname = usePathname();
   return (
     <Navbar shouldHideOnScroll>
       <NavbarContent className="sm:hidden" justify="start">
@@ -22,13 +21,19 @@ export default function index() {
       </NavbarContent>
       <NavbarContent className="hidden sm:flex gap-4">
         <NavbarItem>
-          <NavLink href={isJapanese ? "about" : "en/about"}>About</NavLink>
+          <Link href="/about" isDisabled={pathname.includes("about")}>
+            About
+          </Link>
         </NavbarItem>
         <NavbarItem>
-          <NavLink href="/articles">Articles</NavLink>
+          <Link href="/articles" isDisabled={pathname.includes("articles")}>
+            Articles
+          </Link>
         </NavbarItem>
         <NavbarItem>
-          <NavLink href="/playground">Playground</NavLink>
+          <Link href="/playground" isDisabled={pathname.includes("playground")}>
+            Playground
+          </Link>
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
@@ -36,18 +41,24 @@ export default function index() {
           <ToggleDarkModeButton />
         </NavbarItem>
         <NavbarItem>
-          <ToggleLanguageButton params={{ lang: "ja" }} />
+          <ToggleLanguageButton />
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
         <NavbarMenuItem>
-          <NavLink href="/about">About</NavLink>
+          <Link href="/about" isDisabled={pathname.includes("about")}>
+            About
+          </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <NavLink href="/articles">Articles</NavLink>
+          <Link href="/articles" isDisabled={pathname.includes("articles")}>
+            Articles
+          </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <NavLink href="/playground">Playground</NavLink>
+          <Link href="/playground" isDisabled={pathname.includes("playground")}>
+            Playground
+          </Link>
         </NavbarMenuItem>
       </NavbarMenu>
     </Navbar>
