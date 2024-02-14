@@ -34,7 +34,7 @@ export type ArticleType = {
   content?: string;
   publishedAt: string;
   revisedAt: string;
-  tags: Array<{ id: string; name: string; emoji: string }>;
+  tags: Array<{ id: string; name: string; emoji: string; name_en: string }>;
   title_en?: string;
   content_en?: string;
 };
