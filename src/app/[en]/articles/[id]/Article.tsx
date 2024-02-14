@@ -35,7 +35,7 @@ export const Article: React.FC<ArticleType> = ({ id, title, content, publishedAt
             </div>
           </div>
           <div className="flex items-center">
-            <div className="flex gap-x-2">{tags?.map((tag) => <Tag id={tag.id} name={tag.name} key={tag.id} />)}</div>
+            <div className="flex gap-x-2">{tags?.map((tag) => <Tag id={tag.id} name={isJapanese ? tag.name : tag.name_en} key={tag.id} />)}</div>
           </div>
         </div>
         <div className="dark:text-slate-200 mb-[100px]" dangerouslySetInnerHTML={{ __html: isJapanese ? content : content_en }} />
