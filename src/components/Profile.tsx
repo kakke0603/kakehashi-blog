@@ -48,10 +48,10 @@ const codeJp = () => {
     Name: "かっけ", \n
     Age: 31, \n
     Like: { \n
-      Music: ["back number", "Perfume", "saucy dog", "Creepy Nuts", "新しい学校のリーダーズ"], \n
-      Game: ["モンスターハンター"], \n
+      Music: ["back number", "Perfume", "saucy dog", "Creepy Nuts", "新しい学校のリーダーズ", "King Gnu"], \n
+      Game: ["モンスターハンター", "アーマードコア", "エルデンリング"], \n
       Anime: ["新世紀エヴァンゲリオン", "僕のヒーローアカデミア", "呪術廻戦"], \n
-      Movie: ["Marvel", "Star Wars"], \n
+      Movie: ["Marvel", "Star Wars", "ラ・ラ・ランド"], \n
       Technology: ["Next.js", "React", "TypeScript", "javaScript", "AWS", "Laravel", "PHP"], \n
       YouTube: ["`}
       <a href="https://www.youtube.com/@TokaiOnAir" target="_blank" rel="noopener noreferrer">
@@ -106,22 +106,22 @@ const codeEn = () => {
     Name: "kakke", \n
     Age: 31, \n
     Like: { \n
-      Music: ["back number", "Perfume", "saucy dog", "Creepy Nuts", "ATARASHII GAKKO!"], \n
-      Game: ["monster hunter"], \n
+      Music: ["back number", "Perfume", "saucy dog", "Creepy Nuts", "ATARASHII GAKKO!", "King Gnu"], \n
+      Game: ["monster hunter", "ARMORED CORE", "Elden Ling"], \n
       Anime: ["Neon Genesis Evangelion", "My Hero Academia", "Jujutsu Kaisen"], \n
-      Movie: ["Marvel", "Star Wars"], \n
+      Movie: ["Marvel", "Star Wars", "La La Land"], \n
       Technology: ["Next.js", "React", "TypeScript", "javaScript", "AWS", "Laravel", "PHP"], \n
       YouTube: ["`}
       <a href="https://www.youtube.com/@TokaiOnAir" target="_blank" rel="noopener noreferrer">
         TokaiOnAir
       </a>
-      (
+      ({"fan of "}
       {
         <a href="https://www.youtube.com/@mushimeganeradio" target="_blank" rel="noopener noreferrer">
           Mushimegane-san
         </a>
       }
-      fan of )", "
+      )", "
       {
         <a href="https://www.youtube.com/@tokumei_radio" target="_blank" rel="noopener noreferrer">
           tokumei_radio
