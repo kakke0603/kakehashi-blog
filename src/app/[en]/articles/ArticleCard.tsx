@@ -2,7 +2,7 @@
 import { DateTime } from "../../../components/DateTime";
 import { Card, CardBody } from "@nextui-org/react";
 import { useRouter } from "next/navigation";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import twemoji from "twemoji";
 import { PencilIcon } from "../../../components/Icons/PencilIcon";
 import { RefreshIcon } from "../../../components/Icons/RefreshIcon";
@@ -58,9 +58,14 @@ export const ArticleCard: React.FC<ArticleType> = ({
 };
 
 function HtmlStringToText({ htmlString }: { htmlString: string }) {
+  const [text, setText] = useState("");
   // ダミーのdiv要素を作成してinnerHTMLを設定し、テキストを取得します。
-  const dummyDiv = document.createElement("div");
-  dummyDiv.innerHTML = htmlString;
-  const text = dummyDiv.textContent || dummyDiv.innerText;
+  useEffect(() => {
+    const { document } = window;
+    const dummyDiv = document.createElement("div");
+    dummyDiv.innerHTML = htmlString;
+    const text = dummyDiv.textContent || dummyDiv.innerText;
+    setText(text);
+  }, []);
   return <div className="block text-sm text-default-500 line-clamp-3 h-[40px] break-all">{text}</div>;
 }
