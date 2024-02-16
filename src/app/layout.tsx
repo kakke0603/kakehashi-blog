@@ -60,12 +60,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <div className="lg:flex flex-col fixed">
                   <SideAdvertisements />
                 </div>
-                <div className="max-w-[1024px] mx-auto flex-grow">
-                  <>
-                    {children}
-                    <Advertisements />
-                  </>
-                </div>
+                <div className="max-w-[1024px] mx-auto flex-grow">{children}</div>
                 <div className="hidden xl:flex flex-col"></div>
               </div>
             </main>
