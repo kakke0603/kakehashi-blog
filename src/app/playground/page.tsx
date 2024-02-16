@@ -13,6 +13,14 @@ import { useLang } from "../../hooks/useLang";
 
 const pages = [
   {
+    id: "evangelion-mark01",
+    image: ThumFaceDetect,
+    title: "evangelion-mark01",
+    content: "tailwindでエヴァンゲリオン作ってみた",
+    publishedAt: "2024-02-11T02:00:34.925Z",
+    revisedAt: "2024-02-11T02:00:34.925Z",
+  },
+  {
     id: "face-detect",
     image: ThumFaceDetect,
     title: "顔認証",
