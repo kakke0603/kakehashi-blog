@@ -57,13 +57,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Navbar />
             <main>
               <div className="flex justify-between">
-                <div className="hidden xl:flex flex-col">
-                  <Advertisements />
-                </div>
-                <div className="max-w-[1024px] mx-auto flex-grow">{children}</div>
-                <div className="hidden lg:flex flex-col fixed">
+                <div className="lg:flex flex-col fixed">
                   <SideAdvertisements />
                 </div>
+                <div className="max-w-[1024px] mx-auto flex-grow">
+                  <>
+                    {children}
+                    <Advertisements />
+                  </>
+                </div>
+                <div className="hidden xl:flex flex-col"></div>
               </div>
             </main>
             <Footer />
