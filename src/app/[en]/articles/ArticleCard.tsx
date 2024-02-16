@@ -59,7 +59,7 @@ export const ArticleCard: React.FC<ArticleType> = ({
 
 function HtmlStringToText({ htmlString }: { htmlString: string }) {
   // ダミーのdiv要素を作成してinnerHTMLを設定し、テキストを取得します。
-  const dummyDiv = document.createElement("div");
+  const dummyDiv = window.document.createElement("div");
   dummyDiv.innerHTML = htmlString;
   const text = dummyDiv.textContent || dummyDiv.innerText;
   return <div className="block text-sm text-default-500 line-clamp-3 h-[40px] break-all">{text}</div>;
