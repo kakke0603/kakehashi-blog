@@ -15,7 +15,7 @@ export default function Profile() {
             <div>
               {isJapanese ? "ふるすたっくえんじにあ" : "Full stack engineer"}
               <br />
-              Twitter:
+              X:
               <a href="https://twitter.com/kkhs0603" target="_blank" rel="noopener noreferrer">
                 @kkhs0603
               </a>
@@ -31,7 +31,7 @@ export default function Profile() {
               </a>
             </div>
           }
-          avatarProps={{ name: "K" }}
+          avatarProps={{ src: "/profile.jpg", size: "lg" }}
         />
       </div>
       <pre className="mt-10">{isJapanese ? codeJp() : codeEn()}</pre>
