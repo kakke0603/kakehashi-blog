@@ -34,10 +34,12 @@ export default function Profile() {
           avatarProps={{ src: "/profile.jpg", size: "lg" }}
         />
       </div>
+      <h1>{isJapanese ? "経歴" : "career"}</h1>
       <div className="p-5">
         <TimelineComponent />
       </div>
       <WideAdvertisements />
+      <h1>{isJapanese ? "自己紹介" : "self-introduction"}</h1>
       <pre className="mt-10">{isJapanese ? codeJp() : codeEn()}</pre>
       <WideAdvertisements />
     </div>
