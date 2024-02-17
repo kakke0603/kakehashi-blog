@@ -239,11 +239,15 @@ const TimelineComponent = () => {
                 SNSの開発。React,Laravelなどで開発中。AWSを使用したインフラ構築も行っています。
                 <br />
                 フロントがめっちゃ得意です。楽しく開発させてもらってます！
+                <br />
+                AWS Certified Cloud Practitionerの取得。
               </>
             ) : (
               <>
                 Developing SNS, using React, Laravel, etc. Also building infrastructure using AWS.
                 <br />I am very good at front-end development. I am very good at front-end development. I enjoy developing!
+                <br />
+                AWS Certified Cloud Practitioner.
               </>
             )}
           </p>
