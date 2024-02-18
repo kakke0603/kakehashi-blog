@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import { Advertisements } from "../components/Advertisements";
 import { SideAdvertisements } from "../components/SideAdvertisements";
 import React from "react";
+import { HorizontalAdvertisements } from "@/components/HorizontalAdvertisements";
 
 const inter = Noto_Sans_JP({ subsets: ["latin"], display: "swap" });
 
@@ -58,10 +59,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <main>
               <div className="flex justify-between">
                 <div className="hidden lg:flex flex-col fixed">
-                  <SideAdvertisements />
+                  <div>
+                    <SideAdvertisements />
+                  </div>
                 </div>
                 <div className="max-w-[1024px] mx-auto flex-grow">{children}</div>
-                <div className="hidden xl:flex flex-col"></div>
+                <div className="hidden xl:flex flex-col fixed right-0">
+                  <HorizontalAdvertisements />
+                </div>
               </div>
             </main>
             <Footer />

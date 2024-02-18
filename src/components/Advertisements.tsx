@@ -3,7 +3,7 @@ import React from "react";
 
 export const Advertisements = () => {
   const random = Math.floor(Math.random() * 10);
-  if (random == 1) {
+  if (random == 0) {
     return (
       <div>
         {/* wordpress */}
@@ -13,7 +13,7 @@ export const Advertisements = () => {
         <img style={{ width: 1, height: 1 }} src="https://www15.a8.net/0.gif?a8mat=3Z0CMV+2Z6SY+5GDG+ZTNGX" alt="" />
       </div>
     );
-  } else if (random == 2) {
+  } else if (random == 1) {
     return (
       <div>
         {/* hobby shop metalbox */}
@@ -23,7 +23,7 @@ export const Advertisements = () => {
         <img style={{ width: 1, height: 1 }} src="https://www15.a8.net/0.gif?a8mat=3Z0DF4+EV8PMA+44IY+5ZU29" alt=""></img>
       </div>
     );
-  } else if (random == 3) {
+  } else if (random == 2) {
     return (
       <div>
         {/*  EC site */}
@@ -33,7 +33,7 @@ export const Advertisements = () => {
         <img style={{ width: 1, height: 1 }} src="https://www16.a8.net/0.gif?a8mat=3Z0E76+EI56B6+2BZM+4ATZKX" alt=""></img>
       </div>
     );
-  } else if (random == 4) {
+  } else if (random == 3) {
     <div>
       {/*  動画スタジオ*/}
       <a href="https://px.a8.net/svt/ejp?a8mat=3Z0E76+EHJQPE+4V0U+ZRALD" rel="nofollow">
@@ -41,7 +41,7 @@ export const Advertisements = () => {
       </a>
       <img style={{ width: 1, height: 1 }} src="https://www15.a8.net/0.gif?a8mat=3Z0E76+EHJQPE+4V0U+ZRALD" alt=""></img>
     </div>;
-  } else if (random == 5) {
+  } else if (random == 4) {
     <div>
       {/* MEN'S SELCA */}
       <a href="https://px.a8.net/svt/ejp?a8mat=3Z0E76+E8M8MQ+5EA6+BYDTT" rel="nofollow">
@@ -49,7 +49,7 @@ export const Advertisements = () => {
       </a>
       <img style={{ width: 1, height: 1 }} src="https://www15.a8.net/0.gif?a8mat=3Z0E76+E8M8MQ+5EA6+BYDTT" alt=""></img>
     </div>;
-  } else if (random == 6) {
+  } else if (random == 5) {
     <div>
       {/* コインランドリー */}
       <a href="https://px.a8.net/svt/ejp?a8mat=3Z0E76+E39C6Q+4RZ4+NTZCH" rel="nofollow">
@@ -57,7 +57,7 @@ export const Advertisements = () => {
       </a>
       <img style={{ width: 1, height: 1 }} src="https://www18.a8.net/0.gif?a8mat=3Z0E76+E39C6Q+4RZ4+NTZCH" alt=""></img>
     </div>;
-  } else if (random == 7) {
+  } else if (random == 6) {
     <div>
       {/* 女性のためのプロテイン【私の完全美容食】(24-0202) */}
       <a href="https://px.a8.net/svt/ejp?a8mat=3Z0E76+E2NWKY+4ZUQ+HVV0H" rel="nofollow">
@@ -65,7 +65,7 @@ export const Advertisements = () => {
       </a>
       <img style={{ width: 1, height: 1 }} src="https://www16.a8.net/0.gif?a8mat=3Z0E76+E2NWKY+4ZUQ+HVV0H" alt=""></img>
     </div>;
-  } else if (random == 8) {
+  } else if (random == 7) {
     <div>
       {/* 他社VPSを凌駕する圧倒的性能！「シン」世代VPS【シン・VPS】(24-0201) */}
       <a href="https://px.a8.net/svt/ejp?a8mat=3Z0CMV+1VVFQQ+5GDG+NVP2P" rel="nofollow">
@@ -73,7 +73,7 @@ export const Advertisements = () => {
       </a>
       <img style={{ width: 1, height: 1 }} src="https://www19.a8.net/0.gif?a8mat=3Z0CMV+1VVFQQ+5GDG+NVP2P" alt=""></img>
     </div>;
-  } else if (random == 9) {
+  } else if (random == 8) {
     <div>
       {/* 国内最速！進化の極限を目指したエックスサーバーの新たなカタチ【シン・レンタルサーバー】(24-0201) */}
       <a href="https://px.a8.net/svt/ejp?a8mat=3Z0CMV+1U34XE+5GDG+609HT" rel="nofollow">

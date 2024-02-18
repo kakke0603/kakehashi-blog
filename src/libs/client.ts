@@ -38,3 +38,35 @@ export type ArticleType = {
   title_en?: string;
   content_en?: string;
 };
+
+export function isArticleType(obj: any): obj is ArticleType {
+  if (
+    typeof obj === "object" &&
+    obj !== null &&
+    typeof obj.id === "string" &&
+    typeof obj.publishedAt === "string" &&
+    typeof obj.revisedAt === "string" &&
+    Array.isArray(obj.tags) &&
+    obj.tags.every(
+      (tag) =>
+        typeof tag === "object" &&
+        tag !== null &&
+        typeof tag.id === "string" &&
+        typeof tag.name === "string" &&
+        typeof tag.emoji === "string" &&
+        typeof tag.name_en === "string"
+    )
+  ) {
+    // オプションのプロパティが全て文字列であることを確認する
+    if (typeof obj.title === "undefined" || typeof obj.title === "string") {
+      if (typeof obj.content === "undefined" || typeof obj.content === "string") {
+        if (typeof obj.title_en === "undefined" || typeof obj.title_en === "string") {
+          if (typeof obj.content_en === "undefined" || typeof obj.content_en === "string") {
+            return true;
+          }
+        }
+      }
+    }
+  }
+  return false;
+}
