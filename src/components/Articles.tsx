@@ -1,8 +1,8 @@
 export const runtime = "edge";
 import { ArticleType, client, isArticleType } from "@/libs/client";
 import React from "react";
-import { ArticleCard } from "./ArticleCard";
 import { WideAdvertisements } from "@/components/WideAdvertisements";
+import { ArticleCard } from "@/components/ArticleCard";
 
 export default async function Articles() {
   const data = await client
