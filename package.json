@@ -10,8 +10,7 @@
   },
   "dependencies": {
     "@mediapipe/face_detection": "^0.4.1646425229",
-    "@nextui-org/pagination": "^2.0.26",
-    "@nextui-org/react": "^2.0.29",
+    "@nextui-org/react": "^2.2.9",
     "@react-three/drei": "^9.92.7",
     "@react-three/fiber": "^8.15.12",
     "@types/three": "^0.160.0",
