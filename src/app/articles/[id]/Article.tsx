@@ -8,6 +8,7 @@ import { RefreshIcon } from "@/components/Icons/RefreshIcon";
 import { ArticleType } from "@/libs/client";
 import { Tag } from "@/components/Tag";
 import { Advertisements } from "@/components/Advertisements";
+import { BuyMeCoffeeButton } from "@/components/BuyMeCoffeeButton";
 
 export const Article: React.FC<ArticleType> = ({ id, title, content, publishedAt, revisedAt, tags }) => {
   const tag = tags?.[0]?.emoji ?? "📝";
@@ -37,6 +38,7 @@ export const Article: React.FC<ArticleType> = ({ id, title, content, publishedAt
           </div>
         </div>
         <div className="dark:text-slate-200 mb-[100px]" dangerouslySetInnerHTML={{ __html: content }} />
+        <BuyMeCoffeeButton />
         <Advertisements />
       </div>
     </div>
