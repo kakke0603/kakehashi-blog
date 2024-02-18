@@ -1,5 +1,5 @@
 "use client";
-import { User } from "@nextui-org/react";
+import { Link, User, Image } from "@nextui-org/react";
 import React from "react";
 import { WideAdvertisements } from "./WideAdvertisements";
 import { useLang } from "../hooks/useLang";
@@ -41,6 +41,11 @@ export default function Profile() {
       <WideAdvertisements />
       <h1>{isJapanese ? "自己紹介" : "self-introduction"}</h1>
       <pre className="mt-10">{isJapanese ? codeJp() : codeEn()}</pre>
+      <WideAdvertisements />
+      <h1>{isJapanese ? "コミュニティ" : "community"}</h1>
+      <Link href="https://it-takoyaki.connpass.com/" target="_blank" rel="noopener noreferrer">
+        <Image src={isJapanese ? "it-takoyaki.png" : "/[en]/it-takoyaki-en.png"} />
+      </Link>
       <WideAdvertisements />
     </div>
   );
