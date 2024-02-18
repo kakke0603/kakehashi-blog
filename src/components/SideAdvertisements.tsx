@@ -31,7 +31,7 @@ export const SideAdvertisements = () => {
             src="https://www22.a8.net/svt/bgt?aid=240202480899&wid=001&eno=01&mid=s00000019249001007000&mc=1"
           />
         </a>
-        <img width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=3Z0DF4+EV8PMA+44IY+5ZU29" alt=""></img>
+        <img style={{ width: 1, height: 1 }} src="https://www15.a8.net/0.gif?a8mat=3Z0DF4+EV8PMA+44IY+5ZU29" alt=""></img>
       </div>
     );
   } else if (random == 3) {
@@ -45,7 +45,7 @@ export const SideAdvertisements = () => {
             src="https://www27.a8.net/svt/bgt?aid=240203490877&wid=001&eno=01&mid=s00000010885026006000&mc=1"
           />
         </a>
-        <img width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=3Z0E76+EI56B6+2BZM+4ATZKX" alt=""></img>
+        <img style={{ width: 1, height: 1 }} src="https://www16.a8.net/0.gif?a8mat=3Z0E76+EI56B6+2BZM+4ATZKX" alt=""></img>
       </div>
     );
   } else if (random == 4) {
@@ -59,7 +59,7 @@ export const SideAdvertisements = () => {
             src="https://www29.a8.net/svt/bgt?aid=240203490876&wid=001&eno=01&mid=s00000022683006006000&mc=1"
           />
         </a>
-        <img width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=3Z0E76+EHJQPE+4V0U+ZRALD" alt=""></img>
+        <img style={{ width: 1, height: 1 }} src="https://www15.a8.net/0.gif?a8mat=3Z0E76+EHJQPE+4V0U+ZRALD" alt=""></img>
       </div>
     );
   } else if (random == 5) {
@@ -72,7 +72,7 @@ export const SideAdvertisements = () => {
           src="https://www24.a8.net/svt/bgt?aid=240203490861&wid=001&eno=01&mid=s00000025179002008000&mc=1"
         />
       </a>
-      <img width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=3Z0E76+E8M8MQ+5EA6+BYDTT" alt=""></img>
+      <img style={{ width: 1, height: 1 }} src="https://www15.a8.net/0.gif?a8mat=3Z0E76+E8M8MQ+5EA6+BYDTT" alt=""></img>
     </div>;
   } else if (random == 6) {
     <div>
@@ -84,7 +84,7 @@ export const SideAdvertisements = () => {
           src="https://www20.a8.net/svt/bgt?aid=240203490852&wid=001&eno=01&mid=s00000022288004003000&mc=1"
         />
       </a>
-      <img width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=3Z0E76+E39C6Q+4RZ4+NTZCH" alt=""></img>
+      <img style={{ width: 1, height: 1 }} src="https://www18.a8.net/0.gif?a8mat=3Z0E76+E39C6Q+4RZ4+NTZCH" alt=""></img>
     </div>;
   } else if (random == 7) {
     <div>
@@ -96,7 +96,7 @@ export const SideAdvertisements = () => {
           src="https://www24.a8.net/svt/bgt?aid=240203490851&wid=001&eno=01&mid=s00000023309003004000&mc=1"
         />
       </a>
-      <img width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=3Z0E76+E2NWKY+4ZUQ+HVV0H" alt=""></img>
+      <img style={{ width: 1, height: 1 }} src="https://www16.a8.net/0.gif?a8mat=3Z0E76+E2NWKY+4ZUQ+HVV0H" alt=""></img>
     </div>;
   } else if (random == 8) {
     <div>
@@ -108,7 +108,7 @@ export const SideAdvertisements = () => {
           src="https://www22.a8.net/svt/bgt?aid=240201463114&wid=001&eno=01&mid=s00000025450004011000&mc=1"
         />
       </a>
-      <img width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=3Z0CMV+1VVFQQ+5GDG+NVP2P" alt=""></img>
+      <img style={{ width: 1, height: 1 }} src="https://www19.a8.net/0.gif?a8mat=3Z0CMV+1VVFQQ+5GDG+NVP2P" alt=""></img>
     </div>;
   } else if (random == 9) {
     <div>
@@ -120,7 +120,7 @@ export const SideAdvertisements = () => {
           src="https://www28.a8.net/svt/bgt?aid=240201463111&wid=001&eno=01&mid=s00000025450001009000&mc=1"
         />
       </a>
-      <img width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=3Z0CMV+1U34XE+5GDG+609HT" alt=""></img>
+      <img style={{ width: 1, height: 1 }} src="https://www16.a8.net/0.gif?a8mat=3Z0CMV+1U34XE+5GDG+609HT" alt=""></img>
     </div>;
   } else {
     <div>
@@ -132,7 +132,7 @@ export const SideAdvertisements = () => {
           src="https://www22.a8.net/svt/bgt?aid=240201463003&wid=001&eno=01&mid=s00000025450003008000&mc=1"
         />
       </a>
-      <img width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=3Z0CMV+1SBLE+5GDG+HWPVL" alt=""></img>
+      <img style={{ width: 1, height: 1 }} src="https://www15.a8.net/0.gif?a8mat=3Z0CMV+1SBLE+5GDG+HWPVL" alt=""></img>
     </div>;
   }
 };
