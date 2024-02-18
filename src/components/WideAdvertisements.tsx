@@ -2,7 +2,8 @@
 import React from "react";
 
 export const WideAdvertisements = () => {
-  const random = Math.floor(Math.random() * 10);
+  const random = Math.floor(Math.random() * 11);
+  console.log(random);
   if (random == 0) {
     return (
       <div>
@@ -81,7 +82,7 @@ export const WideAdvertisements = () => {
       </a>
       <img style={{ width: 1, height: 1 }} src="https://www12.a8.net/0.gif?a8mat=3Z0CMV+1SBLE+5GDG+HWI5T" alt="" />
     </div>;
-  } else {
+  } else if (random == 9) {
     <div>
       {/* 100種類以上の求人広告一括取り扱い、求人広告掲載なら【求人広告ドットコム】(24-0213) */}
       <a href="https://px.a8.net/svt/ejp?a8mat=3Z0Q04+D3K36+52NU+C0B9T" rel="nofollow">
@@ -89,5 +90,14 @@ export const WideAdvertisements = () => {
       </a>
       <img style={{ width: 1, height: 1 }} src="https://www18.a8.net/0.gif?a8mat=3Z0Q04+D3K36+52NU+C0B9T" alt=""></img>
     </div>;
+  } else {
+    return (
+      <div>
+        <a href="https://px.a8.net/svt/ejp?a8mat=3Z0Q03+BZNACY+2PEO+1I1QAP" rel="nofollow">
+          <img width="468" height="60" alt="" src="https://www24.a8.net/svt/bgt?aid=240218787725&wid=001&eno=01&mid=s00000012624009078000&mc=1" />
+        </a>
+        <img style={{ width: 1, height: 1 }} src="https://www17.a8.net/0.gif?a8mat=3Z0Q03+BZNACY+2PEO+1I1QAP" alt=""></img>
+      </div>
+    );
   }
 };
