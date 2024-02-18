@@ -1,9 +1,10 @@
 export const runtime = "edge";
 import { getAllArticles, getArticle } from "../../../../libs/client";
-import { Article } from "./Article";
+
 import { Metadata, ResolvingMetadata } from "next";
 import { Advertisements } from "../../../../components/Advertisements";
 import React from "react";
+import { Article } from "@/components/Article";
 
 /**
  * メタデータの設定

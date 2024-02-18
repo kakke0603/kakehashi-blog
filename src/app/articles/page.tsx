@@ -1,7 +1,7 @@
 export const runtime = "edge";
 import React from "react";
-import Articles from "./Articles";
 import { Advertisements } from "@/components/Advertisements";
+import Articles from "@/components/Articles";
 
 export default async function page() {
   return (
