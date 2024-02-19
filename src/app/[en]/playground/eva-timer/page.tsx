@@ -1,4 +1,4 @@
-import { EvaTimer } from "./EvaTimer";
+import { EvaTimer } from "@/components/Playground/EvaTimer/EvaTimer";
 
 export const runtime = "edge";
 

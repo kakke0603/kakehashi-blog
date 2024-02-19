@@ -1,7 +1,7 @@
-export const runtime = "edge"
+export const runtime = "edge";
 
-import React from "react"
-import ThreeJs from "./ThreeJs"
+import ThreeJs from "@/components/Playground/ThreeJs/ThreeJs";
+import React from "react";
 
 export default async function Page() {
   return (
@@ -9,5 +9,5 @@ export default async function Page() {
       three.js
       <ThreeJs />
     </div>
-  )
+  );
 }
