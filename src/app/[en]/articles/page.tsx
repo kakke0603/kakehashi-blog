@@ -1,6 +1,6 @@
 export const runtime = "edge";
+import Articles from "@/components/Article/Articles";
 import React from "react";
-import Articles from "./Articles";
 
 export default async function page() {
   return (

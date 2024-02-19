@@ -3,10 +3,12 @@ import { Noto_Sans_JP } from "next/font/google";
 import { Providers } from "./providers";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { Advertisements } from "../components/Advertisements";
-import { SideAdvertisements } from "../components/SideAdvertisements";
+import { Advertisements } from "../components/Advertisement/Advertisements";
+import { SideAdvertisements } from "../components/Advertisement/SideAdvertisements";
 import React from "react";
-import { HorizontalAdvertisements } from "@/components/HorizontalAdvertisements";
+import { HorizontalAdvertisements } from "@/components/Advertisement/HorizontalAdvertisements";
+import { BuyMeCoffeeWidget } from "@/components/BuyMeCoffeeWidget";
+import { BuyMeCoffeeButton } from "@/components/BuyMeCoffeeButton";
 
 const inter = Noto_Sans_JP({ subsets: ["latin"], display: "swap" });
 
@@ -58,14 +60,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Navbar />
             <main>
               <div className="flex justify-between">
-                <div className="hidden lg:flex flex-col fixed">
-                  <div>
-                    <SideAdvertisements />
-                  </div>
-                </div>
+                <div className="hidden lg:flex flex-col fixed">{/* <BuyMeCoffeeButton /> */}</div>
                 <div className="max-w-[1024px] mx-auto flex-grow">{children}</div>
-                <div className="hidden xl:flex flex-col fixed right-0">
-                  <HorizontalAdvertisements />
+                <div className="hidden xl:flex fixed right-0">
+                  <div className="flex flex-col">
+                    <SideAdvertisements />
+                    <div className=" top-[600px]">
+                      <HorizontalAdvertisements />
+                    </div>
+                  </div>
                 </div>
               </div>
             </main>

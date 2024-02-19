@@ -1,4 +1,4 @@
-import { WideAdvertisements } from "@/components/WideAdvertisements";
+import { WideAdvertisements } from "@/components/Advertisement/WideAdvertisements";
 import { Home } from "./Home";
 
 export const runtime = "edge";

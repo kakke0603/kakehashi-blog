@@ -1,14 +1,15 @@
 "use client";
 import React from "react";
 import twemoji from "twemoji";
-import { DateTime } from "../../../../components/DateTime";
+import { DateTime } from "@/components/DateTime";
 import { Chip } from "@nextui-org/react";
-import { PencilIcon } from "../../../../components/Icons/PencilIcon";
-import { RefreshIcon } from "../../../../components/Icons/RefreshIcon";
-import { ArticleType } from "../../../../libs/client";
-import { Tag } from "../../../../components/Tag";
-import { Advertisements } from "../../../../components/Advertisements";
-import { useLang } from "../../../../hooks/useLang";
+import { PencilIcon } from "@/components/Icons/PencilIcon";
+import { RefreshIcon } from "@/components/Icons/RefreshIcon";
+import { ArticleType } from "@/libs/client";
+import { Tag } from "@/components/Tag";
+import { Advertisements } from "@/components/Advertisement/Advertisements";
+import { useLang } from "@/hooks/useLang";
+import { BuyMeCoffeeButton } from "../BuyMeCoffeeButton";
 
 export const Article: React.FC<ArticleType> = ({ id, title, content, publishedAt, revisedAt, tags, title_en, content_en }) => {
   const tag = tags?.[0]?.emoji ?? "📝";
@@ -39,6 +40,7 @@ export const Article: React.FC<ArticleType> = ({ id, title, content, publishedAt
           </div>
         </div>
         <div className="dark:text-slate-200 mb-[100px]" dangerouslySetInnerHTML={{ __html: isJapanese ? content : content_en }} />
+        <BuyMeCoffeeButton />
         <Advertisements />
       </div>
     </div>
