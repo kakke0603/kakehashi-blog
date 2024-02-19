@@ -1,42 +1,11 @@
 export const runtime = "edge";
+import { EvaAlert } from "@/components/Playground/EvaAlert/EvaAlert";
 import React from "react";
 
 export default async function Page() {
   return (
     <div>
-      <div className="relative">
-        <div className="absolute border-b-2 border-t-2 bg-red-600 top-[0px] left-[0px] w-[50px] h-[88px] pt-8 text-[12px] z-10">WARNING</div>
-        <div className="absolute border-b-2 border-t-2 rotate-[60deg] bg-red-600 top-[0px] left-[0px] w-[50px] h-[88px]"></div>
-        <div className="absolute border-b-2 border-t-2 rotate-[120deg] bg-red-600 top-[0px] left-[0px] w-[50px] h-[88px]"></div>
-
-        <div className="absolute border-b-2 border-t-2 bg-red-600 top-[88px] left-[0px] w-[50px] h-[88px] pt-8 text-[12px] z-10">WARNING</div>
-        <div className="absolute border-b-2 border-t-2 rotate-[60deg] bg-red-600 top-[88px] left-[0px] w-[50px] h-[88px]"></div>
-        <div className="absolute border-b-2 border-t-2 rotate-[120deg] bg-red-600 top-[88px] left-[0px] w-[50px] h-[88px]"></div>
-
-        <div className="absolute border-b-2 border-t-2 bg-red-600 top-[44px] left-[75px] w-[50px] h-[88px] pt-8 text-[12px] z-10">WARNING</div>
-        <div className="absolute border-b-2 border-t-2 rotate-[60deg] bg-red-600 top-[44px] left-[75px] w-[50px] h-[88px]"></div>
-        <div className="absolute border-b-2 border-t-2 rotate-[120deg] bg-red-600 top-[44px] left-[75px] w-[50px] h-[88px]"></div>
-
-        <div className="absolute border-b-2 border-t-2 bg-red-600 top-[130px] left-[75px] w-[50px] h-[88px] pt-8 text-[12px] z-10">WARNING</div>
-        <div className="absolute border-b-2 border-t-2 rotate-[60deg] bg-red-600 top-[130px] left-[75px] w-[50px] h-[88px]"></div>
-        <div className="absolute border-b-2 border-t-2 rotate-[120deg] bg-red-600 top-[130px] left-[75px] w-[50px] h-[88px]"></div>
-
-        <div className="absolute border-b-2 border-t-2 bg-red-600 top-[0px] left-[150px] w-[50px] h-[88px] pt-8 text-[12px] z-10">WARNING</div>
-        <div className="absolute border-b-2 border-t-2 rotate-[60deg] bg-red-600 top-[0px] left-[150px] w-[50px] h-[88px]"></div>
-        <div className="absolute border-b-2 border-t-2 rotate-[120deg] bg-red-600 top-[0px] left-[150px] w-[50px] h-[88px]"></div>
-
-        <div className="absolute border-b-2 border-t-2 bg-red-600 top-[88px] left-[150px] w-[50px] h-[88px] pt-8 text-[12px] z-10">WARNING</div>
-        <div className="absolute border-b-2 border-t-2 rotate-[60deg] bg-red-600 top-[88px] left-[150px] w-[50px] h-[88px]"></div>
-        <div className="absolute border-b-2 border-t-2 rotate-[120deg] bg-red-600 top-[88px] left-[150px] w-[50px] h-[88px]"></div>
-
-        <div className="absolute border-b-2 border-t-2 bg-red-600 top-[44px] left-[225px] w-[50px] h-[88px] pt-8 text-[12px] z-10">WARNING</div>
-        <div className="absolute border-b-2 border-t-2 rotate-[60deg] bg-red-600 top-[44px] left-[225px] w-[50px] h-[88px]"></div>
-        <div className="absolute border-b-2 border-t-2 rotate-[120deg] bg-red-600 top-[44px] left-[225px] w-[50px] h-[88px]"></div>
-
-        <div className="absolute border-b-2 border-t-2 bg-red-600 top-[130px] left-[225px] w-[50px] h-[88px] pt-8 text-[12px] z-10">WARNING</div>
-        <div className="absolute border-b-2 border-t-2 rotate-[60deg] bg-red-600 top-[130px] left-[225px] w-[50px] h-[88px]"></div>
-        <div className="absolute border-b-2 border-t-2 rotate-[120deg] bg-red-600 top-[130px] left-[225px] w-[50px] h-[88px]"></div>
-      </div>
+      <EvaAlert />
       <div style={{ position: "absolute", top: 400 }}>
         <table cellPadding="0" cellSpacing="0" style={{ border: "1px solid #ccc", width: "300px" }}>
           <tbody>
