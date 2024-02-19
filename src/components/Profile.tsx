@@ -34,6 +34,7 @@ export default function Profile() {
           avatarProps={{ src: "/profile.jpg", size: "lg" }}
         />
       </div>
+      <WideAdvertisements />
       <h1>{isJapanese ? "経歴" : "career"}</h1>
       <div className="p-5">
         <TimelineComponent />
