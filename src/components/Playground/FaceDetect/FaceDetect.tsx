@@ -7,7 +7,7 @@ import { Camera } from "@mediapipe/camera_utils";
 import { Button, Spinner } from "@nextui-org/react";
 import { useTimer } from "use-timer";
 
-export const Timer = () => {
+export const FaceDetect = () => {
   const [min, setMin] = useState(25);
   const [sec, setSec] = useState(0);
   const [elapsedTime, setElapsedTime] = useState(0);

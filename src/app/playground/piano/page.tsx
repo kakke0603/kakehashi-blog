@@ -1,7 +1,7 @@
 export const runtime = "edge";
 
+import { Piano } from "@/components/Playground/Piano/Piano";
 import React from "react";
-import { Piano } from "./Piano";
 
 export default async function Page() {
   return (
