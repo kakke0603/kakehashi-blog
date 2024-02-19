@@ -7,7 +7,7 @@ import { PencilIcon } from "@/components/Icons/PencilIcon";
 import { RefreshIcon } from "@/components/Icons/RefreshIcon";
 import { ArticleType } from "@/libs/client";
 import { Tag } from "@/components/Tag";
-import { Advertisements } from "@/components/Advertisements";
+import { Advertisements } from "@/components/Advertisement/Advertisements";
 import { useLang } from "@/hooks/useLang";
 import { BuyMeCoffeeButton } from "./BuyMeCoffeeButton";
 
