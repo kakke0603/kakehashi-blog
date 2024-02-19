@@ -14,6 +14,14 @@ import { useLang } from "@/hooks/useLang";
 
 const pages = [
   {
+    id: "evangelion-mark01",
+    image: ThumFaceDetect,
+    title: "エヴァンゲリオン初号機",
+    content: "tailwindcssでエヴァンゲリオン初号機を作ってみた",
+    publishedAt: "2024-02-21T02:00:34.925Z",
+    revisedAt: "2024-02-21T02:00:34.925Z",
+  },
+  {
     id: "face-detect",
     image: ThumFaceDetect,
     title: "顔認証",
