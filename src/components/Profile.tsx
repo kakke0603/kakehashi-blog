@@ -8,7 +8,7 @@ export default function Profile() {
   const { isJapanese } = useLang();
   return (
     <div>
-      <div className="mt-5 flex justify-center">
+      <div className="my-10 flex justify-center">
         <User
           name={isJapanese ? "かっけ" : "Kakke"}
           description={
