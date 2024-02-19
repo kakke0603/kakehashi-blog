@@ -9,7 +9,7 @@ import { ArticleType } from "@/libs/client";
 import { Tag } from "@/components/Tag";
 import { Advertisements } from "@/components/Advertisement/Advertisements";
 import { useLang } from "@/hooks/useLang";
-import { BuyMeCoffeeButton } from "./BuyMeCoffeeButton";
+import { BuyMeCoffeeButton } from "../BuyMeCoffeeButton";
 
 export const Article: React.FC<ArticleType> = ({ id, title, content, publishedAt, revisedAt, tags, title_en, content_en }) => {
   const tag = tags?.[0]?.emoji ?? "📝";

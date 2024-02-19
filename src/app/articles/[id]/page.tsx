@@ -2,7 +2,7 @@ export const runtime = "edge";
 import { getAllArticles, getArticle } from "@/libs/client";
 import { Metadata, ResolvingMetadata } from "next";
 import { Advertisements } from "@/components/Advertisement/Advertisements";
-import { Article } from "@/components/Article";
+import { Article } from "@/components/Article/Article";
 
 /**
  * メタデータの設定
