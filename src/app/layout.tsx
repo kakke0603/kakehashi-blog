@@ -3,10 +3,10 @@ import { Noto_Sans_JP } from "next/font/google";
 import { Providers } from "./providers";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { Advertisements } from "../components/Advertisements";
-import { SideAdvertisements } from "../components/SideAdvertisements";
+import { Advertisements } from "../components/Advertisement/Advertisements";
+import { SideAdvertisements } from "../components/Advertisement/SideAdvertisements";
 import React from "react";
-import { HorizontalAdvertisements } from "@/components/HorizontalAdvertisements";
+import { HorizontalAdvertisements } from "@/components/Advertisement/HorizontalAdvertisements";
 import { BuyMeCoffeeWidget } from "@/components/BuyMeCoffeeWidget";
 import { BuyMeCoffeeButton } from "@/components/BuyMeCoffeeButton";
 

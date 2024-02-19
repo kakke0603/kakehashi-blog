@@ -1,8 +1,8 @@
 export const runtime = "edge";
 import { ArticleType, client, isArticleType } from "@/libs/client";
 import React from "react";
-import { WideAdvertisements } from "@/components/WideAdvertisements";
-import { ArticleCard } from "@/components/ArticleCard";
+import { WideAdvertisements } from "@/components/Advertisement/WideAdvertisements";
+import { ArticleCard } from "@/components/Article/ArticleCard";
 
 export default async function Articles() {
   const data = await client
@@ -12,8 +12,8 @@ export default async function Articles() {
     .then((res) => res);
 
   const groupedItems = [];
-  for (let i = 0; i < data.length; i += 5) {
-    groupedItems.push(data.slice(i, i + 5));
+  for (let i = 0; i < data.length; i += 3) {
+    groupedItems.push(data.slice(i, i + 3));
   }
   const listWithAdvertisements = groupedItems.flatMap((group, index) => {
     const items = [...group];

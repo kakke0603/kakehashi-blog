@@ -9,7 +9,7 @@ import ThumFramerMotion from "./thum-framer-motion.png";
 import ThumPiano from "./thum-piano.png";
 import ThumAlert from "./thum-alert.png";
 import ThumFaceDetect from "./thum-face-detect.png";
-import { Advertisements } from "@/components/Advertisements";
+import { Advertisements } from "@/components/Advertisement/Advertisements";
 import { useLang } from "@/hooks/useLang";
 
 const pages = [

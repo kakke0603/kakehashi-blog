@@ -1,7 +1,7 @@
 "use client";
 import { Link, User, Image } from "@nextui-org/react";
 import React from "react";
-import { WideAdvertisements } from "./WideAdvertisements";
+import { WideAdvertisements } from "./Advertisement/WideAdvertisements";
 import { useLang } from "../hooks/useLang";
 
 export default function Profile() {
