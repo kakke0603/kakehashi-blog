@@ -224,10 +224,10 @@ const TimelineComponent = () => {
           <p className="text-sm text-neutral-500 dark:text-neutral-300">2019/04/01〜2021/03/31</p>
         </div>
         <div className="mb-6 ml-4 mt-2">
-          <h4 className="mb-1.5 text-xl font-semibold">{isJapanese ? "(株)ソフトウェア・サービスに入社" : "Joined Software Service Co."}</h4>
+          <h4 className="mb-1.5 text-xl font-semibold">{isJapanese ? "株式会社ソフトウェア・サービスに入社" : "Joined Software Service Co."}</h4>
           <p className="mb-3 text-neutral-500 dark:text-neutral-300">
             {isJapanese
-              ? "医療系のシステムを開発。デスクトップアプリケーション(VB.net,C#などで開発)"
+              ? "医療系のシステムを開発。デスクトップアプリケーションをVB.net,C#などで開発"
               : "Developed medical systems. Desktop application (developed in VB.net, C#, etc.)"}
           </p>
         </div>
