@@ -6,6 +6,7 @@ import { useLang } from "../hooks/useLang";
 
 export default function ToggleLanguageButton() {
   const pathname = usePathname();
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const { isJapanese } = useLang();
   const router = useRouter();
   const url = isJapanese ? pathname.replace("/", "/en/") : pathname.includes("/en") ? pathname.replace("/en", "/") : pathname;

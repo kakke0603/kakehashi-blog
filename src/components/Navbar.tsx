@@ -6,6 +6,7 @@ import ToggleLanguageButton from "./ToggleLanguageButton";
 import { usePathname } from "next/navigation";
 
 export default function index() {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const pathname = usePathname();
   return (
     <Navbar shouldHideOnScroll>

@@ -1,29 +1,30 @@
-"use client"
-import { DateTime } from "@/components/DateTime"
-import { Card, CardBody, Image } from "@nextui-org/react"
-import { useRouter } from "next/navigation"
-import React from "react"
-import { PencilIcon } from "@/components/Icons/PencilIcon"
-import { RefreshIcon } from "@/components/Icons/RefreshIcon"
-import { StaticImageData } from "next/image"
+"use client";
+import { DateTime } from "@/components/DateTime";
+import { Card, CardBody } from "@nextui-org/react";
+import { useRouter } from "next/navigation";
+import React from "react";
+import { PencilIcon } from "@/components/Icons/PencilIcon";
+import { RefreshIcon } from "@/components/Icons/RefreshIcon";
+import { StaticImageData } from "next/image";
+import Image from "next/image";
 
 type PlaygroundType = {
-  id: string
-  image: StaticImageData
-  title: string
-  content: string
-  publishedAt: string
-  revisedAt: string
-}
+  id: string;
+  image: StaticImageData;
+  title: string;
+  content: string;
+  publishedAt: string;
+  revisedAt: string;
+};
 export const PlaygroundCard: React.FC<PlaygroundType> = ({ id, image, title, content, publishedAt, revisedAt }) => {
-  const router = useRouter()
-  const handleClick = () => router.push(`/playground/${id}`)
+  const router = useRouter();
+  const handleClick = () => router.push(`/playground/${id}`);
   return (
     <Card className="py-4 w-full" isPressable onPress={handleClick}>
       <CardBody>
         <div className="gap-x-4 flex flex-row gap-y-4">
           <div className="w-[70px] h-[70px] border-[4px] bg-gray-100 dark:bg-gray-700 rounded-lg">
-            <Image src={image.src} width={70} height={70} />
+            <Image src={image.src} width={70} height={70} alt="" />
           </div>
           <div className="space-y-4 w-[230px]">
             <h4 className="font-bold text-large block">{title}</h4>
@@ -44,5 +45,5 @@ export const PlaygroundCard: React.FC<PlaygroundType> = ({ id, image, title, con
         </div>
       </CardBody>
     </Card>
-  )
-}
+  );
+};
