@@ -1,10 +1,7 @@
 "use client";
-import clsx from "clsx";
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { Button, Link } from "@nextui-org/react";
-
-import { Input } from "@nextui-org/react";
 import { useTimer } from "use-timer";
 import { Timer } from "./components/Timer";
 
@@ -42,13 +39,14 @@ export const EvaTimer = () => {
     }
     setTimerMode("stop");
   };
-  React.useEffect(() => {
+  useEffect(() => {
     if (status === "STOPPED" || status === "PAUSED") return;
     const id = setInterval(() => {
       setRandomNum(Math.floor(Math.random() * 100));
     }, 10);
     return () => clearInterval(id);
   });
+
   return (
     <div className="pt-10">
       <Timer time={time} randomNum={randomNum} timerMode={timerMode} onClick={onClickTimerButton} />
@@ -66,7 +64,6 @@ export const EvaTimer = () => {
         </div>
         <div>制作過程は以下の記事で紹介しています🥳</div>
         <Link href={"https://kakke.site/articles/phth-0wg-1a"}>https://kakke.site/articles/phth-0wg-1a</Link>
-        <div></div>
       </div>
     </div>
   );

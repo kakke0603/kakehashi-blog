@@ -14,6 +14,7 @@ import { BuyMeCoffeeButton } from "../BuyMeCoffeeButton";
 export const Article: React.FC<ArticleType> = ({ id, title, content, publishedAt, revisedAt, tags, title_en, content_en }) => {
   const tag = tags?.[0]?.emoji ?? "📝";
   const emoji = twemoji.parse(tag);
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const { isJapanese } = useLang();
   return (
     <div className="mx-5 ">

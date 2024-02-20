@@ -1,14 +1,16 @@
 "use client";
-import { Link, User, Image } from "@nextui-org/react";
+import { Link, User } from "@nextui-org/react";
 import React from "react";
 import { WideAdvertisements } from "./Advertisement/WideAdvertisements";
-import { useLang } from "../hooks/useLang";
+import { useLang } from "@/hooks/useLang";
+import Image from "next/image";
 
 export default function Profile() {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const { isJapanese } = useLang();
   return (
     <div>
-      <div className="mt-5 flex justify-center">
+      <div className="my-10 flex justify-center">
         <User
           name={isJapanese ? "かっけ" : "Kakke"}
           description={
@@ -34,6 +36,7 @@ export default function Profile() {
           avatarProps={{ src: "/profile.jpg", size: "lg" }}
         />
       </div>
+      <WideAdvertisements />
       <h1>{isJapanese ? "経歴" : "career"}</h1>
       <div className="p-5">
         <TimelineComponent />
@@ -44,7 +47,7 @@ export default function Profile() {
       <WideAdvertisements />
       <h1>{isJapanese ? "コミュニティ" : "community"}</h1>
       <Link href="https://it-takoyaki.connpass.com/" target="_blank" rel="noopener noreferrer">
-        <Image src={isJapanese ? "it-takoyaki.png" : "/[en]/it-takoyaki-en.png"} />
+        <Image src={isJapanese ? "it-takoyaki.png" : "/[en]/it-takoyaki-en.png"} alt="it-takoyaki" />
       </Link>
       <WideAdvertisements />
     </div>
@@ -74,25 +77,25 @@ const codeJp = () => {
           虫眼鏡さん
         </a>
       }
-      推し)", "
+      推し){", "}
       {
         <a href="https://www.youtube.com/@tokumei_radio" target="_blank" rel="noopener noreferrer">
           匿名ラジオ
         </a>
       }
-      ", "
+      {", "}
       {
         <a href="https://www.youtube.com/@itabasihausu" target="_blank" rel="noopener noreferrer">
           板橋ハウス
         </a>
       }
-      ", "
+      {", "}
       {
         <a href="https://www.youtube.com/@nekoten_zzz" target="_blank" rel="noopener noreferrer">
           ねこてん
         </a>
       }
-      ", "
+      {", "}
       {
         <a href="https://www.youtube.com/@omocorochannel" target="_blank" rel="noopener noreferrer">
           オモコロチャンネル
@@ -132,25 +135,25 @@ const codeEn = () => {
           Mushimegane-san
         </a>
       }
-      )", "
+      ){", "}
       {
         <a href="https://www.youtube.com/@tokumei_radio" target="_blank" rel="noopener noreferrer">
           tokumei_radio
         </a>
       }
-      ", "
+      {", "}
       {
         <a href="https://www.youtube.com/@itabasihausu" target="_blank" rel="noopener noreferrer">
           itabasihausu
         </a>
       }
-      ", "
+      {", "}
       {
         <a href="https://www.youtube.com/@nekoten_zzz" target="_blank" rel="noopener noreferrer">
           nekoten
         </a>
       }
-      ", "
+      {", "}
       {
         <a href="https://www.youtube.com/@omocorochannel" target="_blank" rel="noopener noreferrer">
           omocorochannel
@@ -168,6 +171,7 @@ const codeEn = () => {
 };
 
 const TimelineComponent = () => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const { isJapanese } = useLang();
   return (
     <ol className="border-l border-neutral-300 dark:border-neutral-500">
@@ -223,10 +227,10 @@ const TimelineComponent = () => {
           <p className="text-sm text-neutral-500 dark:text-neutral-300">2019/04/01〜2021/03/31</p>
         </div>
         <div className="mb-6 ml-4 mt-2">
-          <h4 className="mb-1.5 text-xl font-semibold">{isJapanese ? "(株)ソフトウェア・サービスに入社" : "Joined Software Service Co."}</h4>
+          <h4 className="mb-1.5 text-xl font-semibold">{isJapanese ? "株式会社ソフトウェア・サービスに入社" : "Joined Software Service Co."}</h4>
           <p className="mb-3 text-neutral-500 dark:text-neutral-300">
             {isJapanese
-              ? "医療系のシステムを開発。デスクトップアプリケーション(VB.net,C#などで開発)"
+              ? "医療系のシステムを開発。デスクトップアプリケーションをVB.net,C#などで開発"
               : "Developed medical systems. Desktop application (developed in VB.net, C#, etc.)"}
           </p>
         </div>
