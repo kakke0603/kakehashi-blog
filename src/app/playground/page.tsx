@@ -1,6 +1,6 @@
 export const runtime = "edge";
 import React from "react";
-import { PlaygroundCard } from "./PlaygroundCard";
+import { PlaygroundCard } from "../../components/Playground/PlaygroundCard";
 import ThumOurGoals from "./thum-our-goals.png";
 import ThumThreeJs from "./thum-three-js.png";
 import ThumFramerMotion from "./thum-framer-motion.png";

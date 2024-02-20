@@ -1,10 +1,12 @@
 "use client";
-import { Link, User, Image } from "@nextui-org/react";
+import { Link, User } from "@nextui-org/react";
 import React from "react";
 import { WideAdvertisements } from "./Advertisement/WideAdvertisements";
-import { useLang } from "../hooks/useLang";
+import { useLang } from "@/hooks/useLang";
+import Image from "next/image";
 
 export default function Profile() {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const { isJapanese } = useLang();
   return (
     <div>
@@ -45,7 +47,7 @@ export default function Profile() {
       <WideAdvertisements />
       <h1>{isJapanese ? "コミュニティ" : "community"}</h1>
       <Link href="https://it-takoyaki.connpass.com/" target="_blank" rel="noopener noreferrer">
-        <Image src={isJapanese ? "it-takoyaki.png" : "/[en]/it-takoyaki-en.png"} />
+        <Image src={isJapanese ? "it-takoyaki.png" : "/[en]/it-takoyaki-en.png"} alt="it-takoyaki" />
       </Link>
       <WideAdvertisements />
     </div>
@@ -75,25 +77,25 @@ const codeJp = () => {
           虫眼鏡さん
         </a>
       }
-      推し)", "
+      推し){", "}
       {
         <a href="https://www.youtube.com/@tokumei_radio" target="_blank" rel="noopener noreferrer">
           匿名ラジオ
         </a>
       }
-      ", "
+      {", "}
       {
         <a href="https://www.youtube.com/@itabasihausu" target="_blank" rel="noopener noreferrer">
           板橋ハウス
         </a>
       }
-      ", "
+      {", "}
       {
         <a href="https://www.youtube.com/@nekoten_zzz" target="_blank" rel="noopener noreferrer">
           ねこてん
         </a>
       }
-      ", "
+      {", "}
       {
         <a href="https://www.youtube.com/@omocorochannel" target="_blank" rel="noopener noreferrer">
           オモコロチャンネル
@@ -133,25 +135,25 @@ const codeEn = () => {
           Mushimegane-san
         </a>
       }
-      )", "
+      ){", "}
       {
         <a href="https://www.youtube.com/@tokumei_radio" target="_blank" rel="noopener noreferrer">
           tokumei_radio
         </a>
       }
-      ", "
+      {", "}
       {
         <a href="https://www.youtube.com/@itabasihausu" target="_blank" rel="noopener noreferrer">
           itabasihausu
         </a>
       }
-      ", "
+      {", "}
       {
         <a href="https://www.youtube.com/@nekoten_zzz" target="_blank" rel="noopener noreferrer">
           nekoten
         </a>
       }
-      ", "
+      {", "}
       {
         <a href="https://www.youtube.com/@omocorochannel" target="_blank" rel="noopener noreferrer">
           omocorochannel
@@ -169,6 +171,7 @@ const codeEn = () => {
 };
 
 const TimelineComponent = () => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const { isJapanese } = useLang();
   return (
     <ol className="border-l border-neutral-300 dark:border-neutral-500">

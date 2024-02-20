@@ -1,25 +1,13 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import Webcam from "react-webcam";
 import { CameraOptions, useFaceDetection } from "react-use-face-detection";
 import FaceDetection from "@mediapipe/face_detection";
 import { Camera } from "@mediapipe/camera_utils";
-import { Button, Spinner } from "@nextui-org/react";
-import { useTimer } from "use-timer";
+import { Spinner } from "@nextui-org/react";
 
 export const FaceDetect = () => {
-  const [min, setMin] = useState(25);
-  const [sec, setSec] = useState(0);
-  const [elapsedTime, setElapsedTime] = useState(0);
-
-  const { time, start, pause, reset, status } = useTimer({
-    initialTime: sec + min * 60,
-    timerType: "DECREMENTAL",
-    endTime: 0,
-    interval: 1000,
-    onTimeOver: () => {},
-  });
-  const { webcamRef, boundingBox, isLoading, detected, facesDetected } = useFaceDetection({
+  const { webcamRef, boundingBox, isLoading, detected, facesDetected, imgRef } = useFaceDetection({
     faceDetectionOptions: {
       model: "short",
     },
@@ -60,13 +48,9 @@ export const FaceDetect = () => {
             width: "100%",
             position: "absolute",
           }}
+          onUserMedia={(media) => media.removeTrack(media.getVideoTracks()[0])}
         />
       </div>
-      {/* <Button color="primary" onClick={start}>
-        start
-      </Button>
-      {Math.floor(time / 60)} : {time} */}
-
       {detected ? <div className="text-4xl text-center">Face detected</div> : <div className="text-4xl text-center">Face not detected</div>}
     </div>
   );

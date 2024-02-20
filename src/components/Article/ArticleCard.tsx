@@ -22,6 +22,7 @@ export const ArticleCard: React.FC<ArticleType> = ({
 }) => {
   const router = useRouter();
   const handleClick = () => router.push(`/articles/${id}`);
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const { isJapanese } = useLang();
   const tag = tags?.[0]?.emoji ?? "📝";
   const emoji = twemoji.parse(tag);
@@ -66,6 +67,6 @@ function HtmlStringToText({ htmlString }: { htmlString: string }) {
     dummyDiv.innerHTML = htmlString;
     const text = dummyDiv.textContent || dummyDiv.innerText;
     setText(text);
-  }, []);
+  }, [htmlString]);
   return <div className="block text-sm text-default-500 line-clamp-3 h-[40px] break-all">{text}</div>;
 }
