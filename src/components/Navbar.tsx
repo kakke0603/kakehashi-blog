@@ -47,17 +47,17 @@ export default function index() {
       </NavbarContent>
       <NavbarMenu>
         <NavbarMenuItem>
-          <Link href="/about" isDisabled={pathname.includes("about")}>
+          <Link href="/about" isDisabled={pathname === "/about" || pathname === "/en/about"}>
             About
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link href="/articles" isDisabled={pathname.includes("articles")}>
+          <Link href="/articles" isDisabled={pathname === "/articles" || pathname === "/en/articles"}>
             Articles
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link href="/playground" isDisabled={pathname.includes("playground")}>
+          <Link href="/playground" isDisabled={pathname === "/playground" || pathname === "/en/playground"}>
             Playground
           </Link>
         </NavbarMenuItem>
