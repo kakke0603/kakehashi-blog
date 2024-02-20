@@ -1,3 +1,4 @@
+export const runtime = "edge";
 import { getAllArticles, getArticle } from "../../../../libs/client";
 
 import { Metadata, ResolvingMetadata } from "next";
