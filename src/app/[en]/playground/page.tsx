@@ -9,7 +9,7 @@ import ThumPiano from "./thum-piano.png";
 import ThumAlert from "./thum-alert.png";
 import ThumFaceDetect from "./thum-face-detect.png";
 import { Advertisements } from "@/components/Advertisement/Advertisements";
-import { useLang } from "@/hooks/useLang";
+import { useLang } from "@/hooks/UseLang";
 import { PlaygroundCard } from "@/components/Playground/PlaygroundCard";
 
 const pages = [

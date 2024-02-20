@@ -8,7 +8,7 @@ import { PencilIcon } from "@/components/Icons/PencilIcon";
 import { RefreshIcon } from "@/components/Icons/RefreshIcon";
 import { ArticleType } from "@/libs/client";
 import { Tag } from "@/components/Tag";
-import { useLang } from "@/hooks/useLang";
+import { useLang } from "@/hooks/UseLang";
 
 export const ArticleCard: React.FC<ArticleType> = ({
   id,

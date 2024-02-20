@@ -2,7 +2,7 @@
 import { Button, Link } from "@nextui-org/react";
 import { useParams, usePathname, useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import { useLang } from "../hooks/useLang";
+import { useLang } from "../hooks/UseLang";
 
 export default function ToggleLanguageButton() {
   const pathname = usePathname();
