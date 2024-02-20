@@ -1,3 +1,4 @@
+export const runtime = "edge";
 import { WideAdvertisements } from "@/components/Advertisement/WideAdvertisements";
 import { Home } from "./Home";
 export default function Page() {
