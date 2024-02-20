@@ -1,7 +1,6 @@
 "use client";
 export const runtime = "edge";
 import React from "react";
-import { PlaygroundCard } from "./PlaygroundCard";
 import ThumEva from "./thum-eva-timer.png";
 import ThumOurGoals from "./thum-our-goals.png";
 import ThumThreeJs from "./thum-three-js.png";
@@ -11,6 +10,7 @@ import ThumAlert from "./thum-alert.png";
 import ThumFaceDetect from "./thum-face-detect.png";
 import { Advertisements } from "@/components/Advertisement/Advertisements";
 import { useLang } from "@/hooks/useLang";
+import { PlaygroundCard } from "@/components/Playground/PlaygroundCard";
 
 const pages = [
   {

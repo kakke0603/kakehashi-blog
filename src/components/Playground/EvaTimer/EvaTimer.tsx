@@ -1,10 +1,7 @@
 "use client";
-import clsx from "clsx";
 import React from "react";
 import { useState } from "react";
 import { Button, Link } from "@nextui-org/react";
-
-import { Input } from "@nextui-org/react";
 import { useTimer } from "use-timer";
 import { Timer } from "./components/Timer";
 

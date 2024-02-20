@@ -40,7 +40,7 @@ export default async function Page() {
             </tr>
           </tbody>
         </table>
-        <img width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=3HE1AZ+42GNLE+2HOM+BWGDT" alt=""></img>
+        <img style={{ width: 1, height: 1 }} src="https://www10.a8.net/0.gif?a8mat=3HE1AZ+42GNLE+2HOM+BWGDT" alt=""></img>
       </div>
     </div>
   );
