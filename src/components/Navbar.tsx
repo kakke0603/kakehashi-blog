@@ -22,17 +22,17 @@ export default function index() {
       </NavbarContent>
       <NavbarContent className="hidden sm:flex gap-4">
         <NavbarItem>
-          <Link href="/about" isDisabled={pathname.includes("about")}>
+          <Link href="/about" isDisabled={pathname === "about"}>
             About
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="/articles" isDisabled={pathname.includes("articles")}>
+          <Link href="/articles" isDisabled={pathname === "articles"}>
             Articles
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="/playground" isDisabled={pathname.includes("playground")}>
+          <Link href="/playground" isDisabled={pathname === "playground"}>
             Playground
           </Link>
         </NavbarItem>
