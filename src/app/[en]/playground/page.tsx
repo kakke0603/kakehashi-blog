@@ -9,7 +9,7 @@ import ThumPiano from "./thum-piano.png";
 import ThumAlert from "./thum-alert.png";
 import ThumFaceDetect from "./thum-face-detect.png";
 import { Advertisements } from "@/components/Advertisement/Advertisements";
-import { useLang } from "@/hooks/UseLang";
+import { useLang } from "@/hooks/useLang";
 import { PlaygroundCard } from "@/components/Playground/PlaygroundCard";
 
 const pages = [
@@ -130,6 +130,7 @@ const pagesEn = [
   },
 ];
 export default function page() {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const { isJapanese } = useLang();
   const contents = isJapanese ? pages : pagesEn;
   return (
