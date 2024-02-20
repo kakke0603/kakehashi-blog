@@ -1,3 +1,4 @@
+export const runtime = "edge";
 import React from "react";
 import { Home } from "../Home";
 import { WideAdvertisements } from "@/components/Advertisement/WideAdvertisements";
