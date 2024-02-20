@@ -1,9 +1,8 @@
 "use client";
-import { Link, User } from "@nextui-org/react";
+import { Link, User, Image } from "@nextui-org/react";
 import React from "react";
 import { WideAdvertisements } from "./Advertisement/WideAdvertisements";
 import { useLang } from "@/hooks/useLang";
-import Image from "next/image";
 
 export default function Profile() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -24,6 +23,11 @@ export default function Profile() {
               <br />
               GitHub:
               <a href="https://github.com/kakke0603" target="_blank" rel="noopener noreferrer">
+                kakke0603
+              </a>
+              <br />
+              instagram:
+              <a href="https://www.instagram.com/kakke0603/" target="_blank" rel="noopener noreferrer">
                 kakke0603
               </a>
               <br />
