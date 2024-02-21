@@ -8,6 +8,9 @@ import { usePathname } from "next/navigation";
 export default function index() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const pathname = usePathname();
+  const isDisabledAbout = pathname === "/about" || pathname === "/en/about";
+  const isDisabledArticles = pathname === "/articles" || pathname === "/en/articles";
+  const isDisabledPlayground = pathname === "/playground" || pathname === "/en/playground";
   return (
     <Navbar shouldHideOnScroll>
       <NavbarContent className="sm:hidden" justify="start">
@@ -22,17 +25,17 @@ export default function index() {
       </NavbarContent>
       <NavbarContent className="hidden sm:flex gap-4">
         <NavbarItem>
-          <Link href="/about" isDisabled={pathname === "/about" || pathname === "/en/about"}>
+          <Link href="/about" isDisabled={isDisabledAbout}>
             About
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="/articles" isDisabled={pathname === "/articles" || pathname === "/en/articles"}>
+          <Link href="/articles" isDisabled={isDisabledArticles}>
             Articles
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="/playground" isDisabled={pathname === "/playground" || pathname === "/en/playground"}>
+          <Link href="/playground" isDisabled={isDisabledPlayground}>
             Playground
           </Link>
         </NavbarItem>
@@ -47,17 +50,17 @@ export default function index() {
       </NavbarContent>
       <NavbarMenu>
         <NavbarMenuItem>
-          <Link href="/about" isDisabled={pathname === "/about" || pathname === "/en/about"}>
+          <Link href="/about" isDisabled={isDisabledAbout}>
             About
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link href="/articles" isDisabled={pathname === "/articles" || pathname === "/en/articles"}>
+          <Link href="/articles" isDisabled={isDisabledArticles}>
             Articles
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link href="/playground" isDisabled={pathname === "/playground" || pathname === "/en/playground"}>
+          <Link href="/playground" isDisabled={isDisabledPlayground}>
             Playground
           </Link>
         </NavbarMenuItem>
