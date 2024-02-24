@@ -1,6 +1,7 @@
 export const runtime = "edge";
 import React from "react";
 import { ImageResponse } from "next/og";
+import { getArticle } from "@/libs/client";
 
 export const alt = "kakke-blog";
 export const size = {
@@ -10,6 +11,7 @@ export const size = {
 export const contentType = "image/png";
 
 export default async function Image({ params }: { params: { id: string } }) {
+  const { title } = await getArticle(params.id);
   return new ImageResponse(
     (
       <div
@@ -21,7 +23,7 @@ export default async function Image({ params }: { params: { id: string } }) {
           justifyContent: "center",
         }}
       >
-        <img src={"./opengraph-image.png"} alt={alt} />
+        {title}
       </div>
     ),
     {
