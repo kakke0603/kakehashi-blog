@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props, parent: ResolvingMetad
     openGraph: {
       title: title_en,
       description: content_en,
-      images: ["https://kakke.site/opengraph-image.png", ...previousImages],
+      images: ["/opengraph-image.png", ...previousImages],
     },
   };
 }
