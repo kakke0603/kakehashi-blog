@@ -14,12 +14,14 @@ type Props = {
 };
 export async function generateMetadata({ params }: Props, parent: ResolvingMetadata): Promise<Metadata> {
   const id = params.id;
-  const { title } = await getArticle(id);
+  const { title_en, content_en } = await getArticle(id);
   const previousImages = (await parent).openGraph?.images || [];
   return {
-    title,
+    title: title_en,
     openGraph: {
-      images: [...previousImages],
+      title: title_en,
+      description: content_en,
+      images: ["https://kakke.site/opengraph-image.png", ...previousImages],
     },
   };
 }
