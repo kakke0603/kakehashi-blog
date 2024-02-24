@@ -19,7 +19,9 @@ export async function generateMetadata({ params }: Props, parent: ResolvingMetad
     title,
     description: content,
     openGraph: {
-      images: [...previousImages],
+      title,
+      description: content,
+      images: ["/opengraph-image.png", ...previousImages],
     },
   };
 }
@@ -29,6 +31,7 @@ export default async function Page({ params }: { params: { id: string } }) {
   return (
     <div>
       <Article {...data} key={data.id} />
+      <Advertisements />
     </div>
   );
 }
