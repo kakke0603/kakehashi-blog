@@ -1,3 +1,4 @@
+export const runtime = "edge";
 import { getArticle } from "@/libs/client";
 import { ImageResponse } from "next/og";
 export async function generateImageMetadata({ params }: { params: { id: string } }) {
