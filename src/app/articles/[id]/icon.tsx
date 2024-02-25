@@ -1,3 +1,4 @@
+export const runtime = "edge";
 import { ImageResponse } from "next/og";
 
 export function generateImageMetadata() {
