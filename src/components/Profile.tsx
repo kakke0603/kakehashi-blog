@@ -182,36 +182,6 @@ const TimelineComponent = () => {
       <li>
         <div className="flex-start flex items-center pt-3">
           <div className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-neutral-300 dark:bg-neutral-500"></div>
-          <p className="text-sm text-neutral-500 dark:text-neutral-300">2012/04/01〜2014/03/31</p>
-        </div>
-        <div className="mb-6 ml-4 mt-2">
-          <h4 className="mb-1.5 text-xl font-semibold">
-            {isJapanese
-              ? "同志社大学 理工学部 機械システム工学科入学"
-              : "Entered Doshisha University, Department of Mechanical Systems Engineering, Faculty of Science and Engineering"}
-          </h4>
-          <p className="mb-3 text-neutral-500 dark:text-neutral-300">
-            {isJapanese
-              ? "ものづくりがしたい思いで入るも、製図の授業で挫折。2年で中退しました。"
-              : "I entered the school because I wanted to make things, but I was frustrated in the drafting class and dropped out after two years."}
-          </p>
-        </div>
-      </li>
-      <li>
-        <div className="flex-start flex items-center pt-3">
-          <div className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-neutral-300 dark:bg-neutral-500"></div>
-          <p className="text-sm text-neutral-500 dark:text-neutral-300">2014/04/01〜2015/03/31</p>
-        </div>
-        <div className="mb-6 ml-4 mt-2">
-          <h4 className="mb-1.5 text-xl font-semibold">{isJapanese ? "フリーター" : "young people subsisting on part-time work"}</h4>
-          <p className="mb-3 text-neutral-500 dark:text-neutral-300">
-            {isJapanese ? "自分のやりたいことは何か、人生を見つめ直していました。" : "I was rethinking my life and what I wanted to do."}
-          </p>
-        </div>
-      </li>
-      <li>
-        <div className="flex-start flex items-center pt-3">
-          <div className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-neutral-300 dark:bg-neutral-500"></div>
           <p className="text-sm text-neutral-500 dark:text-neutral-300">2015/04/01〜2019/03/31</p>
         </div>
         <div className="mb-6 ml-4 mt-2">
