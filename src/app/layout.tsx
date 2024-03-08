@@ -30,6 +30,7 @@ export const metadata = {
     siteName,
     locale: "ja_JP",
     type: "website",
+    images: ["/openGraph-image-square.png"],
   },
   twitter: {
     card: "summary_large_image",
