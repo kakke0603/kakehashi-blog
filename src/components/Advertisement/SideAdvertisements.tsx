@@ -93,12 +93,57 @@ const ads = {
       <img style={{ width: 1, height: 1 }} src="https://www15.a8.net/0.gif?a8mat=3Z0CMV+1SBLE+5GDG+HWPVL" alt=""></img>
     </div>
   ),
+  10: (
+    <div>
+      {/* 日本エイサー株式会社 */}
+      <a href="https://px.a8.net/svt/ejp?a8mat=3Z2KKY+B2WG36+5G54+5YZ75" rel="nofollow">
+        <img style={{ maxWidth: 300 }} alt="" src="https://www21.a8.net/svt/bgt?aid=240305074670&wid=001&eno=01&mid=s00000025420001003000&mc=1" />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www11.a8.net/0.gif?a8mat=3Z2KKY+B2WG36+5G54+5YZ75" alt=""></img>
+    </div>
+  ),
+  11: (
+    <div>
+      {/* 株式会社Ｉ・Ａｃｃｅｓｓ */}
+      <a href="https://px.a8.net/svt/ejp?a8mat=3Z2KKY+B2B0HE+58A2+601S1" rel="nofollow">
+        <img style={{ maxWidth: 300 }} alt="" src="https://www28.a8.net/svt/bgt?aid=240305074669&wid=001&eno=01&mid=s00000024401001008000&mc=1" />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www18.a8.net/0.gif?a8mat=3Z2KKY+B2B0HE+58A2+601S1" alt=""></img>
+    </div>
+  ),
+  12: (
+    <div>
+      {/* 株式会社ＮＴＴドコモ（ｄ払いポイントＧＥＴモール） */}
+      <a href="https://px.a8.net/svt/ejp?a8mat=3Z2KKY+B0IPO2+5244+61C2P" rel="nofollow">
+        <img style={{ maxWidth: 300 }} alt="" src="https://www20.a8.net/svt/bgt?aid=240305074666&wid=001&eno=01&mid=s00000023602001014000&mc=1" />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www12.a8.net/0.gif?a8mat=3Z2KKY+B0IPO2+5244+61C2P" alt=""></img>
+    </div>
+  ),
+  13: (
+    <div>
+      {/* 株式会社ＮＴＴドコモ（ｄ払いポイントＧＥＴモール）2 */}
+      <a href="https://px.a8.net/svt/ejp?a8mat=3Z2KKY+B0IPO2+5244+5ZU29" rel="nofollow">
+        <img style={{ maxWidth: 300 }} alt="" src="https://www24.a8.net/svt/bgt?aid=240305074666&wid=001&eno=01&mid=s00000023602001007000&mc=1" />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www11.a8.net/0.gif?a8mat=3Z2KKY+B0IPO2+5244+5ZU29" alt=""></img>
+    </div>
+  ),
+  14: (
+    <div>
+      {/* ポジウィル株式会社 */}
+      <a href="https://px.a8.net/svt/ejp?a8mat=3Z0RKK+FJNHF6+5H76+5Z6WX" rel="nofollow">
+        <img style={{ maxWidth: 300 }} alt="" src="https://www24.a8.net/svt/bgt?aid=240220820940&wid=001&eno=01&mid=s00000025557001004000&mc=1" />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www11.a8.net/0.gif?a8mat=3Z0RKK+FJNHF6+5H76+5Z6WX" alt=""></img>
+    </div>
+  ),
 };
 export const SideAdvertisements = () => {
   const [ad, setAd] = useState(null);
   const { width } = useWindowSize();
   useEffect(() => {
-    const random = Math.floor(Math.random() * 10);
+    const random = Math.floor(Math.random() * 15);
     setAd(ads[random]);
   }, []);
   return <div style={{ width: (width - 1024) / 2 }}>{ad}</div>;
