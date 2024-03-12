@@ -6,11 +6,14 @@ import { Tag } from "../Tag";
 import { Button } from "@nextui-org/react";
 import twemoji from "twemoji";
 import { useRouter } from "next/navigation";
+import { useLang } from "@/hooks/useLang";
 
 export default async function Tags({ tags }: { tags: TagType[] }) {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const router = useRouter();
   const onClick = (id: string) => router.push(`/tags/${id}`);
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const { isJapanese } = useLang();
   return (
     <div className="flex flex-col gap-3">
       <div className="font-bold underline">Tags</div>
@@ -18,7 +21,7 @@ export default async function Tags({ tags }: { tags: TagType[] }) {
         {tags?.map((tag) => (
           <Button key={tag.id} onClick={() => onClick(tag.id)}>
             <div dangerouslySetInnerHTML={{ __html: twemoji.parse(tag.emoji) }} className="emoji"></div>
-            {tag.name}
+            {isJapanese ? tag.name : tag.name_en}
           </Button>
         ))}
       </div>
