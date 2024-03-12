@@ -10,7 +10,7 @@ export const Home = () => {
   return (
     <div>
       <div className="text-7xl flex justify-center items-center my-10">Kakke-Blog</div>
-      <div className="flex gap-x-5">
+      <div className="flex gap-5 flex-wrap justify-center">
         <a href={"/about"}>
           <Card className="py-4" isPressable>
             <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
