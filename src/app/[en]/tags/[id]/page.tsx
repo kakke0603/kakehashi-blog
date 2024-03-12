@@ -13,6 +13,7 @@ export default async function page({ params }: { params: { id: string } }) {
     .then((res) => res as ArticleType[]);
   const filteredArticles = articles.filter((article) => article.tags.some((tag) => tag.id === params.id));
   const tag = await client.get({ endpoint: "tags", contentId: params.id }).then((res) => res);
+
   return (
     <div>
       <div>
