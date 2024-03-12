@@ -17,6 +17,18 @@ export const getAllArticles = async () => {
   });
 };
 
+export const getArticles = async (offset: number) => {
+  return await client
+    .getList<ArticleType[]>({
+      endpoint: "articles",
+      queries: {
+        limit: 10,
+        offset,
+      },
+    })
+    .then((res) => res.contents);
+};
+
 export const getArticle = async (id: string) => {
   const data: ArticleType = await client
     .get({
@@ -34,7 +46,7 @@ export type ArticleType = {
   content?: string;
   publishedAt: string;
   revisedAt: string;
-  tags: Array<{ id: string; name: string; emoji: string; name_en: string }>;
+  tags?: Array<{ id: string; name: string; emoji: string; name_en: string }>;
   title_en?: string;
   content_en?: string;
 };

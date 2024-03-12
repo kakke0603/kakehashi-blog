@@ -1,30 +1,38 @@
-export const runtime = "edge";
-import { ArticleType, client, isArticleType } from "@/libs/client";
-import React from "react";
+export const revalidate = 0;
+import { ArticleType, client, getArticles, isArticleType } from "@/libs/client";
+import React, { use, useEffect, useState } from "react";
 import { WideAdvertisements } from "@/components/Advertisement/WideAdvertisements";
 import { ArticleCard } from "@/components/Article/ArticleCard";
+import { useSearchParams } from "next/navigation";
+import useSWR from "swr";
+import { MicroCMSContentId, MicroCMSDate, MicroCMSListResponse, createClient } from "microcms-js-sdk";
 
-export default async function Articles() {
-  const data = await client
-    .getAllContents({
-      endpoint: "articles",
+interface IProps {
+  url: string;
+  params: object;
+}
+const fetcher = async (props: IProps): Promise<(ArticleType[] & MicroCMSContentId & MicroCMSDate)[]> =>
+  await client
+    .getList({
+      endpoint: props.url,
+      queries: {
+        limit: 10,
+        ...props.params,
+      },
     })
-    .then((res) => res);
+    .then((res: MicroCMSListResponse<ArticleType[]>) => res.contents);
 
-  const groupedItems = [];
-  for (let i = 0; i < data.length; i += 3) {
-    groupedItems.push(data.slice(i, i + 3));
-  }
-  const listWithAdvertisements = groupedItems.flatMap((group, index) => {
-    const items = [...group];
-    if (index < groupedItems.length - 1) {
-      items.push(<WideAdvertisements key={`advertisement-${index}`} />);
-    }
-    return items;
+export const Articles = ({ offset = 0 }: { offset: number }) => {
+  const client = createClient({
+    serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN ?? "",
+    apiKey: process.env.MICROCMS_API_KEY ?? "",
+    retry: true,
   });
+  const { data } = useSWR({ url: "articles", params: { offset } }, fetcher);
+
   return (
     <div className="pt-10 px-2 space-y-10  mx-auto">
-      {listWithAdvertisements?.map((article: any) => {
+      {data?.map((article: any) => {
         if (isArticleType(article)) {
           return <ArticleCard key={article.id} {...article} />;
         } else {
@@ -33,4 +41,4 @@ export default async function Articles() {
       })}
     </div>
   );
-}
+};
