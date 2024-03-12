@@ -61,7 +61,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <main>
               <div className="flex justify-between">
                 <div className="hidden lg:flex flex-col fixed">{/* <BuyMeCoffeeButton /> */}</div>
-                <div className="max-w-[1024px] mx-auto flex-grow">{children}</div>
+                <div className="max-w-[1024px] mx-auto flex-grow">
+                  {children}
+                  <Advertisements />
+                </div>
                 <div className="hidden xl:flex fixed right-0">
                   <div className="flex flex-col">
                     <SideAdvertisements />
