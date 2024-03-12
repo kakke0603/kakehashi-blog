@@ -36,13 +36,13 @@ export default function index() {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="/playground" isDisabled={isDisabledPlayground}>
-            Playground
+          <Link href="/tags" isDisabled={isDisabledTags}>
+            tags
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="/tags" isDisabled={isDisabledTags}>
-            tags
+          <Link href="/playground" isDisabled={isDisabledPlayground}>
+            Playground
           </Link>
         </NavbarItem>
       </NavbarContent>
@@ -66,13 +66,13 @@ export default function index() {
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link href="/playground" isDisabled={isDisabledPlayground}>
-            Playground
+          <Link href="/tags" isDisabled={isDisabledTags}>
+            tags
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link href="/tags" isDisabled={isDisabledTags}>
-            tags
+          <Link href="/playground" isDisabled={isDisabledPlayground}>
+            Playground
           </Link>
         </NavbarMenuItem>
       </NavbarMenu>

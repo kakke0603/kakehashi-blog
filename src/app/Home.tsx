@@ -35,6 +35,17 @@ export const Home = () => {
             </CardBody>
           </Card>
         </a>
+        <a href={"/tags"}>
+          <Card className="py-4" isPressable>
+            <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
+              <h4 className="font-bold text-large">Tags</h4>
+              <small className="text-default-500">{isJapanese ? <>記事のタグ一覧です</> : <>Here is a list of tags for the article</>}</small>
+            </CardHeader>
+            <CardBody className="overflow-visible py-2 flex justify-center items-center">
+              <Image alt="Card background" className="object-cover rounded-xl" src="tags.png" width={100} />
+            </CardBody>
+          </Card>
+        </a>
         <a href={"/playground"}>
           <Card className="py-4" isPressable>
             <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
