@@ -53,7 +53,6 @@ export default function Profile() {
       <Link href="https://it-takoyaki.connpass.com/" target="_blank" rel="noopener noreferrer">
         <Image src={isJapanese ? "it-takoyaki.png" : "/[en]/it-takoyaki-en.png"} alt="it-takoyaki" />
       </Link>
-      <WideAdvertisements />
     </div>
   );
 }
