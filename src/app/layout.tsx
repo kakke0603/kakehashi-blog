@@ -9,6 +9,7 @@ import React from "react";
 import { HorizontalAdvertisements } from "@/components/Advertisement/HorizontalAdvertisements";
 import { BuyMeCoffeeWidget } from "@/components/BuyMeCoffeeWidget";
 import { BuyMeCoffeeButton } from "@/components/BuyMeCoffeeButton";
+import GoogleAdsense from "@/components/Advertisement/GoogleAdsense";
 
 const inter = Noto_Sans_JP({ subsets: ["latin"], display: "swap" });
 
@@ -56,6 +57,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <meta property="og:image:height" content="<generated>" />
       <body id="output">
         <Providers>
+          <GoogleAdsense pId="1124456984547171" />
           <div className="flex flex-col h-screen">
             <Navbar />
             <main>
