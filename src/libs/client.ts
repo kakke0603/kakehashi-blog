@@ -39,6 +39,13 @@ export type ArticleType = {
   content_en?: string;
 };
 
+export type TagType = {
+  id: string;
+  name: string;
+  emoji: string;
+  name_en: string;
+};
+
 export function isArticleType(obj: any): obj is ArticleType {
   if (
     typeof obj === "object" &&
