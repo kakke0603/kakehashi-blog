@@ -2,7 +2,7 @@ import React from "react";
 
 export const EvaMark01 = () => {
   return (
-    <div>
+    <div className="mb-[600px]">
       <div className="relative">
         <div className="absolute top-[100px] rotate-[50deg]">
           <div className="flex">
@@ -76,6 +76,12 @@ export const EvaMark01 = () => {
             <div className="w-[4px] h-[16px] bg-purple-800 rotate-[-20deg]"></div>
           </div>
         </div>
+        <div
+          className="w-0 h-0 absolute rotate-[55deg] top-[162px] left-[300px]
+                border-l-[0px] border-l-transparent 
+                border-t-[40px] border-t-transparent 
+                border-r-[16px] border-r-purple-500"
+        ></div>
         <div className="w-[80px] h-[16px] bg-purple-500 absolute rotate-[-35deg] top-[204px] left-[252px]">
           <div className="flex justify-between">
             <div className="w-[4px] h-[16px] bg-purple-500 rotate-[0deg]"></div>
@@ -88,6 +94,15 @@ export const EvaMark01 = () => {
             <div className="w-[4px] h-[16px] bg-purple-500 rotate-[0deg]"></div>
             <div className="w-[4px] h-[16px] bg-purple-500 rotate-[0deg]"></div>
           </div>
+        </div>
+        <div>
+          <div
+            className="w-0 h-0 absolute rotate-[55deg] top-[162px] left-[300px]
+                border-l-[0px] border-l-transparent 
+                border-t-[40px] border-t-transparent 
+                border-r-[16px] border-r-purple-500"
+          ></div>
+          <div></div>
         </div>
         {/* 上顎 */}
         <div
