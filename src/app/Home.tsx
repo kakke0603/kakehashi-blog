@@ -9,7 +9,6 @@ export const Home = () => {
   const isJapanese = locale === "ja";
   return (
     <div>
-      <div className="text-7xl flex justify-center items-center my-10 font-bold">Kakke-Blog</div>
       <div className=" gap-5 grid grid-cols-2 grid-rows-2 justify-center mb-5">
         <a href={"/about"}>
           <Card className="py-4 w-full h-full" isPressable>
