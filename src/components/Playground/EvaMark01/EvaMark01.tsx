@@ -77,9 +77,9 @@ export const EvaMark01 = () => {
           </div>
         </div>
         <div
-          className="w-0 h-0 absolute rotate-[55deg] top-[162px] left-[300px]
+          className="w-0 h-0 absolute rotate-[55deg] top-[169px] left-[295px]
                 border-l-[0px] border-l-transparent 
-                border-t-[40px] border-t-transparent 
+                border-t-[34px] border-t-transparent 
                 border-r-[16px] border-r-purple-500"
         ></div>
         <div className="w-[80px] h-[16px] bg-purple-500 absolute rotate-[-35deg] top-[204px] left-[252px]">
@@ -95,14 +95,33 @@ export const EvaMark01 = () => {
             <div className="w-[4px] h-[16px] bg-purple-500 rotate-[0deg]"></div>
           </div>
         </div>
-        <div>
+        {/* 頭部後ろの部分 */}
+        <div className="">
           <div
-            className="w-0 h-0 absolute rotate-[55deg] top-[162px] left-[300px]
+            className="w-0 h-0 rotate-[55deg] absolute top-[165px] left-[329px]
                 border-l-[0px] border-l-transparent 
-                border-t-[40px] border-t-transparent 
-                border-r-[16px] border-r-purple-500"
+                border-t-[27px] border-t-transparent 
+                border-r-[8px] border-r-purple-500"
           ></div>
-          <div></div>
+          <div className="w-[24px] h-[90px] bg-purple-500 absolute rotate-[55deg] left-[350px] top-[130px]"></div>
+          <div
+            className="w-0 h-0 rotate-[190deg] absolute top-[144px] left-[385px]
+                border-l-[56px] border-l-transparent 
+                border-t-[7px] border-t-transparent 
+                border-r-[7px] border-r-purple-500"
+          ></div>
+          <div className="w-[24px] h-[30px] bg-purple-500 absolute rotate-[95deg] left-[390px] top-[140px]"></div>
+          <div
+            className="w-0 h-0 rotate-[5deg] absolute top-[145px] left-[416px]
+                border-l-[8px] border-l-purple-500 
+                border-b-[24px] border-b-transparent 
+                border-r-[0px] border-r-transparent"
+          ></div>
+        </div>
+        {/* 頭部横円形パーツ */}
+        <div>
+          <div className="absolute top-[248px] left-[260px] rotate-[55deg] w-[30px] h-[5px] rounded-full bg-green-500"></div>
+          <div className="absolute top-[250px] left-[258px] rotate-[55deg] w-[30px] h-[5px] rounded-full bg-red-500"></div>
         </div>
         {/* 上顎 */}
         <div
