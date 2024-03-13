@@ -101,12 +101,21 @@ const ads = {
       <img style={{ width: 1, height: 1 }} src="https://www19.a8.net/0.gif?a8mat=3Z0CMV+1VVFQQ+5GDG+NVHCX" alt=""></img>
     </div>
   ),
+  11: (
+    <div>
+      {/* 株式会社ＮＴＴドコモ（ｄ払いポイントＧＥＴモール） */}
+      <a href="https://px.a8.net/svt/ejp?a8mat=3Z2KKY+B0IPO2+5244+5Z6WX" rel="nofollow">
+        <img width="468" height="60" alt="" src="https://www29.a8.net/svt/bgt?aid=240305074666&wid=001&eno=01&mid=s00000023602001004000&mc=1" />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www15.a8.net/0.gif?a8mat=3Z2KKY+B0IPO2+5244+5Z6WX" alt=""></img>
+    </div>
+  ),
 };
 
 export const WideAdvertisements = () => {
   const [ad, setAd] = useState(null);
   useEffect(() => {
-    const random = Math.floor(Math.random() * 11);
+    const random = Math.floor(Math.random() * 12);
     setAd(ads[random]);
   }, []);
   return <>{ad}</>;

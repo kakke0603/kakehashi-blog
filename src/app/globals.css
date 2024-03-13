@@ -34,4 +34,7 @@
   code {
     @apply p-2 max-w-[88dvw] break-all inline-block overflow-scroll;
   }
+  .emoji img {
+    @apply mt-2  h-8 w-8;
+  }
 }

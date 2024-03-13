@@ -9,10 +9,10 @@ export const Home = () => {
   const isJapanese = locale === "ja";
   return (
     <div>
-      <div className="text-7xl flex justify-center items-center my-10">Kakke-Blog</div>
-      <div className="flex gap-x-5">
+      <div className="text-7xl flex justify-center items-center my-10 font-bold">Kakke-Blog</div>
+      <div className=" gap-5 grid grid-cols-2 grid-rows-2 justify-center mb-5">
         <a href={"/about"}>
-          <Card className="py-4" isPressable>
+          <Card className="py-4 w-full h-full" isPressable>
             <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
               <h4 className="font-bold text-large">About</h4>
               <small className="text-default-500">{isJapanese ? <>かっけについて自己紹介</> : <>Self introduction about kakke</>}</small>
@@ -23,7 +23,7 @@ export const Home = () => {
           </Card>
         </a>
         <a href={"/articles"}>
-          <Card className="py-4" isPressable>
+          <Card className="py-4 w-full h-full" isPressable>
             <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
               <h4 className="font-bold text-large">Articles</h4>
               <small className="text-default-500">
@@ -35,8 +35,19 @@ export const Home = () => {
             </CardBody>
           </Card>
         </a>
+        <a href={"/tags"}>
+          <Card className="py-4 w-full h-full" isPressable>
+            <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
+              <h4 className="font-bold text-large">Tags</h4>
+              <small className="text-default-500">{isJapanese ? <>記事のタグ一覧です</> : <>Here is a list of tags for the article</>}</small>
+            </CardHeader>
+            <CardBody className="overflow-visible py-2 flex justify-center items-center">
+              <Image alt="Card background" className="object-cover rounded-xl" src="tags.png" width={100} />
+            </CardBody>
+          </Card>
+        </a>
         <a href={"/playground"}>
-          <Card className="py-4" isPressable>
+          <Card className="py-4 w-full h-full" isPressable>
             <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
               <h4 className="font-bold text-large">Playground</h4>
               <small className="text-default-500">{isJapanese ? <>技術の実験場遊び場</> : <>A testing ground and playground for technology</>}</small>
