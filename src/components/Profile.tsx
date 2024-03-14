@@ -30,11 +30,6 @@ export default function Profile() {
               <a href="https://www.instagram.com/kakke0603/" target="_blank" rel="noopener noreferrer">
                 kakke0603
               </a>
-              <br />
-              {isJapanese ? "くるっぷ" : "crepu"}
-              <a href="https://crepu.net/user/kake" target="_blank" rel="noopener noreferrer">
-                @kake
-              </a>
             </div>
           }
           avatarProps={{ src: "/profile.jpg", size: "lg" }}
