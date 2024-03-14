@@ -12,6 +12,8 @@ export default function index() {
   const isDisabledArticles = pathname === "/articles" || pathname === "/en/articles";
   const isDisabledPlayground = pathname === "/playground" || pathname === "/en/playground";
   const isDisabledTags = pathname === "/tags" || pathname === "/en/tags";
+  const isDisabledContact = pathname === "/contact" || pathname === "/en/contact";
+  const isDisabledProducts = pathname === "/products" || pathname === "/en/products";
   return (
     <Navbar shouldHideOnScroll>
       <NavbarContent className="sm:hidden" justify="start">
@@ -45,6 +47,16 @@ export default function index() {
             Playground
           </Link>
         </NavbarItem>
+        <NavbarItem>
+          <Link href="/products" isDisabled={isDisabledProducts}>
+            Products
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link href="/contact" isDisabled={isDisabledContact}>
+            ContactMe
+          </Link>
+        </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>
@@ -73,6 +85,16 @@ export default function index() {
         <NavbarMenuItem>
           <Link href="/playground" isDisabled={isDisabledPlayground}>
             Playground
+          </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <Link href="/products" isDisabled={isDisabledProducts}>
+            Products
+          </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <Link href="/contact" isDisabled={isDisabledContact}>
+            ContactMe
           </Link>
         </NavbarMenuItem>
       </NavbarMenu>
