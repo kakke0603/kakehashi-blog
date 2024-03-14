@@ -69,7 +69,7 @@ export default function index() {
       </NavbarContent>
       <NavbarMenu>
         <NavbarMenuItem>
-          <Link href="/top" isDisabled={isDisabledTop}>
+          <Link href="/" isDisabled={isDisabledTop}>
             Top
           </Link>
         </NavbarMenuItem>
