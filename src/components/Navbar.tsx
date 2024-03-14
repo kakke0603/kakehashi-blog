@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 export default function index() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const pathname = usePathname();
+  const isDisabledTop = pathname === "/" || pathname === "/en/";
   const isDisabledAbout = pathname === "/about" || pathname === "/en/about";
   const isDisabledArticles = pathname === "/articles" || pathname === "/en/articles";
   const isDisabledPlayground = pathname === "/playground" || pathname === "/en/playground";
@@ -67,6 +68,11 @@ export default function index() {
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
+        <NavbarMenuItem>
+          <Link href="/top" isDisabled={isDisabledTop}>
+            Top
+          </Link>
+        </NavbarMenuItem>
         <NavbarMenuItem>
           <Link href="/about" isDisabled={isDisabledAbout}>
             About
