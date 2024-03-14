@@ -9,22 +9,6 @@ import { Article } from "@/components/Article/Article";
 /**
  * メタデータの設定
  */
-type Props = {
-  params: { id: string };
-};
-export async function generateMetadata({ params }: Props, parent: ResolvingMetadata): Promise<Metadata> {
-  const id = params.id;
-  const { title_en, content_en } = await getArticle(id);
-  const previousImages = (await parent).openGraph?.images || [];
-  return {
-    title: title_en,
-    openGraph: {
-      title: title_en,
-      description: content_en,
-      images: ["/opengraph-image.png", ...previousImages],
-    },
-  };
-}
 
 const siteName = "Kakke Blog";
 const description = "This is a blog by kakke";

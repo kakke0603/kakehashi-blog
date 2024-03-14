@@ -8,10 +8,6 @@ import { ImageResponse } from "next/og";
 /**
  * メタデータの設定
  */
-type Props = {
-  params: { id: string };
-};
-
 const siteName = "Kakke Blog";
 const description = "This is a blog by kakke";
 const url = "https://kakke.site";
@@ -49,20 +45,6 @@ export const metadata = {
     canonical: url,
   },
 };
-export async function generateMetadata({ params }: Props, parent: ResolvingMetadata): Promise<Metadata> {
-  const id = params.id;
-  const { title, content } = await getArticle(id);
-  const previousImages = (await parent).openGraph?.images || [];
-  return {
-    title,
-    description: content,
-    openGraph: {
-      title,
-      description: content,
-      images: ["/opengraph-image.png", ...previousImages],
-    },
-  };
-}
 
 export default async function Page({ params }: { params: { id: string } }) {
   const data = await getArticle(params.id);
