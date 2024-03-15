@@ -42,7 +42,6 @@ export const Article: React.FC<ArticleType> = ({ id, title, content, publishedAt
         </div>
         <div className="dark:text-slate-200 mb-[100px]" dangerouslySetInnerHTML={{ __html: isJapanese ? content : content_en }} />
         <BuyMeCoffeeButton />
-        <Advertisements />
       </div>
     </div>
   );
