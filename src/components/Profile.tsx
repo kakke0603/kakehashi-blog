@@ -30,11 +30,6 @@ export default function Profile() {
               <a href="https://www.instagram.com/kakke0603/" target="_blank" rel="noopener noreferrer">
                 kakke0603
               </a>
-              <br />
-              {isJapanese ? "くるっぷ" : "crepu"}
-              <a href="https://crepu.net/user/kake" target="_blank" rel="noopener noreferrer">
-                @kake
-              </a>
             </div>
           }
           avatarProps={{ src: "/profile.jpg", size: "lg" }}
@@ -53,7 +48,6 @@ export default function Profile() {
       <Link href="https://it-takoyaki.connpass.com/" target="_blank" rel="noopener noreferrer">
         <Image src={isJapanese ? "it-takoyaki.png" : "/[en]/it-takoyaki-en.png"} alt="it-takoyaki" />
       </Link>
-      <WideAdvertisements />
     </div>
   );
 }
@@ -81,25 +75,25 @@ const codeJp = () => {
           虫眼鏡さん
         </a>
       }
-      推し){", "}
+      推し){`", "`}
       {
         <a href="https://www.youtube.com/@tokumei_radio" target="_blank" rel="noopener noreferrer">
           匿名ラジオ
         </a>
       }
-      {", "}
+      {`", "`}
       {
         <a href="https://www.youtube.com/@itabasihausu" target="_blank" rel="noopener noreferrer">
           板橋ハウス
         </a>
       }
-      {", "}
+      {`", "`}
       {
         <a href="https://www.youtube.com/@nekoten_zzz" target="_blank" rel="noopener noreferrer">
           ねこてん
         </a>
       }
-      {", "}
+      {`", "`}
       {
         <a href="https://www.youtube.com/@omocorochannel" target="_blank" rel="noopener noreferrer">
           オモコロチャンネル
@@ -139,25 +133,25 @@ const codeEn = () => {
           Mushimegane-san
         </a>
       }
-      ){", "}
+      ){`", "`}
       {
         <a href="https://www.youtube.com/@tokumei_radio" target="_blank" rel="noopener noreferrer">
           tokumei_radio
         </a>
       }
-      {", "}
+      {`", "`}
       {
         <a href="https://www.youtube.com/@itabasihausu" target="_blank" rel="noopener noreferrer">
           itabasihausu
         </a>
       }
-      {", "}
+      {`", "`}
       {
         <a href="https://www.youtube.com/@nekoten_zzz" target="_blank" rel="noopener noreferrer">
           nekoten
         </a>
       }
-      {", "}
+      {`", "`}
       {
         <a href="https://www.youtube.com/@omocorochannel" target="_blank" rel="noopener noreferrer">
           omocorochannel

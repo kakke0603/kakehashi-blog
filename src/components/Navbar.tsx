@@ -8,9 +8,13 @@ import { usePathname } from "next/navigation";
 export default function index() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const pathname = usePathname();
+  const isDisabledTop = pathname === "/" || pathname === "/en/";
   const isDisabledAbout = pathname === "/about" || pathname === "/en/about";
   const isDisabledArticles = pathname === "/articles" || pathname === "/en/articles";
   const isDisabledPlayground = pathname === "/playground" || pathname === "/en/playground";
+  const isDisabledTags = pathname === "/tags" || pathname === "/en/tags";
+  const isDisabledContact = pathname === "/contact" || pathname === "/en/contact";
+  const isDisabledProducts = pathname === "/products" || pathname === "/en/products";
   return (
     <Navbar shouldHideOnScroll>
       <NavbarContent className="sm:hidden" justify="start">
@@ -35,8 +39,23 @@ export default function index() {
           </Link>
         </NavbarItem>
         <NavbarItem>
+          <Link href="/tags" isDisabled={isDisabledTags}>
+            tags
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
           <Link href="/playground" isDisabled={isDisabledPlayground}>
             Playground
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link href="/products" isDisabled={isDisabledProducts}>
+            Products
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link href="/contact" isDisabled={isDisabledContact}>
+            ContactMe
           </Link>
         </NavbarItem>
       </NavbarContent>
@@ -50,6 +69,11 @@ export default function index() {
       </NavbarContent>
       <NavbarMenu>
         <NavbarMenuItem>
+          <Link href="/" isDisabled={isDisabledTop}>
+            Top
+          </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
           <Link href="/about" isDisabled={isDisabledAbout}>
             About
           </Link>
@@ -60,8 +84,23 @@ export default function index() {
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
+          <Link href="/tags" isDisabled={isDisabledTags}>
+            tags
+          </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
           <Link href="/playground" isDisabled={isDisabledPlayground}>
             Playground
+          </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <Link href="/products" isDisabled={isDisabledProducts}>
+            Products
+          </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <Link href="/contact" isDisabled={isDisabledContact}>
+            ContactMe
           </Link>
         </NavbarMenuItem>
       </NavbarMenu>

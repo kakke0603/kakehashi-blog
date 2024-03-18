@@ -9,6 +9,7 @@ import React from "react";
 import { HorizontalAdvertisements } from "@/components/Advertisement/HorizontalAdvertisements";
 import { BuyMeCoffeeWidget } from "@/components/BuyMeCoffeeWidget";
 import { BuyMeCoffeeButton } from "@/components/BuyMeCoffeeButton";
+import GoogleAdsense from "@/components/Advertisement/GoogleAdsense";
 
 const inter = Noto_Sans_JP({ subsets: ["latin"], display: "swap" });
 
@@ -54,14 +55,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <meta property="og:image:type" content="<generated>" />
       <meta property="og:image:width" content="<generated>" />
       <meta property="og:image:height" content="<generated>" />
+      <meta name="theme-color" content="#b8e986" />
+      <link rel="manifest" href="/manifest.json" />
+      <link rel="apple-touch-icon" href="/icon.png"></link>
       <body id="output">
         <Providers>
+          <GoogleAdsense pId="1124456984547171" />
           <div className="flex flex-col h-screen">
             <Navbar />
             <main>
               <div className="flex justify-between">
                 <div className="hidden lg:flex flex-col fixed">{/* <BuyMeCoffeeButton /> */}</div>
-                <div className="max-w-[1024px] mx-auto flex-grow">{children}</div>
+                <div className="max-w-[1024px] mx-auto flex-grow">
+                  {children}
+                  <Advertisements />
+                </div>
                 <div className="hidden xl:flex fixed right-0">
                   <div className="flex flex-col">
                     <SideAdvertisements />
