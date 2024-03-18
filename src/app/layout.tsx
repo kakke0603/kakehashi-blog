@@ -55,6 +55,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <meta property="og:image:type" content="<generated>" />
       <meta property="og:image:width" content="<generated>" />
       <meta property="og:image:height" content="<generated>" />
+      <meta name="theme-color" content="#b8e986" />
+      <link rel="manifest" href="/manifest.json" />
+      <link rel="apple-touch-icon" href="/icon.png"></link>
       <body id="output">
         <Providers>
           <GoogleAdsense pId="1124456984547171" />
