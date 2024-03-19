@@ -37,6 +37,25 @@ const Subscription = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [formState, setFormState] = useReducer((previous, next) => ({ ...previous, ...next }), initialState);
   const [selected, setSelected] = useState<SubscriptionType>({ ...(JSON.parse(value) ?? { ...initialState }) });
+  let sum = 0;
+  list.forEach((pay) => {
+    if (pay.paymentCycle === "1ヶ月に1回") {
+      sum += Number(pay.monthlyFee);
+    } else {
+      sum += Math.round(Number(pay.monthlyFee) / 12);
+    }
+  });
+  let sumYear = 0;
+  list.forEach((pay) => {
+    console.log(pay.monthlyFee);
+    if (pay.paymentCycle === "1ヶ月に1回") {
+      sumYear += Number(pay.monthlyFee) * 12;
+    } else {
+      sumYear += Number(pay.monthlyFee);
+    }
+  });
+  console.log(sumYear);
+  const [isMonthly, setIsMonthly] = useState(false);
   return (
     <div>
       <div className="px-3 flex justify-between">
@@ -58,7 +77,7 @@ const Subscription = () => {
                     <div className="w-full">
                       <div className="flex justify-between w-full">
                         <div>{pay.serviceName}</div>
-                        <div>¥{pay.monthlyFee}/月</div>
+                        <div>¥{pay.monthlyFee} / 月</div>
                       </div>
                       <div className="flex justify-between w-full">
                         <div>{pay.paymentCycle}</div>
@@ -70,28 +89,80 @@ const Subscription = () => {
               </div>
             </Tab>
             <Tab className="flex justify-center" key="bunseki" title="分析">
-              <div className="w-[250px] text-center  sm:w-[100%]">
-                <TEChart
-                  type="pie"
-                  data={{
-                    labels: list.map((pay) => pay.serviceName),
-                    datasets: [
-                      {
-                        label: "Traffic",
-                        data: list.map((pay) => Number(pay.monthlyFee)),
-                        backgroundColor: [
-                          "rgba(63, 81, 181, 0.5)",
-                          "rgba(77, 182, 172, 0.5)",
-                          "rgba(66, 133, 244, 0.5)",
-                          "rgba(156, 39, 176, 0.5)",
-                          "rgba(233, 30, 99, 0.5)",
-                          "rgba(66, 73, 244, 0.4)",
-                          "rgba(66, 133, 244, 0.2)",
-                        ],
-                      },
-                    ],
+              <div className="flex flex-col justify-center items-center">
+                <Tabs
+                  onSelectionChange={() => {
+                    setIsMonthly(!isMonthly);
                   }}
-                />
+                >
+                  <Tab title="月間"></Tab>
+                  <Tab title="年間"></Tab>
+                </Tabs>
+                <div className="w-[250px] text-center sm:w-[100%]">
+                  {isMonthly ? (
+                    <>
+                      <TEChart
+                        type="pie"
+                        data={{
+                          labels: list.map((pay) => pay.serviceName),
+                          datasets: [
+                            {
+                              label: "Traffic",
+                              data: list.map((pay) => {
+                                if (pay.paymentCycle === "1ヶ月に1回") {
+                                  return Number(pay.monthlyFee);
+                                } else {
+                                  return Math.round(Number(pay.monthlyFee) / 12);
+                                }
+                              }),
+                              backgroundColor: [
+                                "rgba(63, 81, 181, 0.5)",
+                                "rgba(77, 182, 172, 0.5)",
+                                "rgba(66, 133, 244, 0.5)",
+                                "rgba(156, 39, 176, 0.5)",
+                                "rgba(233, 30, 99, 0.5)",
+                                "rgba(66, 73, 244, 0.4)",
+                                "rgba(66, 133, 244, 0.2)",
+                              ],
+                            },
+                          ],
+                        }}
+                      />
+                      <div>¥{sum}</div>
+                    </>
+                  ) : (
+                    <>
+                      <TEChart
+                        type="pie"
+                        data={{
+                          labels: list.map((pay) => pay.serviceName),
+                          datasets: [
+                            {
+                              label: "Traffic",
+                              data: list.map((pay) => {
+                                if (pay.paymentCycle === "1ヶ月に1回") {
+                                  return Number(pay.monthlyFee) * 12;
+                                } else {
+                                  return Number(pay.monthlyFee);
+                                }
+                              }),
+                              backgroundColor: [
+                                "rgba(63, 81, 181, 0.5)",
+                                "rgba(77, 182, 172, 0.5)",
+                                "rgba(66, 133, 244, 0.5)",
+                                "rgba(156, 39, 176, 0.5)",
+                                "rgba(233, 30, 99, 0.5)",
+                                "rgba(66, 73, 244, 0.4)",
+                                "rgba(66, 133, 244, 0.2)",
+                              ],
+                            },
+                          ],
+                        }}
+                      />
+                      <div>¥{sumYear}</div>
+                    </>
+                  )}
+                </div>
               </div>
             </Tab>
           </Tabs>
