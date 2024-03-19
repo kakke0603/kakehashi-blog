@@ -69,8 +69,8 @@ const Subscription = () => {
                 ))}
               </div>
             </Tab>
-            <Tab className="" key="bunseki" title="分析">
-              <div>
+            <Tab className="flex justify-center" key="bunseki" title="分析">
+              <div className="w-[250px] text-center  sm:w-[100%]">
                 <TEChart
                   type="pie"
                   data={{
@@ -131,7 +131,6 @@ const Subscription = () => {
                   isRequired
                   value={selected.serviceName ?? formState.serviceName}
                   onChange={(e) => {
-                    localStorage.setItem("subscription", JSON.stringify([...list, { ...formState, serviceName: e.target.value }]));
                     setFormState({ serviceName: e.target.value });
                   }}
                 />
@@ -141,7 +140,6 @@ const Subscription = () => {
                   className="max-w-xs"
                   value={selected.paymentCycle ?? formState.paymentCycle}
                   onChange={(e) => {
-                    localStorage.setItem("subscription", JSON.stringify([...list, { ...formState, paymentCycle: e.target.value }]));
                     setFormState(e.target.value);
                   }}
                 >
@@ -158,7 +156,6 @@ const Subscription = () => {
                   isRequired
                   value={selected.monthlyFee ?? formState.monthlyFee}
                   onChange={(e) => {
-                    localStorage.setItem("subscription", JSON.stringify([...list, { ...formState, monthlyFee: e.target.value }]));
                     setFormState({ monthlyFee: e.target.value });
                   }}
                 />
@@ -170,7 +167,6 @@ const Subscription = () => {
                     isRequired
                     value={selected.firstPaymentDate ?? formState.firstPaymentDate}
                     onChange={(e) => {
-                      localStorage.setItem("subscription", JSON.stringify([...list, { ...formState, firstPaymentDate: e.target.value }]));
                       setFormState({ firstPaymentDate: e.target.value });
                     }}
                   />
