@@ -8,12 +8,13 @@ import ThumPiano from "./thum-piano.png";
 import ThumAlert from "./thum-alert.png";
 import ThumFaceDetect from "./thum-face-detect.png";
 import ThumEva from "./thum-eva-timer.png";
+import ThumSubscription from "./thum-subscription.png";
 import { Advertisements } from "@/components/Advertisement/Advertisements";
 
 const pages = [
   {
     id: "subscription",
-    image: ThumFaceDetect,
+    image: ThumSubscription,
     title: "サブスク！",
     content: "サブスクリプションの管理アプリ",
     publishedAt: "2024-03-17T02:00:34.925Z",
