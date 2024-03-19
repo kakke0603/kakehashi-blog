@@ -130,14 +130,20 @@ const Subscription = () => {
                   label="サービス名"
                   isRequired
                   value={selected.serviceName ?? formState.serviceName}
-                  onChange={(e) => setFormState({ serviceName: e.target.value })}
+                  onChange={(e) => {
+                    localStorage.setItem("subscription", JSON.stringify([...list, { ...formState, serviceName: e.target.value }]));
+                    setFormState({ serviceName: e.target.value });
+                  }}
                 />
                 <p>支払い周期</p>
                 <Select
                   label="支払い周期を選択してください"
                   className="max-w-xs"
                   value={selected.paymentCycle ?? formState.paymentCycle}
-                  onChange={(e) => setFormState(e.target.value)}
+                  onChange={(e) => {
+                    localStorage.setItem("subscription", JSON.stringify([...list, { ...formState, paymentCycle: e.target.value }]));
+                    setFormState(e.target.value);
+                  }}
                 >
                   <SelectItem key="1" value="1ヶ月に1回">
                     1ヶ月に1回
@@ -151,7 +157,10 @@ const Subscription = () => {
                   type="number"
                   isRequired
                   value={selected.monthlyFee ?? formState.monthlyFee}
-                  onChange={(e) => setFormState({ monthlyFee: e.target.value })}
+                  onChange={(e) => {
+                    localStorage.setItem("subscription", JSON.stringify([...list, { ...formState, monthlyFee: e.target.value }]));
+                    setFormState({ monthlyFee: e.target.value });
+                  }}
                 />
                 <p>初回支払日</p>
                 <div className="flex">
@@ -160,7 +169,10 @@ const Subscription = () => {
                     type="date"
                     isRequired
                     value={selected.firstPaymentDate ?? formState.firstPaymentDate}
-                    onChange={(e) => setFormState({ firstPaymentDate: e.target.value })}
+                    onChange={(e) => {
+                      localStorage.setItem("subscription", JSON.stringify([...list, { ...formState, firstPaymentDate: e.target.value }]));
+                      setFormState({ firstPaymentDate: e.target.value });
+                    }}
                   />
                 </div>
               </ModalBody>
