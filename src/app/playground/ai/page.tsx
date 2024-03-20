@@ -1,6 +1,6 @@
 "use client";
 export const runtime = "edge";
-import { ask } from "@/components/Playground/AI/openai";
+import { ask } from "@/components/Playground/AI/claude";
 import { Button, Input } from "@nextui-org/react";
 import React, { useState } from "react";
 
@@ -14,7 +14,7 @@ export default function Page() {
     try {
       const response = await ask(prompt);
       const t = response ?? "";
-      setResponse(t);
+      setResponse(t.toString());
     } catch (error) {
       console.log(error);
     }
