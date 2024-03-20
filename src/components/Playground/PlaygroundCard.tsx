@@ -10,7 +10,7 @@ import Image from "next/image";
 
 type PlaygroundType = {
   id: string;
-  image: StaticImageData;
+  image: string;
   title: string;
   content: string;
   publishedAt: string;
@@ -24,7 +24,7 @@ export const PlaygroundCard: React.FC<PlaygroundType> = ({ id, image, title, con
       <CardBody>
         <div className="gap-x-4 flex flex-row gap-y-4">
           <div className="w-[70px] h-[70px] border-[4px] bg-gray-100 dark:bg-gray-700 rounded-lg">
-            <Image src={image.src} width={70} height={70} alt="" />
+            <Image src={image} width={70} height={70} alt="" />
           </div>
           <div className="space-y-4 w-[230px]">
             <h4 className="font-bold text-large block">{title}</h4>
