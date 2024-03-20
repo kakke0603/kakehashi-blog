@@ -4,6 +4,14 @@ import React from "react";
 import { PlaygroundCard } from "./PlaygroundCard";
 
 const pages = [
+  {
+    id: "qr-reader",
+    image: "/playground/thum-qr-reader.png",
+    title: "QR Reader",
+    content: "QRコードリーダー",
+    publishedAt: "2024-03-21T02:00:34.925Z",
+    revisedAt: "2024-03-21T02:00:34.925Z",
+  },
   //   {
   //     id: "ai",
   //     image: "/playground/thum-ai.png",
@@ -87,6 +95,14 @@ const pages = [
 ];
 
 const pagesEn = [
+  {
+    id: "qr-reader",
+    image: "/playground/thum-qr-reader.png",
+    title: "QR Reader",
+    content: "QR code reader",
+    publishedAt: "2024-03-21T02:00:34.925Z",
+    revisedAt: "2024-03-21T02:00:34.925Z",
+  },
   //   {
   //     id: "ai",
   //     image: "/playground/thum-ai.png",
