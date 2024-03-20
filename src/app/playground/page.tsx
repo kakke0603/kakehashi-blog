@@ -8,6 +8,7 @@ import ThumPiano from "./thum-piano.png";
 import ThumAlert from "./thum-alert.png";
 import ThumFaceDetect from "./thum-face-detect.png";
 import ThumEva from "./thum-eva-timer.png";
+import ThumSubscription from "./thum-subscription.png";
 import { Advertisements } from "@/components/Advertisement/Advertisements";
 
 const pages = [
@@ -16,8 +17,16 @@ const pages = [
     image: ThumFaceDetect,
     title: "エヴァンゲリオン初号機",
     content: "tailwindcssでエヴァンゲリオン初号機を作ってみた",
-    publishedAt: "2024-02-21T02:00:34.925Z",
-    revisedAt: "2024-02-21T02:00:34.925Z",
+    publishedAt: "2024-03-25T02:00:34.925Z",
+    revisedAt: "2024-03-25T02:00:34.925Z",
+  },
+  {
+    id: "subscription",
+    image: ThumSubscription,
+    title: "サブスク！",
+    content: "サブスクリプションの管理アプリ",
+    publishedAt: "2024-03-17T02:00:34.925Z",
+    revisedAt: "2024-03-17T02:00:34.925Z",
   },
   {
     id: "face-detect",
@@ -81,7 +90,7 @@ export default function page() {
     <div className="">
       <div className="flex flex-col space-y-5">
         {pages.map((page) => (
-          <PlaygroundCard {...page} key={page.id} />
+          <PlaygroundCard {...page} key={page.id} image={page.image || undefined} />
         ))}
       </div>
       <Advertisements />

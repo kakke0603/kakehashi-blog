@@ -11,6 +11,7 @@ import ThumFaceDetect from "./thum-face-detect.png";
 import { Advertisements } from "@/components/Advertisement/Advertisements";
 import { useLang } from "@/hooks/useLang";
 import { PlaygroundCard } from "@/components/Playground/PlaygroundCard";
+import ThumSubscription from "./thum-subscription.png";
 
 const pages = [
   {
@@ -18,8 +19,16 @@ const pages = [
     image: ThumFaceDetect,
     title: "エヴァンゲリオン初号機",
     content: "tailwindcssでエヴァンゲリオン初号機を作ってみた",
-    publishedAt: "2024-02-21T02:00:34.925Z",
-    revisedAt: "2024-02-21T02:00:34.925Z",
+    publishedAt: "2024-03-25T02:00:34.925Z",
+    revisedAt: "2024-03-25T02:00:34.925Z",
+  },
+  {
+    id: "subscription",
+    image: ThumSubscription,
+    title: "サブスク！",
+    content: "サブスクリプションの管理アプリ",
+    publishedAt: "2024-03-17T02:00:34.925Z",
+    revisedAt: "2024-03-17T02:00:34.925Z",
   },
   {
     id: "face-detect",
@@ -80,6 +89,14 @@ const pages = [
 ];
 
 const pagesEn = [
+  {
+    id: "subscription",
+    image: ThumSubscription,
+    title: "subscribe!",
+    content: "Subscription Management Apps",
+    publishedAt: "2024-03-17T02:00:34.925Z",
+    revisedAt: "2024-03-17T02:00:34.925Z",
+  },
   {
     id: "face-detect",
     image: ThumFaceDetect,
