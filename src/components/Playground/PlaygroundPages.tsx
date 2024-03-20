@@ -80,6 +80,14 @@ const pages = [
 
 const pagesEn = [
   {
+    id: "evangelion-mark01",
+    image: "/playground/thum-face-detect.png",
+    title: "evangelion mark01",
+    content: "I made Evangelion Mark01 with tailwindcss.",
+    publishedAt: "2024-03-25T02:00:34.925Z",
+    revisedAt: "2024-03-25T02:00:34.925Z",
+  },
+  {
     id: "subscription",
     image: "/playground/thum-subscription.png",
     title: "subscribe!",
@@ -150,7 +158,7 @@ const PlaygroundPages = () => {
   const contents = isJapanese ? pages : pagesEn;
   return (
     <div className="">
-      <div className="flex flex-col space-y-5">
+      <div className="flex flex-col space-y-5 px-3">
         {contents.map((page) => (
           <PlaygroundCard {...page} key={page.id} />
         ))}
