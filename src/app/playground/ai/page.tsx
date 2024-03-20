@@ -5,7 +5,7 @@ import { Button, Input } from "@nextui-org/react";
 import React, { useState } from "react";
 
 // eslint-disable-next-line @next/next/no-async-client-component
-export default async function Page() {
+export default function Page() {
   const [prompt, setPrompt] = useState("");
   const [response, setResponse] = useState("");
 
