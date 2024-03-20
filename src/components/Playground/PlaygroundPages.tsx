@@ -6,7 +6,7 @@ import { PlaygroundCard } from "./PlaygroundCard";
 const pages = [
   {
     id: "evangelion-mark01",
-    image: "/playground/thum-face-detect.png",
+    image: "/playground/thum-eva-mark01.png",
     title: "エヴァンゲリオン初号機",
     content: "tailwindcssでエヴァンゲリオン初号機を作ってみた",
     publishedAt: "2024-03-25T02:00:34.925Z",
@@ -81,7 +81,7 @@ const pages = [
 const pagesEn = [
   {
     id: "evangelion-mark01",
-    image: "/playground/thum-face-detect.png",
+    image: "/playground/thum-eva-mark01.png",
     title: "evangelion mark01",
     content: "I made Evangelion Mark01 with tailwindcss.",
     publishedAt: "2024-03-25T02:00:34.925Z",
