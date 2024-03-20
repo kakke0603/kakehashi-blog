@@ -23,21 +23,19 @@ export default function Page() {
   return (
     <div>
       <div className="mt-3 p-3">
-        <form onSubmit={handleSubmit}>
-          <div className="space-y-3 px-4 py-5 sm:p-6">
-            <label htmlFor="Prompt" className="block text-sm font-medium">
-              質問文
-            </label>
-            <div>
-              <Input className="" placeholder="ここに質問を入れてください" value={prompt} onChange={(e) => setPrompt(e.target.value)} />
-            </div>
-            <div>
-              <Button type="submit" className="">
-                質問する
-              </Button>
-            </div>
+        <div className="space-y-3 px-4 py-5 sm:p-6">
+          <label htmlFor="Prompt" className="block text-sm font-medium">
+            質問文
+          </label>
+          <div>
+            <Input value={prompt} onValueChange={setPrompt} placeholder="ここに質問を入れてください" onChange={(e) => setPrompt(e.target.value)} />
           </div>
-        </form>
+          <div>
+            <Button onClick={handleSubmit} className="">
+              質問する
+            </Button>
+          </div>
+        </div>
       </div>
       <div className="mt-3 p-3 md:col-span-2 md:mt-0">
         <div className="">

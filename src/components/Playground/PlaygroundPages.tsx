@@ -4,14 +4,14 @@ import React from "react";
 import { PlaygroundCard } from "./PlaygroundCard";
 
 const pages = [
-  {
-    id: "ai",
-    image: "/playground/thum-ai.png",
-    title: "AI",
-    content: "AIのチャット",
-    publishedAt: "2024-03-20T02:00:34.925Z",
-    revisedAt: "2024-03-20T02:00:34.925Z",
-  },
+  //   {
+  //     id: "ai",
+  //     image: "/playground/thum-ai.png",
+  //     title: "AI",
+  //     content: "AIのチャット",
+  //     publishedAt: "2024-03-20T02:00:34.925Z",
+  //     revisedAt: "2024-03-20T02:00:34.925Z",
+  //   },
   {
     id: "evangelion-mark01",
     image: "/playground/thum-eva-mark01.png",
@@ -87,14 +87,14 @@ const pages = [
 ];
 
 const pagesEn = [
-  {
-    id: "ai",
-    image: "/playground/thum-ai.png",
-    title: "AI",
-    content: "AI Chat",
-    publishedAt: "2024-03-20T02:00:34.925Z",
-    revisedAt: "2024-03-20T02:00:34.925Z",
-  },
+  //   {
+  //     id: "ai",
+  //     image: "/playground/thum-ai.png",
+  //     title: "AI",
+  //     content: "AI Chat",
+  //     publishedAt: "2024-03-20T02:00:34.925Z",
+  //     revisedAt: "2024-03-20T02:00:34.925Z",
+  //   },
   {
     id: "evangelion-mark01",
     image: "/playground/thum-eva-mark01.png",
