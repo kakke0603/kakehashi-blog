@@ -5,6 +5,14 @@ import { PlaygroundCard } from "./PlaygroundCard";
 
 const pages = [
   {
+    id: "four-pillars-fortune-telling",
+    image: "/playground/thum-qr-reader.png",
+    title: "占い",
+    content: "四柱推命占い",
+    publishedAt: "2024-03-21T02:00:34.925Z",
+    revisedAt: "2024-03-21T02:00:34.925Z",
+  },
+  {
     id: "qr-reader",
     image: "/playground/thum-qr-reader.png",
     title: "QR Reader",
@@ -95,6 +103,14 @@ const pages = [
 ];
 
 const pagesEn = [
+  {
+    id: "four-pillars-fortune-telling",
+    image: "/playground/thum-qr-reader.png",
+    title: "Fortune Telling",
+    content: "Four Pillars Fortune Telling",
+    publishedAt: "2024-03-21T02:00:34.925Z",
+    revisedAt: "2024-03-21T02:00:34.925Z",
+  },
   {
     id: "qr-reader",
     image: "/playground/thum-qr-reader.png",
