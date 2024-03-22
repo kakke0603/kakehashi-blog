@@ -1,10 +1,9 @@
 version: "3"
 services:
-  demo-app:
-    build: .
+  backend:
+    build: ./backend
     volumes:
-      - .dockervenv:/src/.venv
-      - .:/src
+      - ./backend
     ports:
       - 8000:8000
   frontend:

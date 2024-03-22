@@ -2,7 +2,7 @@
 FROM python:3.9-buster
 ENV PYTHONUNBUFFERED=1
 
-WORKDIR /src
+WORKDIR /
 
 # pipを使ってpoetryをインストール
 RUN pip install poetry
