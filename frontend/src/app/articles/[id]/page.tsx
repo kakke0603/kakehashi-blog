@@ -1,8 +1,8 @@
 export const runtime = "edge";
-import { getAllArticles, getArticle } from "frontend/src/libs/client";
+import { getAllArticles, getArticle } from "@libs/client";
 import { Metadata, ResolvingMetadata } from "next";
-import { Advertisements } from "frontend/src/components/Advertisement/Advertisements";
-import { Article } from "frontend/src/components/Article/Article";
+import { Advertisements } from "@components/Advertisement/Advertisements";
+import { Article } from "@components/Article/Article";
 import { ImageResponse } from "next/og";
 
 /**

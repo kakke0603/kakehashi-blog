@@ -1,6 +1,6 @@
 "use client";
 export const runtime = "edge";
-import { ask } from "frontend/src/components/Playground/AI/claude";
+import { ask } from "@components/Playground/AI/claude";
 import { Button, Input } from "@nextui-org/react";
 import React, { useState } from "react";
 

@@ -1,6 +1,6 @@
 export const runtime = "edge";
-import { ArticleCard } from "frontend/src/components/Article/ArticleCard";
-import { ArticleType, client } from "frontend/src/libs/client";
+import { ArticleCard } from "@components/Article/ArticleCard";
+import { ArticleType, client } from "@libs/client";
 import { BreadcrumbItem, Breadcrumbs, Spinner } from "@nextui-org/react";
 import { Suspense } from "react";
 

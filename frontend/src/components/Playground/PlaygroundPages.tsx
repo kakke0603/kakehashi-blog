@@ -1,5 +1,5 @@
 "use client";
-import { useLang } from "frontend/src/hooks/useLang";
+import { useLang } from "@hooks/useLang";
 import React from "react";
 import { PlaygroundCard } from "./PlaygroundCard";
 

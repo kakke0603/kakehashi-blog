@@ -1,14 +1,14 @@
 "use client";
 import React from "react";
 import twemoji from "twemoji";
-import { DateTime } from "frontend/src/components/DateTime";
+import { DateTime } from "@components/DateTime";
 import { Chip } from "@nextui-org/react";
-import { PencilIcon } from "frontend/src/components/Icons/PencilIcon";
-import { RefreshIcon } from "frontend/src/components/Icons/RefreshIcon";
-import { ArticleType } from "frontend/src/libs/client";
-import { Tag } from "frontend/src/components/Tag";
-import { Advertisements } from "frontend/src/components/Advertisement/Advertisements";
-import { useLang } from "frontend/src/hooks/useLang";
+import { PencilIcon } from "@components/Icons/PencilIcon";
+import { RefreshIcon } from "@components/Icons/RefreshIcon";
+import { ArticleType } from "@libs/client";
+import { Tag } from "@components/Tag";
+import { Advertisements } from "@components/Advertisement/Advertisements";
+import { useLang } from "@hooks/useLang";
 import { BuyMeCoffeeButton } from "../BuyMeCoffeeButton";
 
 export const Article: React.FC<ArticleType> = ({ id, title, content, publishedAt, revisedAt, tags, title_en, content_en }) => {

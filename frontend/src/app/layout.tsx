@@ -6,10 +6,10 @@ import Footer from "../components/Footer";
 import { Advertisements } from "../components/Advertisement/Advertisements";
 import { SideAdvertisements } from "../components/Advertisement/SideAdvertisements";
 import React from "react";
-import { HorizontalAdvertisements } from "frontend/src/components/Advertisement/HorizontalAdvertisements";
-import { BuyMeCoffeeWidget } from "frontend/src/components/BuyMeCoffeeWidget";
-import { BuyMeCoffeeButton } from "frontend/src/components/BuyMeCoffeeButton";
-import GoogleAdsense from "frontend/src/components/Advertisement/GoogleAdsense";
+import { HorizontalAdvertisements } from "@components/Advertisement/HorizontalAdvertisements";
+import { BuyMeCoffeeWidget } from "@components/BuyMeCoffeeWidget";
+import { BuyMeCoffeeButton } from "@components/BuyMeCoffeeButton";
+import GoogleAdsense from "@components/Advertisement/GoogleAdsense";
 
 const inter = Noto_Sans_JP({ subsets: ["latin"], display: "swap" });
 

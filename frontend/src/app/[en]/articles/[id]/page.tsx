@@ -4,7 +4,7 @@ import { getAllArticles, getArticle } from "../../../../libs/client";
 import { Metadata, ResolvingMetadata } from "next";
 import { Advertisements } from "../../../../components/Advertisement/Advertisements";
 import React from "react";
-import { Article } from "frontend/src/components/Article/Article";
+import { Article } from "@components/Article/Article";
 
 /**
  * メタデータの設定
