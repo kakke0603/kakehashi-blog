@@ -128,11 +128,37 @@ const ads = {
       <img style={{ width: 1, height: 1 }} src="https://www11.a8.net/0.gif?a8mat=3Z0RKK+FJNHF6+5H76+5Z6WX" alt=""></img>
     </div>
   ),
+  15: (
+    <div>
+      {/* 成績保証付きのオンライン家庭教師【ドリーム】 */}
+      <a href="https://px.a8.net/svt/ejp?a8mat=3Z2XYI+1F7ASY+5IAC+60OXD" rel="nofollow">
+        <img width="300" height="250" alt="" src="https://www22.a8.net/svt/bgt?aid=240322410086&wid=001&eno=01&mid=s00000025698001011000&mc=1" />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www19.a8.net/0.gif?a8mat=3Z2XYI+1F7ASY+5IAC+60OXD" alt=""></img>
+    </div>
+  ),
+  16: (
+    <div>
+      {/* 大切な方へ贈る特別なオーダー国産腕時計【ルノータス】(24-0321) */}
+      <a href="https://px.a8.net/svt/ejp?a8mat=3Z2XYI+76E5BM+5I9I+5YZ75" rel="nofollow">
+        <img width="300" height="250" alt="" src="https://www27.a8.net/svt/bgt?aid=240322410434&wid=001&eno=01&mid=s00000025695001003000&mc=1" />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www15.a8.net/0.gif?a8mat=3Z2XYI+76E5BM+5I9I+5YZ75" alt=""></img>
+    </div>
+  ),
+  17: (
+    <div>
+      <a href="https://px.a8.net/svt/ejp?a8mat=3Z2XYI+74LUIA+50BY+NUU7L" rel="nofollow">
+        <img width="250" height="250" alt="" src="https://www22.a8.net/svt/bgt?aid=240322410431&wid=001&eno=01&mid=s00000023371004007000&mc=1" />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www19.a8.net/0.gif?a8mat=3Z2XYI+74LUIA+50BY+NUU7L" alt=""></img>
+    </div>
+  ),
 };
 export const Advertisements = () => {
   const [ad, setAd] = useState(null);
   useEffect(() => {
-    const random = Math.floor(Math.random() * 15);
+    const random = Math.floor(Math.random() * 18);
     setAd(ads[random]);
   }, []);
   return <>{ad}</>;

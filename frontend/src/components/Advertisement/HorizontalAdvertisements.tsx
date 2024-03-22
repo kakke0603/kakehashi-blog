@@ -38,11 +38,37 @@ const ads = {
       <img style={{ width: 1, height: 1 }} src="https://www15.a8.net/0.gif?a8mat=3Z0Q03+BZNACY+2PEO+1I7QCH" alt=""></img>
     </div>
   ),
+  3: (
+    // 成績保証付きのオンライン家庭教師【ドリーム】
+    <div>
+      <a href="https://px.a8.net/svt/ejp?a8mat=3Z2XYI+1F7ASY+5IAC+614CX" rel="nofollow">
+        <img
+          style={{ width: 120, maxHeight: 600 }}
+          alt=""
+          src="https://www26.a8.net/svt/bgt?aid=240322410086&wid=001&eno=01&mid=s00000025698001013000&mc=1"
+        />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www19.a8.net/0.gif?a8mat=3Z2XYI+1F7ASY+5IAC+614CX" alt=""></img>
+    </div>
+  ),
+  4: (
+    //アウトドアに特化！簡単便利・食べきりサイズ【孤高のキャンプ飯・アルファー食品】(24-0321)
+    <div>
+      <a href="https://px.a8.net/svt/ejp?a8mat=3Z2XYI+74LUIA+50BY+NUES1" rel="nofollow">
+        <img
+          style={{ width: 120, maxHeight: 600 }}
+          alt=""
+          src="https://www21.a8.net/svt/bgt?aid=240322410431&wid=001&eno=01&mid=s00000023371004005000&mc=1"
+        />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www15.a8.net/0.gif?a8mat=3Z2XYI+74LUIA+50BY+NUES1" alt=""></img>
+    </div>
+  ),
 };
 export const HorizontalAdvertisements = () => {
   const [ad, setAd] = useState(null);
   useEffect(() => {
-    const random = Math.floor(Math.random() * 3);
+    const random = Math.floor(Math.random() * 5);
     setAd(ads[random]);
   }, []);
   return <>{ad}</>;
