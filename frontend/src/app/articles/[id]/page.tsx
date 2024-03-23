@@ -1,9 +1,11 @@
 export const runtime = "edge";
-import { getAllArticles, getArticle } from "../../../libs/client";
+import { getAllArticles, getAllTags, getArticle } from "../../../libs/client";
 import { Metadata, ResolvingMetadata } from "next";
 import { Advertisements } from "../../../components//Advertisement/Advertisements";
 import { Article } from "../../../components//Article/Article";
 import { ImageResponse } from "next/og";
+import { Card } from "@nextui-org/react";
+import RelatedArticles from "../../../components/Article/RelatedArticles";
 
 /**
  * メタデータの設定
@@ -48,9 +50,18 @@ export const metadata = {
 
 export default async function Page({ params }: { params: { id: string } }) {
   const data = await getArticle(params.id);
+  const articles = await getAllArticles();
+  const tags = data.tags;
+  const relatedTags = tags?.filter((tag) => articles?.filter((article) => article.tags?.some((articleTag) => articleTag.id === tag.id)));
+  const relatedArticles = articles?.filter((article) => {
+    return article.tags?.some((articleTag) => relatedTags?.some((relatedTag) => articleTag.id === relatedTag.id));
+  });
   return (
     <div>
       <Article {...data} key={data.id} />
+      <div>
+        <RelatedArticles articles={relatedArticles} />
+      </div>
     </div>
   );
 }

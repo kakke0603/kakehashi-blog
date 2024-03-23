@@ -7,14 +7,14 @@ export const client = createClient({
 });
 
 export const getAllArticles = async () => {
-  return await client.getList<ArticleType>({
-    endpoint: "articles",
-    queries: {
-      limit: 1000,
-      fields: "id",
-      orders: "-createdAt",
-    },
-  });
+  return await client
+    .getAllContents<ArticleType>({
+      endpoint: "articles",
+      queries: {
+        orders: "-createdAt",
+      },
+    })
+    .then((res) => res as ArticleType[]);
 };
 
 export const getArticle = async (id: string) => {
@@ -26,6 +26,16 @@ export const getArticle = async (id: string) => {
     })
     .then((res) => res);
   return data;
+};
+
+export const getAllTags = async () => {
+  const tags = await client
+    .getAllContents({
+      endpoint: "tags",
+      queries: { orders: "createdAt" },
+    })
+    .then((res) => res as TagType[]);
+  return tags;
 };
 
 export type ArticleType = {
