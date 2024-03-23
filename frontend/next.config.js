@@ -1,16 +1,5 @@
 const path = require("path");
-const nextConfig = {
-  /** WebPack の設定を追加 */
-  webpack: (config) => {
-    // return config;
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      "@": path.resolve(__dirname, "/"),
-      "@/components": path.resolve(__dirname, "./src/components"),
-      "@hooks": path.resolve(__dirname, "./src/hooks"),
-    };
-  },
-};
+const nextConfig = {};
 module.exports = nextConfig;
 
 const withPWA = require("next-pwa")({
