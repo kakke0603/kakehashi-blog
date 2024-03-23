@@ -10,6 +10,7 @@ import { HorizontalAdvertisements } from "../components//Advertisement/Horizonta
 import { BuyMeCoffeeWidget } from "../components//BuyMeCoffeeWidget";
 import { BuyMeCoffeeButton } from "../components//BuyMeCoffeeButton";
 import GoogleAdsense from "../components//Advertisement/GoogleAdsense";
+import GoogleAnalytics from "../components/GoogleAnalytics";
 
 const inter = Noto_Sans_JP({ subsets: ["latin"], display: "swap" });
 
@@ -58,6 +59,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <meta name="theme-color" content="#b8e986" />
       <link rel="manifest" href="/manifest.json" />
       <link rel="apple-touch-icon" href="/icon.png"></link>
+      <GoogleAnalytics />
       <body id="output">
         <Providers>
           <GoogleAdsense pId="1124456984547171" />
