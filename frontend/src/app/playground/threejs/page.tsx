@@ -1,6 +1,6 @@
 export const runtime = "edge";
 
-import ThreeJs from "@components/Playground/ThreeJs/ThreeJs";
+import ThreeJs from "../../../components//Playground/ThreeJs/ThreeJs";
 import React from "react";
 
 export default async function Page() {

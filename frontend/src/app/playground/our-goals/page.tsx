@@ -1,4 +1,4 @@
-import { OurGoals } from "@components/Playground/OurGoals/OurGoals";
+import { OurGoals } from "../../../components//Playground/OurGoals/OurGoals";
 import { Metadata, ResolvingMetadata } from "next";
 
 export const runtime = "edge";

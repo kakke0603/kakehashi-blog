@@ -1,5 +1,5 @@
 export const runtime = "edge";
-import Profile from "@components/Profile";
+import Profile from "../../components//Profile";
 import React from "react";
 
 export default function page() {

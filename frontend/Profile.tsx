@@ -1,8 +1,8 @@
 "use client";
 import { Link, User, Image } from "@nextui-org/react";
 import React from "react";
-import { WideAdvertisements } from "./Advertisement/WideAdvertisements";
-import { useLang } from "../hooks/useLang";
+import { WideAdvertisements } from "./src/components/Advertisement/WideAdvertisements";
+import { useLang } from "./src/hooks/useLang";
 
 export default function Profile() {
   // eslint-disable-next-line react-hooks/rules-of-hooks

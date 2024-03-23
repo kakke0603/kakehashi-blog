@@ -1,7 +1,7 @@
 "use client";
 export const runtime = "edge";
 import React from "react";
-import PlaygroundPages from "@components/Playground/PlaygroundPages";
+import PlaygroundPages from "../../../components//Playground/PlaygroundPages";
 
 export default function page() {
   return (

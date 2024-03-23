@@ -1,5 +1,5 @@
 export const runtime = "edge";
-import { EvaTimer } from "@components/Playground/EvaTimer/EvaTimer";
+import { EvaTimer } from "../../../components//Playground/EvaTimer/EvaTimer";
 import React from "react";
 
 export default function page() {
