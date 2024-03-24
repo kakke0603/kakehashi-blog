@@ -187,7 +187,7 @@ export const SideAdvertisements = () => {
   const [ad, setAd] = useState(null);
   const { width } = useWindowSize();
   useEffect(() => {
-    const random = Math.floor(Math.random() * 15);
+    const random = Math.floor(Math.random() * 20);
     setAd(ads[random]);
   }, []);
   return <div style={{ width: (width - 1024) / 2 }}>{ad}</div>;
