@@ -1,12 +1,12 @@
 /* eslint-disable @next/next/no-async-client-component */
 "use client";
-import { TagType } from "frontend/src/libs/client";
+import { TagType } from "../../libs/client";
 import React from "react";
 import { Tag } from "../Tag";
 import { Button } from "@nextui-org/react";
 import twemoji from "twemoji";
 import { useRouter } from "next/navigation";
-import { useLang } from "frontend/src/hooks/useLang";
+import { useLang } from "../../hooks/useLang";
 
 export default async function Tags({ tags }: { tags: TagType[] }) {
   // eslint-disable-next-line react-hooks/rules-of-hooks

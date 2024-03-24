@@ -1,10 +1,10 @@
 "use client";
-import { DateTime } from "frontend/src/components/DateTime";
+import { DateTime } from "../../components//DateTime";
 import { Card, CardBody } from "@nextui-org/react";
 import { useRouter } from "next/navigation";
 import React from "react";
-import { PencilIcon } from "frontend/src/components/Icons/PencilIcon";
-import { RefreshIcon } from "frontend/src/components/Icons/RefreshIcon";
+import { PencilIcon } from "../../components//Icons/PencilIcon";
+import { RefreshIcon } from "../../components//Icons/RefreshIcon";
 import { StaticImageData } from "next/image";
 import Image from "next/image";
 

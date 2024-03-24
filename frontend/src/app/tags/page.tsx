@@ -1,5 +1,5 @@
 export const runtime = "edge";
-import TagsPage from "frontend/src/components/Tag/TagsPage";
+import TagsPage from "../../components//Tag/TagsPage";
 
 export default async function page() {
   return (

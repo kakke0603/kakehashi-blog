@@ -5,11 +5,12 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Advertisements } from "../components/Advertisement/Advertisements";
 import { SideAdvertisements } from "../components/Advertisement/SideAdvertisements";
-import React from "react";
-import { HorizontalAdvertisements } from "frontend/src/components/Advertisement/HorizontalAdvertisements";
-import { BuyMeCoffeeWidget } from "frontend/src/components/BuyMeCoffeeWidget";
-import { BuyMeCoffeeButton } from "frontend/src/components/BuyMeCoffeeButton";
-import GoogleAdsense from "frontend/src/components/Advertisement/GoogleAdsense";
+import React, { Suspense } from "react";
+import { HorizontalAdvertisements } from "../components//Advertisement/HorizontalAdvertisements";
+import { BuyMeCoffeeWidget } from "../components//BuyMeCoffeeWidget";
+import { BuyMeCoffeeButton } from "../components//BuyMeCoffeeButton";
+import GoogleAdsense from "../components//Advertisement/GoogleAdsense";
+import GoogleAnalytics from "../components/GoogleAnalytics";
 
 const inter = Noto_Sans_JP({ subsets: ["latin"], display: "swap" });
 
@@ -58,6 +59,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <meta name="theme-color" content="#b8e986" />
       <link rel="manifest" href="/manifest.json" />
       <link rel="apple-touch-icon" href="/icon.png"></link>
+      <Suspense>
+        <GoogleAnalytics />
+      </Suspense>
       <body id="output">
         <Providers>
           <GoogleAdsense pId="1124456984547171" />

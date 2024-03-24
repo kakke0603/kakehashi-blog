@@ -1,14 +1,14 @@
 "use client";
-import { DateTime } from "frontend/src/components/DateTime";
+import { DateTime } from "../../components//DateTime";
 import { Card, CardBody } from "@nextui-org/react";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import twemoji from "twemoji";
-import { PencilIcon } from "frontend/src/components/Icons/PencilIcon";
-import { RefreshIcon } from "frontend/src/components/Icons/RefreshIcon";
-import { ArticleType } from "frontend/src/libs/client";
-import { Tag } from "frontend/src/components/Tag";
-import { useLang } from "frontend/src/hooks/useLang";
+import { PencilIcon } from "../../components//Icons/PencilIcon";
+import { RefreshIcon } from "../../components//Icons/RefreshIcon";
+import { ArticleType } from "../../libs/client";
+import { Tag } from "../../components//Tag";
+import { useLang } from "../../hooks/useLang";
 
 export const ArticleCard: React.FC<ArticleType> = ({
   id,

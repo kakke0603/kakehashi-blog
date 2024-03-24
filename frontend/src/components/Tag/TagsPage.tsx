@@ -1,13 +1,8 @@
-import { TagType, client } from "frontend/src/libs/client";
+import { TagType, getAllTags } from "../../libs/client";
 import Tags from "./Tags";
 
 export default async function page() {
-  const tags = await client
-    .getAllContents({
-      endpoint: "tags",
-      queries: { orders: "createdAt" },
-    })
-    .then((res) => res as TagType[]);
+  const tags = await getAllTags();
   return (
     <div className="">
       <Tags tags={tags} />

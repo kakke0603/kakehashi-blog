@@ -1,8 +1,8 @@
 "use client";
 import { Link, User, Image } from "@nextui-org/react";
 import React from "react";
-import { WideAdvertisements } from "./Advertisement/WideAdvertisements";
-import { useLang } from "../hooks/useLang";
+import { WideAdvertisements } from "./src/components/Advertisement/WideAdvertisements";
+import { useLang } from "./src/hooks/useLang";
 
 export default function Profile() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -195,7 +195,7 @@ const TimelineComponent = () => {
           <p className="text-sm text-neutral-500 dark:text-neutral-300">2019/04/01〜2021/03/31</p>
         </div>
         <div className="mb-6 ml-4 mt-2">
-          <h4 className="mb-1.5 text-xl font-semibold">{isJapanese ? "医療系SIerに入社" : "Joined a medical SIer"}</h4>
+          <h4 className="mb-1.5 text-xl font-semibold">{isJapanese ? "株式会社ソフトウェア・サービスに入社" : "Joined Software Service Co."}</h4>
           <p className="mb-3 text-neutral-500 dark:text-neutral-300">
             {isJapanese
               ? "医療系のシステムを開発。デスクトップアプリケーションをVB.net,C#などで開発"

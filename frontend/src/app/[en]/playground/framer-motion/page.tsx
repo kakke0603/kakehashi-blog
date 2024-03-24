@@ -1,6 +1,6 @@
 export const runtime = "edge";
 
-import { FramerMotion } from "frontend/src/components/Playground/FramorMotion/FramerMotion";
+import { FramerMotion } from "../../../../components//Playground/FramorMotion/FramerMotion";
 import React from "react";
 
 export default async function Page() {

@@ -1,5 +1,5 @@
 export const runtime = "edge";
-import { EvaAlert } from "frontend/src/components/Playground/EvaAlert/EvaAlert";
+import { EvaAlert } from "../../../components//Playground/EvaAlert/EvaAlert";
 import React from "react";
 
 export default async function Page() {

@@ -1,4 +1,4 @@
-import Contact from "frontend/src/components/Contact/Contact";
+import Contact from "../../components//Contact/Contact";
 
 export const runtime = "edge";
 export default async function Page() {
