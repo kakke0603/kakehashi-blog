@@ -64,11 +64,24 @@ const ads = {
       <img style={{ width: 1, height: 1 }} src="https://www15.a8.net/0.gif?a8mat=3Z2XYI+74LUIA+50BY+NUES1" alt=""></img>
     </div>
   ),
+  5: (
+    //本物に価するレザーアイテムを厳選し、出逢いをお届けするセレクトショップ(17-0607)
+    <div>
+      <a href="https://px.a8.net/svt/ejp?a8mat=3Z2XYI+7IW90Y+3QLK+8ZN8H" rel="nofollow">
+        <img
+          style={{ width: 120, maxHeight: 600 }}
+          alt=""
+          src="https://www26.a8.net/svt/bgt?aid=240322410455&wid=001&eno=01&mid=s00000017444001510000&mc=1"
+        />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www12.a8.net/0.gif?a8mat=3Z2XYI+7IW90Y+3QLK+8ZN8H" alt=""></img>
+    </div>
+  ),
 };
 export const HorizontalAdvertisements = () => {
   const [ad, setAd] = useState(null);
   useEffect(() => {
-    const random = Math.floor(Math.random() * 5);
+    const random = Math.floor(Math.random() * 6);
     setAd(ads[random]);
   }, []);
   return <>{ad}</>;
