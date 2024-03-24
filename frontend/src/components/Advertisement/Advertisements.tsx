@@ -154,11 +154,29 @@ const ads = {
       <img style={{ width: 1, height: 1 }} src="https://www19.a8.net/0.gif?a8mat=3Z2XYI+74LUIA+50BY+NUU7L" alt=""></img>
     </div>
   ),
+  18: (
+    <div>
+      {/* 本物に価するレザーアイテムを厳選し、出逢いをお届けするセレクトショップ(17-0607) */}
+      <a href="https://px.a8.net/svt/ejp?a8mat=3Z2XYI+7IW90Y+3QLK+6TEVL" rel="nofollow">
+        <img width="300" height="250" alt="" src="https://www28.a8.net/svt/bgt?aid=240322410455&wid=001&eno=01&mid=s00000017444001145000&mc=1" />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www12.a8.net/0.gif?a8mat=3Z2XYI+7IW90Y+3QLK+6TEVL" alt=""></img>
+    </div>
+  ),
+  19: (
+    <div>
+      {/* 未経験からITエンジニアに！初めての転職も徹底サポート【IT専門転職エージェント＠PRO人】(24-0319) */}
+      <a href="https://px.a8.net/svt/ejp?a8mat=3Z2XYI+1FSQEQ+4GWI+HVNAP" rel="nofollow">
+        <img width="300" height="250" alt="" src="https://www25.a8.net/svt/bgt?aid=240322410087&wid=001&eno=01&mid=s00000020853003003000&mc=1" />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www15.a8.net/0.gif?a8mat=3Z2XYI+1FSQEQ+4GWI+HVNAP" alt=""></img>
+    </div>
+  ),
 };
 export const Advertisements = () => {
   const [ad, setAd] = useState(null);
   useEffect(() => {
-    const random = Math.floor(Math.random() * 18);
+    const random = Math.floor(Math.random() * 20);
     setAd(ads[random]);
   }, []);
   return <>{ad}</>;
