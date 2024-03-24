@@ -8,9 +8,11 @@ const GoogleAnalytics: React.FC = () => {
   const searchParams = useSearchParams();
   useEffect(() => {
     const url = pathname + searchParams.toString();
-    window.gtag("config", "G-NKPFTZEMEG", {
-      page_path: url,
-    });
+    if (process.env.NODE_ENV == "production") {
+      window.gtag("config", "G-NKPFTZEMEG", {
+        page_path: url,
+      });
+    }
   }, [pathname, searchParams]);
   if (process.env.NODE_ENV !== "production") {
     return null;
