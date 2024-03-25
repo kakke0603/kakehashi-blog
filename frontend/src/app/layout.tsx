@@ -59,9 +59,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <meta name="theme-color" content="#b8e986" />
       <link rel="manifest" href="/manifest.json" />
       <link rel="apple-touch-icon" href="/icon.png"></link>
-      <Suspense>
-        <GoogleAnalytics />
-      </Suspense>
+      <head>
+        <Suspense>
+          <GoogleAnalytics />
+        </Suspense>
+      </head>
       <body id="output">
         <Providers>
           <GoogleAdsense pId="1124456984547171" />
