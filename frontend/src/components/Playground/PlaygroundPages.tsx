@@ -4,14 +4,14 @@ import React from "react";
 import { PlaygroundCard } from "./PlaygroundCard";
 
 const pages = [
-  {
-    id: "marvel",
-    image: "/playground/thum-qr-reader.png",
-    title: "Marvel Characters",
-    content: "マーベルのキャラクター図鑑",
-    publishedAt: "2024-03-22T02:00:34.925Z",
-    revisedAt: "2024-03-22T02:00:34.925Z",
-  },
+  // {
+  //   id: "marvel",
+  //   image: "/playground/thum-qr-reader.png",
+  //   title: "Marvel Characters",
+  //   content: "マーベルのキャラクター図鑑",
+  //   publishedAt: "2024-03-22T02:00:34.925Z",
+  //   revisedAt: "2024-03-22T02:00:34.925Z",
+  // },
   {
     id: "qr-reader",
     image: "/playground/thum-qr-reader.png",
@@ -103,14 +103,14 @@ const pages = [
 ];
 
 const pagesEn = [
-  {
-    id: "marvel",
-    image: "/playground/thum-qr-reader.png",
-    title: "Marvel Characters",
-    content: "Marvel Characters",
-    publishedAt: "2024-03-22T02:00:34.925Z",
-    revisedAt: "2024-03-22T02:00:34.925Z",
-  },
+  // {
+  //   id: "marvel",
+  //   image: "/playground/thum-qr-reader.png",
+  //   title: "Marvel Characters",
+  //   content: "Marvel Characters",
+  //   publishedAt: "2024-03-22T02:00:34.925Z",
+  //   revisedAt: "2024-03-22T02:00:34.925Z",
+  // },
   {
     id: "qr-reader",
     image: "/playground/thum-qr-reader.png",
