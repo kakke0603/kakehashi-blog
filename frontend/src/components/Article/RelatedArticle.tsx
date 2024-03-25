@@ -10,7 +10,7 @@ export default function RelatedArticle({ article }: { article: ArticleType }) {
   const { isJapanese } = useLang();
   const router = useRouter();
   return (
-    <Card isPressable className="w-[150px] h-[90px]" onClick={() => router.push(`/articles/${article.id}`)}>
+    <Card isPressable className="w-[150px] h-[90px] sm:w-[200px]" onClick={() => router.push(`/articles/${article.id}`)}>
       <CardBody>
         <pre>{isJapanese ? article?.title : article.content_en}</pre>
         <div className="mt-2 flex gap-x-2">

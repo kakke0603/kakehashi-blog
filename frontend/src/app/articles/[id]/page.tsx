@@ -56,11 +56,12 @@ export default async function Page({ params }: { params: { id: string } }) {
   const relatedArticles = articles?.filter((article) => {
     return article.tags?.some((articleTag) => relatedTags?.some((relatedTag) => articleTag.id === relatedTag.id));
   });
+  const filteredArticles = relatedArticles?.filter((article) => article.id !== data.id);
   return (
     <div>
       <Article {...data} key={data.id} />
       <div>
-        <RelatedArticles articles={relatedArticles} />
+        <RelatedArticles articles={filteredArticles} />
       </div>
     </div>
   );
