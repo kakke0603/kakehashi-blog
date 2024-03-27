@@ -10,7 +10,7 @@ const Plans = () => {
       <div className="flex gap-3 justify-between p-3 w-[100dvw] overflow-scroll">
         <Card className="w-[250px] text-nowrap">
           <CardHeader className="flex gap-3 font-bold text-xl">
-            <div className=" w-[250px]">
+            <div className="">
               <div>フリープラン</div>
               <div>0円</div>
             </div>
