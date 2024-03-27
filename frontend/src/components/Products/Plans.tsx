@@ -7,7 +7,7 @@ const Plans = () => {
     <div>
       <div>誠意作成中</div>
       <h1 className="">Plans</h1>
-      <div className="flex gap-3 justify-between p-3 w-[100dvw] overflow-scroll">
+      <div className="flex gap-3 justify-between p-3 w-[100dvw] lg:w-[100%] overflow-scroll">
         <Card className="w-[250px] text-nowrap">
           <CardHeader className="flex gap-3 font-bold text-xl">
             <div className="">
