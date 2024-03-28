@@ -3,7 +3,6 @@ import { DateTime } from "../../components//DateTime";
 import { Card, CardBody } from "@nextui-org/react";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import twemoji from "twemoji";
 import { PencilIcon } from "../../components//Icons/PencilIcon";
 import { RefreshIcon } from "../../components//Icons/RefreshIcon";
 import { ArticleType } from "../../libs/client";
@@ -24,14 +23,13 @@ export const ArticleCard: React.FC<ArticleType> = ({
   const handleClick = () => router.push(`/articles/${id}`);
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const { isJapanese } = useLang();
-  const tag = tags?.[0]?.emoji ?? "📝";
-  const emoji = twemoji.parse(tag);
+  const emoji = tags?.[0]?.emoji ?? "📝";
   return (
     <Card className="py-4 w-full" isPressable onPress={handleClick}>
       <CardBody>
         <div className="gap-x-4 flex flex-row gap-y-4 w-full">
           <div className="w-[70px] h-[70px] p-4 bg-gray-100 dark:bg-gray-700 rounded-lg">
-            <div dangerouslySetInnerHTML={{ __html: emoji }}></div>
+            <div className="pt-1 text-center">{emoji}</div>
           </div>
           <div className="space-y-4 flex-1">
             <h4 className="font-bold text-large block">{isJapanese ? title : title_en ?? ""}</h4>

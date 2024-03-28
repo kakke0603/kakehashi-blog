@@ -4,7 +4,6 @@ import { TagType } from "../../libs/client";
 import React from "react";
 import { Tag } from "../Tag";
 import { Button } from "@nextui-org/react";
-import twemoji from "twemoji";
 import { useRouter } from "next/navigation";
 import { useLang } from "../../hooks/useLang";
 
@@ -20,7 +19,7 @@ export default async function Tags({ tags }: { tags: TagType[] }) {
       <div className="flex gap-2 flex-wrap">
         {tags?.map((tag) => (
           <Button key={tag.id} onClick={() => onClick(tag.id)}>
-            <div dangerouslySetInnerHTML={{ __html: twemoji.parse(tag.emoji) }} className="emoji"></div>
+            <div className="emoji">{tag.emoji}</div>
             {isJapanese ? tag.name : tag.name_en}
           </Button>
         ))}

@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import twemoji from "twemoji";
 import { DateTime } from "../../components//DateTime";
 import { Chip } from "@nextui-org/react";
 import { PencilIcon } from "../../components//Icons/PencilIcon";
@@ -12,14 +11,13 @@ import { useLang } from "../../hooks/useLang";
 import { BuyMeCoffeeButton } from "../BuyMeCoffeeButton";
 
 export const Article: React.FC<ArticleType> = ({ id, title, content, publishedAt, revisedAt, tags, title_en, content_en }) => {
-  const tag = tags?.[0]?.emoji ?? "📝";
-  const emoji = twemoji.parse(tag);
+  const emoji = tags?.[0]?.emoji ?? "📝";
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const { isJapanese } = useLang();
   return (
     <div className="mx-5 ">
       <div className="flex justify-center py-10 bg-gray-100 dark:bg-gray-700 my-5 rounded-lg flex-col items-center space-y-5">
-        <div dangerouslySetInnerHTML={{ __html: emoji }}></div>
+        <div>{emoji}</div>
         <h1 className="text-3xl font-bold break-words border-none text-center">{isJapanese ? title : title_en}</h1>
       </div>
       <div>
