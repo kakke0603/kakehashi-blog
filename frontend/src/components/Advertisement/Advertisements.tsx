@@ -253,11 +253,20 @@ const ads = {
       <img style={{ width: 1, height: 1 }} src="https://www17.a8.net/0.gif?a8mat=3Z31VS+FP0DV6+55BE+TT69D" alt=""></img>
     </div>
   ),
+  29: (
+    <div>
+      {/* 【A8.net】メディア会員募集(01-0501) */}
+      <a href="https://px.a8.net/svt/ejp?a8mat=3HE1AZ+41V7ZM+0K+10YDIP" rel="nofollow">
+        <img width="300" height="250" alt="" src="https://www21.a8.net/svt/bgt?aid=210606875245&wid=001&eno=01&mid=s00000000002006207000&mc=1" />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www13.a8.net/0.gif?a8mat=3HE1AZ+41V7ZM+0K+10YDIP" alt=""></img>
+    </div>
+  ),
 };
 export const Advertisements = () => {
   const [ad, setAd] = useState(null);
   useEffect(() => {
-    const random = Math.floor(Math.random() * 29);
+    const random = Math.floor(Math.random() * 30);
     setAd(ads[random]);
   }, []);
   return <>{ad}</>;

@@ -145,12 +145,21 @@ const ads = {
       <img style={{ width: 1, height: 1 }} src="https://www13.a8.net/0.gif?a8mat=3Z2XYI+1FSQEQ+4GWI+HVV0H" alt=""></img>
     </div>
   ),
+  16: (
+    <div>
+      {/* 【A8.net】メディア会員募集(01-0501) */}
+      <a href="https://px.a8.net/svt/ejp?a8mat=3HE1AZ+41V7ZM+0K+109IGH" rel="nofollow">
+        <img width="468" height="60" alt="" src="https://www27.a8.net/svt/bgt?aid=210606875245&wid=001&eno=01&mid=s00000000002006091000&mc=1" />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www11.a8.net/0.gif?a8mat=3HE1AZ+41V7ZM+0K+109IGH" alt=""></img>
+    </div>
+  ),
 };
 
 export const WideAdvertisements = () => {
   const [ad, setAd] = useState(null);
   useEffect(() => {
-    const random = Math.floor(Math.random() * 15);
+    const random = Math.floor(Math.random() * 17);
     setAd(ads[random]);
   }, []);
   return <>{ad}</>;
