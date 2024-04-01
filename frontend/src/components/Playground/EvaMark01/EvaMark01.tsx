@@ -95,6 +95,32 @@ export const EvaMark01 = () => {
             <div className="w-[4px] h-[16px] bg-purple-500 rotate-[0deg]"></div>
           </div>
         </div>
+        <div className="w-[40px] h-[40px] bg-purple-500 absolute rotate-[15deg] top-[190px] left-[300px]" />
+        <div className="w-[30px] h-[30px] bg-purple-500 absolute rotate-[-35deg] top-[214px] left-[299px]" />
+        <div
+          className="w-0 h-0 absolute rotate-[145deg] top-[228px] left-[285px]
+                border-l-[20px] border-l-purple-500 
+                border-t-[30px] border-t-transparent 
+                border-r-[0px] border-transparent"
+        ></div>
+        <div
+          className="w-0 h-0 absolute rotate-[55deg] top-[232px] left-[280px]
+                border-l-[0px] border-l-transparent 
+                border-t-[20px] border-t-transparent 
+                border-r-[30px] border-r-green-500"
+        ></div>
+        <div
+          className="w-0 h-0 absolute rotate-[235deg] top-[235px] left-[270px] z-10
+                border-l-[10px] border-l-green-500 
+                border-t-[18px] border-t-transparent 
+                border-r-[0px] border-r-transparent"
+        ></div>
+        <div
+          className="w-0 h-0 absolute rotate-[235deg] top-[247px] left-[273px] z-10
+                border-l-[0px] border-l-transparent 
+                border-t-[18px] border-t-transparent 
+                border-r-[20px] border-r-green-500"
+        ></div>
         {/* 頭部後ろの部分 */}
         <div className="">
           <div
@@ -130,7 +156,7 @@ export const EvaMark01 = () => {
                 border-t-[30px] border-t-gray-500 
                 border-r-[10px] border-r-transparent"
         ></div>
-        <div className="w-[10px] h-[70px] bg-gray-500 absolute rotate-[60deg] top-[224px] left-[221px]"></div>
+        <div className="w-[10px] h-[80px] bg-gray-500 absolute rotate-[60deg] top-[218px] left-[223px]"></div>
         {/* 前歯１ */}
         <div className="w-[10px] h-[20px] bg-gray-400 absolute rotate-[60deg] top-[268px] left-[205px]"></div>
         <div className="w-[15px] h-[15px] bg-gray-400 absolute rotate-[150deg] top-[282px] left-[207px]"></div>
