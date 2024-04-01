@@ -13,6 +13,14 @@ const pages = [
   //   revisedAt: "2024-03-22T02:00:34.925Z",
   // },
   {
+    id: "evangelion-mark01",
+    image: "/playground/thum-eva-mark01.png",
+    title: "エヴァンゲリオン初号機",
+    content: "tailwindcssでエヴァンゲリオン初号機を作ってみた",
+    publishedAt: "2024-03-25T02:00:34.925Z",
+    revisedAt: "2024-04-01T02:00:34.925Z",
+  },
+  {
     id: "qr-reader",
     image: "/playground/thum-qr-reader.png",
     title: "QR Reader",
@@ -28,14 +36,6 @@ const pages = [
   //     publishedAt: "2024-03-20T02:00:34.925Z",
   //     revisedAt: "2024-03-20T02:00:34.925Z",
   //   },
-  {
-    id: "evangelion-mark01",
-    image: "/playground/thum-eva-mark01.png",
-    title: "エヴァンゲリオン初号機",
-    content: "tailwindcssでエヴァンゲリオン初号機を作ってみた",
-    publishedAt: "2024-03-25T02:00:34.925Z",
-    revisedAt: "2024-03-25T02:00:34.925Z",
-  },
   {
     id: "subscription",
     image: "/playground/thum-subscription.png",
@@ -112,6 +112,14 @@ const pagesEn = [
   //   revisedAt: "2024-03-22T02:00:34.925Z",
   // },
   {
+    id: "evangelion-mark01",
+    image: "/playground/thum-eva-mark01.png",
+    title: "evangelion mark01",
+    content: "I made Evangelion Mark01 with tailwindcss.",
+    publishedAt: "2024-03-25T02:00:34.925Z",
+    revisedAt: "2024-04-01T02:00:34.925Z",
+  },
+  {
     id: "qr-reader",
     image: "/playground/thum-qr-reader.png",
     title: "QR Reader",
@@ -127,14 +135,6 @@ const pagesEn = [
   //     publishedAt: "2024-03-20T02:00:34.925Z",
   //     revisedAt: "2024-03-20T02:00:34.925Z",
   //   },
-  {
-    id: "evangelion-mark01",
-    image: "/playground/thum-eva-mark01.png",
-    title: "evangelion mark01",
-    content: "I made Evangelion Mark01 with tailwindcss.",
-    publishedAt: "2024-03-25T02:00:34.925Z",
-    revisedAt: "2024-03-25T02:00:34.925Z",
-  },
   {
     id: "subscription",
     image: "/playground/thum-subscription.png",
