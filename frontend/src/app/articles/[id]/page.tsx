@@ -60,6 +60,7 @@ export default async function Page({ params }: { params: { id: string } }) {
   return (
     <div>
       <Article {...data} key={data.id} />
+      <Advertisements />
       <div>
         <RelatedArticles articles={filteredArticles} />
       </div>
