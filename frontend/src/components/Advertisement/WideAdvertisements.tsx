@@ -168,7 +168,7 @@ const ads = {
 export const WideAdvertisements = () => {
   const [ad, setAd] = useState(null);
   useEffect(() => {
-    const random = Math.floor(Math.random() * 17);
+    const random = Math.floor(Math.random() * 18);
     setAd(ads[random]);
   }, []);
   return <>{ad}</>;

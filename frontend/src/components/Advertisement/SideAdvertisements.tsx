@@ -326,12 +326,21 @@ const ads = {
       <img style={{ width: 1, height: 1 }} src="https://www19.a8.net/0.gif?a8mat=3Z4Q7O+7OUL2Q+5DPM+BXQOH" alt=""></img>
     </div>
   ),
+  36: (
+    <div>
+      {/* スピード検査！おりもの異常から性病まで検査できる郵送キット【自宅にお薬をお届け】(24-0404) */}
+      <a href="https://px.a8.net/svt/ejp?a8mat=3Z4Q7O+7GIILU+5ITS+5Z6WX" rel="nofollow">
+        <img style={{ maxWidth: 300 }} alt="" src="https://www23.a8.net/svt/bgt?aid=240405684451&wid=001&eno=01&mid=s00000025768001004000&mc=1" />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www19.a8.net/0.gif?a8mat=3Z4Q7O+7GIILU+5ITS+5Z6WX" alt=""></img>
+    </div>
+  ),
 };
 export const SideAdvertisements = () => {
   const [ad, setAd] = useState(null);
   const { width } = useWindowSize();
   useEffect(() => {
-    const random = Math.floor(Math.random() * 30);
+    const random = Math.floor(Math.random() * 37);
     setAd(ads[random]);
   }, []);
   return <div style={{ width: (width - 1024) / 2 }}>{ad}</div>;
