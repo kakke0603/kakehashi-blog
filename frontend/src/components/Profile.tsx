@@ -44,6 +44,11 @@ export default function Profile() {
       <h1>{isJapanese ? "自己紹介" : "self-introduction"}</h1>
       <pre className="mt-10">{isJapanese ? codeJp() : codeEn()}</pre>
       <WideAdvertisements />
+      <h1>YouTube</h1>
+      <Link href="https://www.youtube.com/@kakke0603" target="_blank" rel="noopener noreferrer">
+        <Image src="/youtube.png" alt="youtube" />
+      </Link>
+      <WideAdvertisements />
       <h1>{isJapanese ? "コミュニティ" : "community"}</h1>
       <Link href="https://it-takoyaki.connpass.com/" target="_blank" rel="noopener noreferrer">
         <Image src={isJapanese ? "it-takoyaki.png" : "/[en]/it-takoyaki-en.png"} alt="it-takoyaki" />
@@ -60,11 +65,11 @@ const codeJp = () => {
     Name: "かっけ", \n
     Age: 31, \n
     Like: { \n
-      Music: ["back number", "Perfume", "saucy dog", "Creepy Nuts", "新しい学校のリーダーズ", "King Gnu"], \n
-      Game: ["モンスターハンター", "アーマードコア", "エルデンリング"], \n
-      Anime: ["新世紀エヴァンゲリオン", "僕のヒーローアカデミア", "呪術廻戦"], \n
+      Music: ["back number", "Perfume", "saucy dog", "Creepy Nuts", "新しい学校のリーダーズ", "King Gnu", "Avicii", "マキシマム ザ ホルモン", "ARuFa", "KREVA", "Official 髭男 dism", "TK from 凛として時雨", "Vaundy", "WANIMA", "YOASOBI", "Zedd"], \n
+      Game: ["モンスターハンター", "アーマードコア", "エルデンリング", "ニーアオートマタ"], \n
+      Anime: ["新世紀エヴァンゲリオン", "僕のヒーローアカデミア", "呪術廻戦", "葬送のフリーレン"], \n
       Movie: ["Marvel", "Star Wars", "ラ・ラ・ランド"], \n
-      Technology: ["Next.js", "React", "TypeScript", "javaScript", "AWS", "Laravel", "PHP"], \n
+      Technology: ["Next.js", "React", "TypeScript", "javaScript", "tailwindcss", "AWS", "Laravel", "PHP", "Python", "C#"], \n
       YouTube: ["`}
       <a href="https://www.youtube.com/@TokaiOnAir" target="_blank" rel="noopener noreferrer">
         東海オンエア
@@ -100,8 +105,8 @@ const codeJp = () => {
         </a>
       }
       {`"], \n
-      Food: ["麺類全般", "程よく辛いもの", "明太子"], \n
-      Other: ["京都巡り", "カフェ巡り", "旅行"] \n
+      Food: ["麺類全般", "程よく辛いもの", "明太子", "海鮮"], \n
+      Other: ["京都巡り", "カフェ巡り", "旅行", "歌を歌うこと", "楽曲制作"] \n
     } \n
   } \n
   
@@ -118,11 +123,11 @@ const codeEn = () => {
     Name: "kakke", \n
     Age: 31, \n
     Like: { \n
-      Music: ["back number", "Perfume", "saucy dog", "Creepy Nuts", "ATARASHII GAKKO!", "King Gnu"], \n
-      Game: ["monster hunter", "ARMORED CORE", "Elden Ling"], \n
-      Anime: ["Neon Genesis Evangelion", "My Hero Academia", "Jujutsu Kaisen"], \n
+      Music: ["back number", "Perfume", "saucy dog", "Creepy Nuts", "ATARASHII GAKKO!", "King Gnu", "Avicii", "maximum the hormone", "ARuFa", "KREVA", "Official 髭男 dism", "TK from 凛として時雨", "Vaundy", "WANIMA", "YOASOBI", "Zedd"], \n
+      Game: ["monster hunter", "ARMORED CORE", "Elden Ling", "NieR Automata"], \n
+      Anime: ["Neon Genesis Evangelion", "My Hero Academia", "Jujutsu Kaisen", "Frieren :Beyond Journey's End"], \n
       Movie: ["Marvel", "Star Wars", "La La Land"], \n
-      Technology: ["Next.js", "React", "TypeScript", "javaScript", "AWS", "Laravel", "PHP"], \n
+      Technology: ["Next.js", "React", "TypeScript", "javaScript", "tailwindcss", "AWS", "Laravel", "PHP", "Python", "C#"], \n
       YouTube: ["`}
       <a href="https://www.youtube.com/@TokaiOnAir" target="_blank" rel="noopener noreferrer">
         TokaiOnAir
@@ -158,8 +163,8 @@ const codeEn = () => {
         </a>
       }
       {`"], \n
-      Food: ["Noodles in general", "moderately spicy food", "walleye pollack roe"], \n
-      Other: ["tour of Kyoto", "cafe crawl", "travel"] \n
+      Food: ["Noodles in general", "moderately spicy food", "walleye pollack roe", "seafood"], \n
+      Other: ["tour of Kyoto", "cafe crawl", "travel", "sing a song", "music composition"] \n
     } \n
   } \n
   
