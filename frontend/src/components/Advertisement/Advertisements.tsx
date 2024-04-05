@@ -262,11 +262,65 @@ const ads = {
       <img style={{ width: 1, height: 1 }} src="https://www13.a8.net/0.gif?a8mat=3HE1AZ+41V7ZM+0K+10YDIP" alt=""></img>
     </div>
   ),
+  30: (
+    <div>
+      {/* サブスク型ホームページが制作費用0円！月々8800円で運用可能！【andHP】(24-0329) */}
+      <a href="https://px.a8.net/svt/ejp?a8mat=3Z4Q7O+7IATF6+5I8E+5YZ75" rel="nofollow">
+        <img width="300" height="250" alt="" src="https://www25.a8.net/svt/bgt?aid=240405684454&wid=001&eno=01&mid=s00000025691001003000&mc=1" />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www11.a8.net/0.gif?a8mat=3Z4Q7O+7IATF6+5I8E+5YZ75" alt=""></img>
+    </div>
+  ),
+  31: (
+    <div>
+      {/* ＜個人事業主向け＞確定申告書等を自動作成で効率化！【マネーフォワード クラウド】(24-0401) */}
+      <a href="https://px.a8.net/svt/ejp?a8mat=3Z4Q7O+7L9ZG2+3SPO+C8MHDT" rel="nofollow">
+        <img width="300" height="250" alt="" src="https://www21.a8.net/svt/bgt?aid=240405684459&wid=001&eno=01&mid=s00000017718074008000&mc=1" />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www13.a8.net/0.gif?a8mat=3Z4Q7O+7L9ZG2+3SPO+C8MHDT" alt=""></img>
+    </div>
+  ),
+  32: (
+    <div>
+      {/* 未経験・微経験のITエンジニア転職なら【ツギノシゴト】(24-0329) */}
+      <a href="https://px.a8.net/svt/ejp?a8mat=3Z4Q7O+7LVF1U+5I8O+5YZ75" rel="nofollow">
+        <img width="300" height="250" alt="" src="https://www23.a8.net/svt/bgt?aid=240405684460&wid=001&eno=01&mid=s00000025692001003000&mc=1" />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www17.a8.net/0.gif?a8mat=3Z4Q7O+7LVF1U+5I8O+5YZ75" alt=""></img>
+    </div>
+  ),
+  33: (
+    <div>
+      {/* 美しさを保つ秘訣 【ORIVIN】(24-0403) */}
+      <a href="https://px.a8.net/svt/ejp?a8mat=3Z4Q7O+7OUL2Q+5DPM+BXB8X" rel="nofollow">
+        <img width="300" height="250" alt="" src="https://www23.a8.net/svt/bgt?aid=240405684465&wid=001&eno=01&mid=s00000025105002003000&mc=1" />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www17.a8.net/0.gif?a8mat=3Z4Q7O+7OUL2Q+5DPM+BXB8X" alt=""></img>
+    </div>
+  ),
+  34: (
+    <div>
+      {/* 美しさを保つ秘訣 【ORIVIN】(24-0403) */}
+      <a href="https://px.a8.net/svt/ejp?a8mat=3Z4Q7O+7OUL2Q+5DPM+BXIYP" rel="nofollow">
+        <img width="300" height="250" alt="" src="https://www23.a8.net/svt/bgt?aid=240405684465&wid=001&eno=01&mid=s00000025105002004000&mc=1" />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www11.a8.net/0.gif?a8mat=3Z4Q7O+7OUL2Q+5DPM+BXIYP" alt=""></img>
+    </div>
+  ),
+  35: (
+    <div>
+      {/* 美しさを保つ秘訣 【ORIVIN】(24-0403) */}
+      <a href="https://px.a8.net/svt/ejp?a8mat=3Z4Q7O+7OUL2Q+5DPM+BXQOH" rel="nofollow">
+        <img width="300" height="250" alt="" src="https://www23.a8.net/svt/bgt?aid=240405684465&wid=001&eno=01&mid=s00000025105002005000&mc=1" />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www19.a8.net/0.gif?a8mat=3Z4Q7O+7OUL2Q+5DPM+BXQOH" alt=""></img>
+    </div>
+  ),
 };
 export const Advertisements = () => {
   const [ad, setAd] = useState(null);
   useEffect(() => {
-    const random = Math.floor(Math.random() * 30);
+    const random = Math.floor(Math.random() * 36);
     setAd(ads[random]);
   }, []);
   return <>{ad}</>;

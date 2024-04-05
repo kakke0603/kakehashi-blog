@@ -154,6 +154,15 @@ const ads = {
       <img style={{ width: 1, height: 1 }} src="https://www11.a8.net/0.gif?a8mat=3HE1AZ+41V7ZM+0K+109IGH" alt=""></img>
     </div>
   ),
+  17: (
+    <div>
+      {/* ＜個人事業主向け＞確定申告書等を自動作成で効率化！【マネーフォワード クラウド】(24-0401) */}
+      <a href="https://px.a8.net/svt/ejp?a8mat=3Z4Q7O+7L9ZG2+3SPO+C8LMIP" rel="nofollow">
+        <img width="468" height="60" alt="" src="https://www21.a8.net/svt/bgt?aid=240405684459&wid=001&eno=01&mid=s00000017718074004000&mc=1" />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www16.a8.net/0.gif?a8mat=3Z4Q7O+7L9ZG2+3SPO+C8LMIP" alt=""></img>
+    </div>
+  ),
 };
 
 export const WideAdvertisements = () => {
