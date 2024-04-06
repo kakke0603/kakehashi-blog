@@ -48,7 +48,7 @@ const EnPrivacy = () => {
       <br />
       By using cookies, the site can identify your computer, but not you as an individual.
       <br />
-      For information on how to disable cookies and Google AdSense, please see "Advertising - Policies and Terms - Google".
+      For information on how to disable cookies and Google AdSense, please see Advertising - Policies and Terms - Google.
       <br />
       In addition, kakke.site is a participant in the Amazon Associates Program, an affiliate program designed to provide a means for sites to earn
       advertising fees by advertising and linking to Amazon.co.jp.
