@@ -2,7 +2,7 @@
 import React from "react";
 import { Card, CardHeader, CardBody, Image } from "@nextui-org/react";
 import { useCurrentLocale } from "next-i18n-router/client";
-import i18nConfig from "./i18nConfig";
+import { i18nConfig } from "./i18nConfig";
 
 export const Home = () => {
   const locale = useCurrentLocale(i18nConfig);
@@ -10,7 +10,7 @@ export const Home = () => {
   return (
     <div>
       <div className="gap-5 grid sm:grid-cols-3 grid-cols-2 grid-rows-2 justify-center mb-5 p-5">
-        <a href={"/about"}>
+        <a href={isJapanese ? "/about" : "/en/about"}>
           <Card className="py-4 w-full h-full" isPressable>
             <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
               <h4 className="font-bold text-large">About</h4>
@@ -27,7 +27,7 @@ export const Home = () => {
             </CardBody>
           </Card>
         </a>
-        <a href={"/articles"}>
+        <a href={isJapanese ? "/articles" : "/en/articles"}>
           <Card className="py-4 w-full h-full" isPressable>
             <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
               <h4 className="font-bold text-large">Articles</h4>
@@ -46,7 +46,7 @@ export const Home = () => {
             </CardBody>
           </Card>
         </a>
-        <a href={"/tags"}>
+        <a href={isJapanese ? "/tags" : "/en/tags"}>
           <Card className="py-4 w-full h-full" isPressable>
             <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
               <h4 className="font-bold text-large">Tags</h4>
@@ -57,7 +57,7 @@ export const Home = () => {
             </CardBody>
           </Card>
         </a>
-        <a href={"/playground"}>
+        <a href={isJapanese ? "/playground" : "/en/playground"}>
           <Card className="py-4 w-full h-full" isPressable>
             <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
               <h4 className="font-bold text-large">Playground</h4>
@@ -74,7 +74,7 @@ export const Home = () => {
             </CardBody>
           </Card>
         </a>
-        <a href={"/products"}>
+        <a href={isJapanese ? "/products" : "/en/products"}>
           <Card className="py-4 w-full h-full" isPressable>
             <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
               <h4 className="font-bold text-large">Products</h4>
@@ -91,7 +91,7 @@ export const Home = () => {
             </CardBody>
           </Card>
         </a>
-        <a href={"/contact"}>
+        <a href={isJapanese ? "/contact" : "/en/contact"}>
           <Card className="py-4 w-full h-full" isPressable>
             <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
               <h4 className="font-bold text-large">Contact me</h4>

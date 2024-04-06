@@ -51,7 +51,7 @@ export default function Profile() {
       <WideAdvertisements />
       <h1>{isJapanese ? "コミュニティ" : "community"}</h1>
       <Link href="https://it-takoyaki.connpass.com/" target="_blank" rel="noopener noreferrer">
-        <Image src={isJapanese ? "it-takoyaki.png" : "/[en]/it-takoyaki-en.png"} alt="it-takoyaki" />
+        <Image src={isJapanese ? "it-takoyaki.png" : "/[en]/it-takoyaki.png"} alt="it-takoyaki" />
       </Link>
     </div>
   );

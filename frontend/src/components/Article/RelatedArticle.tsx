@@ -9,8 +9,11 @@ import { useRouter } from "next/navigation";
 export default function RelatedArticle({ article }: { article: ArticleType }) {
   const { isJapanese } = useLang();
   const router = useRouter();
+  const handleClick = () => {
+    isJapanese ? router.push(`/articles/${article.id}`) : router.push(`/en/articles/${article.id}`);
+  };
   return (
-    <Card isPressable className="w-[150px] h-[90px] sm:w-[200px]" onClick={() => router.push(`/articles/${article.id}`)}>
+    <Card isPressable className="w-[150px] h-[90px] sm:w-[200px]" onClick={handleClick}>
       <CardBody>
         <pre>{isJapanese ? article?.title : article.content_en}</pre>
         <div className="mt-2 flex gap-x-2">

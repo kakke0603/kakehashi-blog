@@ -11,6 +11,8 @@ import { BuyMeCoffeeWidget } from "../components//BuyMeCoffeeWidget";
 import { BuyMeCoffeeButton } from "../components//BuyMeCoffeeButton";
 import GoogleAdsense from "../components//Advertisement/GoogleAdsense";
 import GoogleAnalytics from "../components/GoogleAnalytics";
+import i18n from "i18next";
+import { i18nextInitOptions } from "./i18nConfig";
 
 const inter = Noto_Sans_JP({ subsets: ["latin"], display: "swap" });
 
@@ -49,7 +51,22 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+i18n.init(i18nextInitOptions, (err) => {
+  if (err) {
+    console.error("i18next failed to initialize", err);
+  }
+});
+
+export default function RootLayout({
+  children,
+  params: { locale },
+}: {
+  children: React.ReactNode;
+  params: {
+    locale: string;
+  };
+}) {
+  i18n.changeLanguage(locale);
   return (
     <html lang="ja" className={inter.className}>
       <meta property="og:image" content="<generated>" />

@@ -19,10 +19,12 @@ export const ArticleCard: React.FC<ArticleType> = ({
   title_en = "",
   content_en = "",
 }) => {
-  const router = useRouter();
-  const handleClick = () => router.push(`/articles/${id}`);
   // eslint-disable-next-line react-hooks/rules-of-hooks
+  const router = useRouter();
   const { isJapanese } = useLang();
+  const handleClick = () => {
+    isJapanese ? router.push(`/articles/${id}`) : router.push(`/en/articles/${id}`);
+  };
   const emoji = tags?.[0]?.emoji ?? "📝";
   return (
     <Card className="py-4 w-full" isPressable onPress={handleClick}>

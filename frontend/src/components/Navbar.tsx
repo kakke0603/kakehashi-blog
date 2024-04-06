@@ -4,10 +4,13 @@ import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, NavbarMen
 import ToggleDarkModeButton from "./ToggleDarkModeButton";
 import ToggleLanguageButton from "./ToggleLanguageButton";
 import { usePathname } from "next/navigation";
+import { useLang } from "../hooks/useLang";
 
 export default function index() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const pathname = usePathname();
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const { isJapanese } = useLang();
   const isDisabledTop = pathname === "/" || pathname === "/en/";
   const isDisabledAbout = pathname === "/about" || pathname === "/en/about";
   const isDisabledArticles = pathname === "/articles" || pathname === "/en/articles";
@@ -23,44 +26,44 @@ export default function index() {
       </NavbarContent>
       <NavbarContent>
         <NavbarBrand className="justify-center sm:justify-start">
-          <a className="font-bold text-inherit no-underline" href="/">
+          <a className="font-bold text-inherit no-underline" href={isJapanese ? "/" : "/en"}>
             Kakke-Blog
           </a>
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className="hidden sm:flex gap-4">
         <NavbarItem>
-          <Link href="/about" isDisabled={isDisabledAbout}>
+          <Link href={isJapanese ? "/about" : "/en/about"} isDisabled={isDisabledAbout}>
             About
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="/articles" isDisabled={isDisabledArticles}>
+          <Link href={isJapanese ? "/articles" : "/en/articles"} isDisabled={isDisabledArticles}>
             Articles
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="/tags" isDisabled={isDisabledTags}>
+          <Link href={isJapanese ? "/tags" : "/en/tags"} isDisabled={isDisabledTags}>
             tags
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="/playground" isDisabled={isDisabledPlayground}>
+          <Link href={isJapanese ? "/playground" : "/en/playground"} isDisabled={isDisabledPlayground}>
             Playground
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="/products" isDisabled={isDisabledProducts}>
+          <Link href={isJapanese ? "/products" : "/en/products"} isDisabled={isDisabledProducts}>
             Products
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="/contact" isDisabled={isDisabledContact}>
+          <Link href={isJapanese ? "/contact" : "/en/contact"} isDisabled={isDisabledContact}>
             ContactMe
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="/privacy" isDisabled={isDisabledPrivacy}>
+          <Link href={isJapanese ? "/privacy" : "/en/privacy"} isDisabled={isDisabledPrivacy}>
             PrivacyPolicy
           </Link>
         </NavbarItem>
@@ -75,42 +78,42 @@ export default function index() {
       </NavbarContent>
       <NavbarMenu>
         <NavbarMenuItem>
-          <Link href="/" isDisabled={isDisabledTop}>
+          <Link href={isJapanese ? "/" : "/en"} isDisabled={isDisabledTop}>
             Top
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link href="/about" isDisabled={isDisabledAbout}>
+          <Link href={isJapanese ? "/about" : "/en/about"} isDisabled={isDisabledAbout}>
             About
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link href="/articles" isDisabled={isDisabledArticles}>
+          <Link href={isJapanese ? "/articles" : "/en/articles"} isDisabled={isDisabledArticles}>
             Articles
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link href="/tags" isDisabled={isDisabledTags}>
+          <Link href={isJapanese ? "/tags" : "/en/tags"} isDisabled={isDisabledTags}>
             tags
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link href="/playground" isDisabled={isDisabledPlayground}>
+          <Link href={isJapanese ? "/playground" : "/en/playground"} isDisabled={isDisabledPlayground}>
             Playground
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link href="/products" isDisabled={isDisabledProducts}>
+          <Link href={isJapanese ? "/products" : "/en/products"} isDisabled={isDisabledProducts}>
             Products
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link href="/contact" isDisabled={isDisabledContact}>
+          <Link href={isJapanese ? "/contact" : "/en/contact"} isDisabled={isDisabledContact}>
             ContactMe
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link href="/privacy" isDisabled={isDisabledPrivacy}>
+          <Link href={isJapanese ? "/privacy" : "/en/privacy"} isDisabled={isDisabledPrivacy}>
             PrivacyPolicy
           </Link>
         </NavbarMenuItem>

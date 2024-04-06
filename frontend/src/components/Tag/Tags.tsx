@@ -10,9 +10,11 @@ import { useLang } from "../../hooks/useLang";
 export default async function Tags({ tags }: { tags: TagType[] }) {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const router = useRouter();
-  const onClick = (id: string) => router.push(`/tags/${id}`);
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const { isJapanese } = useLang();
+  const onClick = (id: string) => {
+    isJapanese ? router.push(`/tags/${id}`) : router.push(`/en/tags/${id}`);
+  };
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   return (
     <div className="flex flex-col gap-3">
       <div className="font-bold underline">Tags</div>
