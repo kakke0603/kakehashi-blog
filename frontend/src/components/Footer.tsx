@@ -10,7 +10,7 @@ export default function Footer() {
     <footer className="w-full text-center text-default-500 text-sm">
       <div>© 2024 {isJapanese ? <>かっけ</> : <>kakke</>}</div>
       <div>
-        <Link href="privacy">プライバシーポリシー</Link>
+        <Link href="/privacy">プライバシーポリシー</Link>
       </div>
     </footer>
   );
