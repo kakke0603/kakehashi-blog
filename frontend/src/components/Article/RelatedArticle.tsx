@@ -13,7 +13,7 @@ export default function RelatedArticle({ article }: { article: ArticleType }) {
     isJapanese ? router.push(`/articles/${article.id}`) : router.push(`/en/articles/${article.id}`);
   };
   return (
-    <Card isPressable className="w-[150px] h-[90px] sm:w-[200px]" onClick={handleClick}>
+    <Card isPressable className="w-[200px] h-[90px] sm:w-[250px]" onClick={handleClick}>
       <CardBody>
         <pre>{isJapanese ? article?.title : article.content_en}</pre>
         <div className="mt-2 flex gap-x-2">

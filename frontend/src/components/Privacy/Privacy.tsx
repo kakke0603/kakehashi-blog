@@ -4,12 +4,12 @@ import { useLang } from "../../hooks/useLang";
 
 const Privacy = () => {
   const { isJapanese } = useLang();
-  return <div>{isJapanese ? JpPrivacy() : EnPrivacy()}</div>;
+  return <div className="p-3">{isJapanese ? JpPrivacy() : EnPrivacy()}</div>;
 };
 
 const JpPrivacy = () => {
   return (
-    <div className="p-3">
+    <div>
       <h1>プライバシーポリシー</h1>
       <br />
       個人情報の利用目的 当ブログでは、お問い合わせや記事へのコメントの際、名前やメールアドレス等の個人情報を入力いただく場合がございます。
