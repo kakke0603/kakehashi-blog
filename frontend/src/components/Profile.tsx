@@ -211,23 +211,23 @@ const TimelineComponent = () => {
       <li>
         <div className="flex-start flex items-center pt-2">
           <div className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-blue-300 dark:bg-blue-500"></div>
-          <p className="text-sm text-blue-500 dark:text-blue-300">{isJapanese ? "2021/05/01〜現在" : "2021/05/01 - Present"}</p>
+          <p className="text-sm text-blue-500 dark:text-blue-300">2021/05/01〜2024/04/30</p>
         </div>
         <div className="ml-4 mt-2 pb-5">
-          <h4 className="mb-1.5 text-xl font-semibold">{isJapanese ? "HappyLifeCreators株式会社に入社" : "Joined HappyLifeCreators, Inc."}</h4>
+          <h4 className="mb-1.5 text-xl font-semibold">{isJapanese ? "Web系ベンチャー企業に入社" : "Joined a web-based venture company."}</h4>
           <p className="mb-3 text-neutral-500 dark:text-neutral-300">
             {isJapanese ? (
               <>
-                SNSの開発。React,Laravelなどで開発中。AWSを使用したインフラ構築も行っています。
+                オタク向けSNSの開発。React,Laravelなどで開発していました。AWSを使用したインフラ構築も行っていました。
                 <br />
-                フロントがめっちゃ得意です。楽しく開発させてもらってます！
+                ユーザー数を数十万人規模にまで引き上げることができました。
                 <br />
                 AWS Certified Cloud Practitionerの取得。
               </>
             ) : (
               <>
-                Developing SNS, using React, Laravel, etc. Also building infrastructure using AWS.
-                <br />I am very good at front-end development. I am very good at front-end development. I enjoy developing!
+                I developed SNS using React, Laravel, etc. I also built infrastructure using AWS.
+                <br />I was able to increase the number of users to several hundred thousand.
                 <br />
                 AWS Certified Cloud Practitioner.
               </>

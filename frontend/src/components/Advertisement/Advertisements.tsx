@@ -325,11 +325,146 @@ const ads = {
       <img style={{ width: 1, height: 1 }} src="https://www19.a8.net/0.gif?a8mat=3Z4Q7O+7GIILU+5ITS+5Z6WX" alt=""></img>
     </div>
   ),
+  37: (
+    <div>
+      {/* カジュアルなお茶ギフト【おいしい日本茶研究所】(24-0412) */}
+      <a href="https://px.a8.net/svt/ejp?a8mat=3Z4XAL+DE94S2+5IXE+5YZ75" rel="nofollow">
+        <img width="300" height="250" alt="" src="https://www22.a8.net/svt/bgt?aid=240414861810&wid=001&eno=01&mid=s00000025781001003000&mc=1" />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www13.a8.net/0.gif?a8mat=3Z4XAL+DE94S2+5IXE+5YZ75" alt=""></img>
+    </div>
+  ),
+  38: (
+    <div>
+      {/* カジュアルなお茶ギフト【おいしい日本茶研究所】(24-0412) */}
+      <a href="https://px.a8.net/svt/ejp?a8mat=3Z4XAL+DE94S2+5IXE+5Z6WX" rel="nofollow">
+        <img width="300" height="250" alt="" src="https://www27.a8.net/svt/bgt?aid=240414861810&wid=001&eno=01&mid=s00000025781001004000&mc=1" />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www11.a8.net/0.gif?a8mat=3Z4XAL+DE94S2+5IXE+5Z6WX" alt=""></img>
+    </div>
+  ),
+  39: (
+    <div>
+      {/* カジュアルなお茶ギフト【おいしい日本茶研究所】(24-0412) */}
+      <a href="https://px.a8.net/svt/ejp?a8mat=3Z4XAL+DE94S2+5IXE+5ZEMP" rel="nofollow">
+        <img width="300" height="250" alt="" src="https://www27.a8.net/svt/bgt?aid=240414861810&wid=001&eno=01&mid=s00000025781001005000&mc=1" />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www14.a8.net/0.gif?a8mat=3Z4XAL+DE94S2+5IXE+5ZEMP" alt=""></img>
+    </div>
+  ),
+  40: (
+    <div>
+      {/* お米とごはんの専門店【一粒庵】(24-0411) */}
+      <a href="https://px.a8.net/svt/ejp?a8mat=3Z4XAL+CVSP0Y+5J7Y+5Z6WX" rel="nofollow">
+        <img width="300" height="250" alt="" src="https://www21.a8.net/svt/bgt?aid=240414861779&wid=001&eno=01&mid=s00000025819001004000&mc=1" />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www11.a8.net/0.gif?a8mat=3Z4XAL+CVSP0Y+5J7Y+5Z6WX" alt=""></img>
+    </div>
+  ),
+  41: (
+    <div>
+      {/* お米とごはんの専門店【一粒庵】(24-0411) */}
+      <a href="https://px.a8.net/svt/ejp?a8mat=3Z4XAL+CVSP0Y+5J7Y+5YZ75" rel="nofollow">
+        <img width="300" height="250" alt="" src="https://www22.a8.net/svt/bgt?aid=240414861779&wid=001&eno=01&mid=s00000025819001003000&mc=1" />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www12.a8.net/0.gif?a8mat=3Z4XAL+CVSP0Y+5J7Y+5YZ75" alt=""></img>
+    </div>
+  ),
+  42: (
+    <div>
+      {/* お米とごはんの専門店【一粒庵】(24-0411) */}
+      <a href="https://px.a8.net/svt/ejp?a8mat=3Z4XAL+CVSP0Y+5J7Y+5ZEMP" rel="nofollow">
+        <img width="300" height="250" alt="" src="https://www23.a8.net/svt/bgt?aid=240414861779&wid=001&eno=01&mid=s00000025819001005000&mc=1" />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www18.a8.net/0.gif?a8mat=3Z4XAL+CVSP0Y+5J7Y+5ZEMP" alt=""></img>
+    </div>
+  ),
+  43: (
+    <div>
+      {/* 日本FX教育機構　超かんたん考えない投資法【FXスクール説明会】(24-0411) */}
+      <a href="https://px.a8.net/svt/ejp?a8mat=3Z4XAL+DD29KI+5J1A+5ZEMP" rel="nofollow">
+        <img width="300" height="250" alt="" src="https://www26.a8.net/svt/bgt?aid=240414861808&wid=001&eno=01&mid=s00000025795001005000&mc=1" />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www14.a8.net/0.gif?a8mat=3Z4XAL+DD29KI+5J1A+5ZEMP" alt=""></img>
+    </div>
+  ),
+  44: (
+    <div>
+      {/* 日本FX教育機構　超かんたん考えない投資法【FXスクール説明会】(24-0411) */}
+      <a href="https://px.a8.net/svt/ejp?a8mat=3Z4XAL+DD29KI+5J1A+5ZMCH" rel="nofollow">
+        <img width="300" height="250" alt="" src="https://www20.a8.net/svt/bgt?aid=240414861808&wid=001&eno=01&mid=s00000025795001006000&mc=1" />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www19.a8.net/0.gif?a8mat=3Z4XAL+DD29KI+5J1A+5ZMCH" alt=""></img>
+    </div>
+  ),
+  45: (
+    <div>
+      {/* カジュアルなお茶ギフト【おいしい日本茶研究所】(24-0412) */}
+      <a href="https://px.a8.net/svt/ejp?a8mat=3Z4XAL+DE94S2+5IXE+5YZ75" rel="nofollow">
+        <img width="300" height="250" alt="" src="https://www26.a8.net/svt/bgt?aid=240414861810&wid=001&eno=01&mid=s00000025781001003000&mc=1" />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www15.a8.net/0.gif?a8mat=3Z4XAL+DE94S2+5IXE+5YZ75" alt=""></img>
+    </div>
+  ),
+  46: (
+    <div>
+      {/* カジュアルなお茶ギフト【おいしい日本茶研究所】(24-0412) */}
+      <a href="https://px.a8.net/svt/ejp?a8mat=3Z4XAL+DE94S2+5IXE+5Z6WX" rel="nofollow">
+        <img width="300" height="250" alt="" src="https://www21.a8.net/svt/bgt?aid=240414861810&wid=001&eno=01&mid=s00000025781001004000&mc=1" />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www18.a8.net/0.gif?a8mat=3Z4XAL+DE94S2+5IXE+5Z6WX" alt=""></img>
+    </div>
+  ),
+  47: (
+    <div>
+      {/* カジュアルなお茶ギフト【おいしい日本茶研究所】(24-0412) */}
+      <a href="https://px.a8.net/svt/ejp?a8mat=3Z4XAL+DE94S2+5IXE+5ZEMP" rel="nofollow">
+        <img width="300" height="250" alt="" src="https://www27.a8.net/svt/bgt?aid=240414861810&wid=001&eno=01&mid=s00000025781001005000&mc=1" />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www11.a8.net/0.gif?a8mat=3Z4XAL+DE94S2+5IXE+5ZEMP" alt=""></img>
+    </div>
+  ),
+  48: (
+    <div>
+      {/* ひどいくせ毛、縮毛にお悩みのあなたに【シルクサラン】(24-0410) */}
+      <a href="https://px.a8.net/svt/ejp?a8mat=3Z4XAL+D0K5V6+5H7Q+5ZMCH" rel="nofollow">
+        <img width="300" height="250" alt="" src="https://www25.a8.net/svt/bgt?aid=240414861787&wid=001&eno=01&mid=s00000025559001006000&mc=1" />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www14.a8.net/0.gif?a8mat=3Z4XAL+D0K5V6+5H7Q+5ZMCH" alt=""></img>
+    </div>
+  ),
+  49: (
+    <div>
+      {/* ひどいくせ毛、縮毛にお悩みのあなたに【シルクサラン】(24-0410) */}
+      <a href="https://px.a8.net/svt/ejp?a8mat=3Z4XAL+D0K5V6+5H7Q+5ZEMP" rel="nofollow">
+        <img width="300" height="250" alt="" src="https://www25.a8.net/svt/bgt?aid=240414861787&wid=001&eno=01&mid=s00000025559001005000&mc=1" />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www17.a8.net/0.gif?a8mat=3Z4XAL+D0K5V6+5H7Q+5ZEMP" alt=""></img>
+    </div>
+  ),
+  50: (
+    <div>
+      {/* 【楽天第1位8冠達成】薄毛カバー白髪ケアが叶うスタイリングカバースプレー(24-0408) */}
+      <a href="https://px.a8.net/svt/ejp?a8mat=3Z4XAL+CXKZUA+4P4W+ZRQ0X" rel="nofollow">
+        <img width="300" height="250" alt="" src="https://www24.a8.net/svt/bgt?aid=240414861782&wid=001&eno=01&mid=s00000021920006008000&mc=1" />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www14.a8.net/0.gif?a8mat=3Z4XAL+CXKZUA+4P4W+ZRQ0X" alt=""></img>
+    </div>
+  ),
+  51: (
+    <div>
+      {/* 寄せ書きの進化系「贈る言葉の贈り本」【RETTEL】(24-0408) */}
+      <a href="https://px.a8.net/svt/ejp?a8mat=3Z4XAL+DG1FLE+4I5I+BXIYP" rel="nofollow">
+        <img width="300" height="250" alt="" src="https://www27.a8.net/svt/bgt?aid=240414861813&wid=001&eno=01&mid=s00000021015002004000&mc=1" />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www13.a8.net/0.gif?a8mat=3Z4XAL+DG1FLE+4I5I+BXIYP" alt=""></img>
+    </div>
+  ),
 };
 export const Advertisements = () => {
   const [ad, setAd] = useState(null);
   useEffect(() => {
-    const random = Math.floor(Math.random() * 37);
+    const random = Math.floor(Math.random() * 52);
     setAd(ads[random]);
   }, []);
   return <>{ad}</>;

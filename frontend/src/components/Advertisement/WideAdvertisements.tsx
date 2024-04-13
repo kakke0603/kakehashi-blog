@@ -163,6 +163,33 @@ const ads = {
       <img style={{ width: 1, height: 1 }} src="https://www16.a8.net/0.gif?a8mat=3Z4Q7O+7L9ZG2+3SPO+C8LMIP" alt=""></img>
     </div>
   ),
+  18: (
+    <div>
+      {/* お米とごはんの専門店【一粒庵】(24-0411) */}
+      <a href="https://px.a8.net/svt/ejp?a8mat=3Z4XAL+CVSP0Y+5J7Y+61C2P" rel="nofollow">
+        <img width="640" height="100" alt="" src="https://www28.a8.net/svt/bgt?aid=240414861779&wid=001&eno=01&mid=s00000025819001014000&mc=1" />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www15.a8.net/0.gif?a8mat=3Z4XAL+CVSP0Y+5J7Y+61C2P" alt=""></img>
+    </div>
+  ),
+  19: (
+    <div>
+      {/* お米とごはんの専門店【一粒庵】(24-0411) */}
+      <a href="https://px.a8.net/svt/ejp?a8mat=3Z4XAL+CVSP0Y+5J7Y+61JSH" rel="nofollow">
+        <img width="640" height="100" alt="" src="https://www26.a8.net/svt/bgt?aid=240414861779&wid=001&eno=01&mid=s00000025819001015000&mc=1" />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www15.a8.net/0.gif?a8mat=3Z4XAL+CVSP0Y+5J7Y+61JSH" alt=""></img>
+    </div>
+  ),
+  20: (
+    <div>
+      {/* お米とごはんの専門店【一粒庵】(24-0411) */}
+      <a href="https://px.a8.net/svt/ejp?a8mat=3Z4XAL+CVSP0Y+5J7Y+61RI9" rel="nofollow">
+        <img width="640" height="100" alt="" src="https://www26.a8.net/svt/bgt?aid=240414861779&wid=001&eno=01&mid=s00000025819001016000&mc=1" />
+      </a>
+      <img style={{ width: 1, height: 1 }} src="https://www14.a8.net/0.gif?a8mat=3Z4XAL+CVSP0Y+5J7Y+61RI9" alt=""></img>
+    </div>
+  ),
 };
 
 export const WideAdvertisements = () => {
