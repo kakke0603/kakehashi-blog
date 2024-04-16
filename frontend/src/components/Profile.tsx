@@ -259,10 +259,10 @@ const TimelineComponent = () => {
           <p className="text-sm text-blue-500 dark:text-blue-300">2024/05/01〜</p>
         </div>
         <div className="ml-4 mt-2 pb-5">
-          <h4 className="mb-1.5 text-xl font-semibold">{isJapanese ? "株式会社かけはしを設立" : "Established Kakehashi Co."}</h4>
+          <h4 className="mb-1.5 text-xl font-semibold">{isJapanese ? "フリーランスエンジニア" : "freelance engineer"}</h4>
           <p className="mb-3 text-neutral-500 dark:text-neutral-300">
             {isJapanese ? (
-              <>フリーランスとして活動を開始しました。IT事業をメインにしつつ、いずれは都市開発事業に携わりたい。</>
+              <>フリーランスとして活動を開始。IT事業をメインにしつつ、いずれは都市開発事業に携わりたい。</>
             ) : (
               <>
                 I have started working as a freelancer, mainly in the IT business, but would eventually like to be involved in the urban development
