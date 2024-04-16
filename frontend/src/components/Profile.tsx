@@ -11,7 +11,7 @@ export default function Profile() {
     <div>
       <div className="my-10 flex justify-center">
         <User
-          name={isJapanese ? "かっけ" : "Kakke"}
+          name={isJapanese ? "かっけ(掛橋俊介)" : "Kakehashi Shunsuke(a.k.a kakke)"}
           description={
             <div>
               {isJapanese ? "ふるすたっくえんじにあ" : "Full stack engineer"}
@@ -51,7 +51,7 @@ export default function Profile() {
       <WideAdvertisements />
       <h1>{isJapanese ? "コミュニティ" : "community"}</h1>
       <Link href="https://it-takoyaki.connpass.com/" target="_blank" rel="noopener noreferrer">
-        <Image src={isJapanese ? "it-takoyaki.png" : "/[en]/it-takoyaki.png"} alt="it-takoyaki" />
+        <Image src="it-takoyaki.png" alt="it-takoyaki" />
       </Link>
     </div>
   );
@@ -62,7 +62,7 @@ const codeJp = () => {
     <code>
       {`\n  
   { \n
-    Name: "かっけ", \n
+    Name: "かっけ(掛橋俊介)", \n
     Age: 31, \n
     Like: { \n
       Music: ["back number", "Perfume", "saucy dog", "Creepy Nuts", "新しい学校のリーダーズ", "King Gnu", "Avicii", "マキシマム ザ ホルモン", "ARuFa", "KREVA", "Official 髭男 dism", "TK from 凛として時雨", "Vaundy", "WANIMA", "YOASOBI", "Zedd"], \n
@@ -120,7 +120,7 @@ const codeEn = () => {
     <code>
       {`\n  
   { \n
-    Name: "kakke", \n
+    Name: "kakehashi shunsuke(a.k.a kakke)", \n
     Age: 31, \n
     Like: { \n
       Music: ["back number", "Perfume", "saucy dog", "Creepy Nuts", "ATARASHII GAKKO!", "King Gnu", "Avicii", "maximum the hormone", "ARuFa", "KREVA", "Official 髭男 dism", "TK from 凛として時雨", "Vaundy", "WANIMA", "YOASOBI", "Zedd"], \n
@@ -181,6 +181,24 @@ const TimelineComponent = () => {
       <li>
         <div className="flex-start flex items-center pt-3">
           <div className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-neutral-300 dark:bg-neutral-500"></div>
+          <p className="text-sm text-neutral-500 dark:text-neutral-300">2012/04/01〜2013/03/31</p>
+        </div>
+        <div className="mb-6 ml-4 mt-2">
+          <h4 className="mb-1.5 text-xl font-semibold">
+            {isJapanese
+              ? "同志社大学理工学部機械システム工学科入学・中退"
+              : "Entered and withdrew from the Department of Mechanical Systems Engineering, Faculty of Science and Engineering, Doshisha University"}
+          </h4>
+          <p className="mb-3 text-neutral-500 dark:text-neutral-300">
+            {isJapanese
+              ? "機械設計や製図などを学ぶもITに興味を持ち、専門学校に進学することに"
+              : "Studied mechanical design and drafting, but became interested in IT and decided to enter a technical college"}
+          </p>
+        </div>
+      </li>
+      <li>
+        <div className="flex-start flex items-center pt-3">
+          <div className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-neutral-300 dark:bg-neutral-500"></div>
           <p className="text-sm text-neutral-500 dark:text-neutral-300">2015/04/01〜2019/03/31</p>
         </div>
         <div className="mb-6 ml-4 mt-2">
@@ -210,8 +228,8 @@ const TimelineComponent = () => {
       </li>
       <li>
         <div className="flex-start flex items-center pt-2">
-          <div className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-blue-300 dark:bg-blue-500"></div>
-          <p className="text-sm text-blue-500 dark:text-blue-300">2021/05/01〜2024/04/30</p>
+          <div className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-neutral-300 dark:bg-neutral-500"></div>
+          <p className="text-sm text-neutral-500 dark:text-neutral-300">2021/05/01〜2024/04/30</p>
         </div>
         <div className="ml-4 mt-2 pb-5">
           <h4 className="mb-1.5 text-xl font-semibold">{isJapanese ? "Web系ベンチャー企業に入社" : "Joined a web-based venture company."}</h4>
@@ -230,6 +248,25 @@ const TimelineComponent = () => {
                 <br />I was able to increase the number of users to several hundred thousand.
                 <br />
                 AWS Certified Cloud Practitioner.
+              </>
+            )}
+          </p>
+        </div>
+      </li>
+      <li>
+        <div className="flex-start flex items-center pt-2">
+          <div className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-blue-300 dark:bg-blue-500"></div>
+          <p className="text-sm text-blue-500 dark:text-blue-300">2024/05/01〜</p>
+        </div>
+        <div className="ml-4 mt-2 pb-5">
+          <h4 className="mb-1.5 text-xl font-semibold">{isJapanese ? "株式会社かけはしを設立" : "Established Kakehashi Co."}</h4>
+          <p className="mb-3 text-neutral-500 dark:text-neutral-300">
+            {isJapanese ? (
+              <>フリーランスとして活動を開始しました。IT事業をメインにしつつ、いずれは都市開発事業に携わりたい。</>
+            ) : (
+              <>
+                I have started working as a freelancer, mainly in the IT business, but would eventually like to be involved in the urban development
+                business.
               </>
             )}
           </p>
