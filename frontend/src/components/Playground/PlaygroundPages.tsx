@@ -2,6 +2,8 @@
 import { useLang } from "../../hooks/useLang";
 import React from "react";
 import { PlaygroundCard } from "./PlaygroundCard";
+import { WideAdvertisements } from "../Advertisement/WideAdvertisements";
+import { isPlaygroundType } from "../../libs/client";
 
 const pages = [
   // {
@@ -204,12 +206,27 @@ const PlaygroundPages = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const { isJapanese } = useLang();
   const contents = isJapanese ? pages : pagesEn;
+  const groupedItems = [];
+  for (let i = 0; i < contents.length; i += 3) {
+    groupedItems.push(contents.slice(i, i + 3));
+  }
+  const listWithAdvertisements = groupedItems.flatMap((group, index) => {
+    const items = [...group];
+    if (index < groupedItems.length - 1) {
+      items.push(<WideAdvertisements key={`advertisement-${index}`} />);
+    }
+    return items;
+  });
   return (
     <div className="">
       <div className="flex flex-col space-y-5 px-3">
-        {contents.map((page) => (
-          <PlaygroundCard {...page} key={page.id} />
-        ))}
+        {listWithAdvertisements?.map((playground: any) => {
+          if (isPlaygroundType(playground)) {
+            return <PlaygroundCard key={playground.id} {...playground} />;
+          } else {
+            return <>{playground}</>;
+          }
+        })}
       </div>
     </div>
   );

@@ -87,3 +87,27 @@ export function isArticleType(obj: any): obj is ArticleType {
   }
   return false;
 }
+
+type PlaygroundType = {
+  id: string;
+  image: string;
+  title: string;
+  content: string;
+  publishedAt: string;
+  revisedAt: string;
+};
+
+export const isPlaygroundType = (obj: any): obj is PlaygroundType => {
+  if (
+    typeof obj === "object" &&
+    obj !== null &&
+    typeof obj.id === "string" &&
+    typeof obj.title === "string" &&
+    typeof obj.content === "string" &&
+    typeof obj.publishedAt === "string" &&
+    typeof obj.revisedAt === "string"
+  ) {
+    return true;
+  }
+  return false;
+};
