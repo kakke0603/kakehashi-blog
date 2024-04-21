@@ -92,7 +92,9 @@ type PlaygroundType = {
   id: string;
   image: string;
   title: string;
+  titleEn: string;
   content: string;
+  contentEn: string;
   publishedAt: string;
   revisedAt: string;
 };
@@ -105,7 +107,9 @@ export const isPlaygroundType = (obj: any): obj is PlaygroundType => {
     typeof obj.title === "string" &&
     typeof obj.content === "string" &&
     typeof obj.publishedAt === "string" &&
-    typeof obj.revisedAt === "string"
+    typeof obj.revisedAt === "string" &&
+    typeof obj.titleEn === "string" &&
+    typeof obj.contentEn === "string"
   ) {
     return true;
   }

@@ -21,7 +21,7 @@
     "framer-motion": "^10.18.0",
     "highlight.js": "^11.9.0",
     "html2canvas": "^1.4.1",
-    "i18next": "^23.10.1",
+    "i18next": "^23.11.2",
     "microcms-js-sdk": "^3.0.0",
     "microcms-richedit-processer": "^1.2.0",
     "next": "14.1.0",

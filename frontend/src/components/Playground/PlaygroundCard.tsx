@@ -5,19 +5,22 @@ import { useRouter } from "next/navigation";
 import React from "react";
 import { PencilIcon } from "../../components//Icons/PencilIcon";
 import { RefreshIcon } from "../../components//Icons/RefreshIcon";
-import { StaticImageData } from "next/image";
 import Image from "next/image";
+import { useLang } from "../../hooks/useLang";
 
 type PlaygroundType = {
   id: string;
   image: string;
   title: string;
+  titleEn: string;
   content: string;
+  contentEn: string;
   publishedAt: string;
   revisedAt: string;
 };
-export const PlaygroundCard: React.FC<PlaygroundType> = ({ id, image, title, content, publishedAt, revisedAt }) => {
+export const PlaygroundCard: React.FC<PlaygroundType> = ({ id, image, title, content, publishedAt, revisedAt, titleEn, contentEn }) => {
   const router = useRouter();
+  const { isJapanese } = useLang();
   const handleClick = () => router.push(`/playground/${id}`);
   return (
     <Card className="py-4 w-full" isPressable onPress={handleClick}>
@@ -27,8 +30,8 @@ export const PlaygroundCard: React.FC<PlaygroundType> = ({ id, image, title, con
             <Image src={image} width={70} height={70} alt="" />
           </div>
           <div className="space-y-4 w-[230px]">
-            <h4 className="font-bold text-large block">{title}</h4>
-            <div className="">{content}</div>
+            <h4 className="font-bold text-large block">{isJapanese ? title : titleEn}</h4>
+            <div className="">{isJapanese ? content : contentEn}</div>
           </div>
         </div>
         <div className="mt-4 flex gap-x-4 flex-wrap gap-y-1 justify-end">
