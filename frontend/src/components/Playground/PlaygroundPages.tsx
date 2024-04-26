@@ -111,28 +111,9 @@ const pages = [
 ];
 
 const PlaygroundPages = () => {
-  const groupedItems = [];
-  for (let i = 0; i < pages.length; i += 3) {
-    groupedItems.push(pages.slice(i, i + 3));
-  }
-  const listWithAdvertisements = groupedItems.flatMap((group, index) => {
-    const items = [...group];
-    if (index < groupedItems.length - 1) {
-      items.push(<WideAdvertisements key={`advertisement-${index}`} />);
-    }
-    return items;
-  });
   return (
     <div className="">
-      <div className="flex flex-col space-y-5 px-3">
-        {listWithAdvertisements?.map((playground: any) => {
-          if (isPlaygroundType(playground)) {
-            return <PlaygroundCard key={playground.id} {...playground} />;
-          } else {
-            return <div key={playground.id}>{playground}</div>;
-          }
-        })}
-      </div>
+      <div className="flex flex-col space-y-5 px-3">{pages?.map((playground: any) => <PlaygroundCard key={playground.id} {...playground} />)}</div>
     </div>
   );
 };
