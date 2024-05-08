@@ -50,20 +50,20 @@ export const metadata = {
 
 export default async function Page({ params }: { params: { id: string } }) {
   const data = await getArticle(params.id);
-  const articles = await getAllArticles();
-  const tags = data.tags;
-  const relatedTags = tags?.filter((tag) => articles?.filter((article) => article.tags?.some((articleTag) => articleTag.id === tag.id)));
-  const relatedArticles = articles?.filter((article) => {
-    return article.tags?.some((articleTag) => relatedTags?.some((relatedTag) => articleTag.id === relatedTag.id));
-  });
-  const filteredArticles = relatedArticles?.filter((article) => article.id !== data.id);
+  // const articles = await getAllArticles();
+  // const tags = data.tags;
+  // const relatedTags = tags?.filter((tag) => articles?.filter((article) => article.tags?.some((articleTag) => articleTag.id === tag.id)));
+  // const relatedArticles = articles?.filter((article) => {
+  //   return article.tags?.some((articleTag) => relatedTags?.some((relatedTag) => articleTag.id === relatedTag.id));
+  // });
+  // const filteredArticles = relatedArticles?.filter((article) => article.id !== data.id);
   return (
     <div>
       <Article {...data} key={data.id} />
       <Advertisements />
-      <div>
+      {/* <div>
         <RelatedArticles articles={filteredArticles} />
-      </div>
+      </div> */}
     </div>
   );
 }
