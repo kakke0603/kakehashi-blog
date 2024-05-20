@@ -236,18 +236,56 @@ const TimelineComponent = () => {
           <p className="mb-3 text-neutral-500 dark:text-neutral-300">
             {isJapanese ? (
               <>
-                オタク向けSNSの開発。React,Laravelなどで開発していました。AWSを使用したインフラ構築も行っていました。
                 <br />
-                ユーザー数を数十万人規模にまで引き上げることができました。
+                オタク向けSNS「くるっぷ」（
+                <a href="https://crepu.net" target="_blank" rel="noopener noreferrer">
+                  https://crepu.net
+                </a>
+                ）の開発において、エンジニア兼マネージャーを担ってきました。
                 <br />
-                AWS Certified Cloud Practitionerの取得。
+                技術スタックにはReact、TailwindCSS、Laravelなどを使用し、さらにAWSを用いたインフラ構築も手掛けました。
+                <br />
+                UIの一新を行なった結果、ユーザー数を数千人から数十万人規模にまで飛躍的に増加させることに成功しました。
+                <br />
+                ユーザーやプロダクトオーナーの要望に応じて、柔軟かつ迅速に新機能を実装し、サービスの向上に努めました。
+                <br />
+                具体的には、SNSの設計から開発、保守運用までを一手に引き受け、多岐にわたる機能を提供しました。
+                <br />
+                　投稿機能や画像投稿、フォローフォロワー機能、ミュート・ブロック機能、いいね機能、クリップボード機能、ユーザー追加機能、サブスクリプション型の課金システムの構築、タイムラインの実装、そして通報機能など、ユーザーエクスペリエンスを向上させるための幅広い機能を開発しました。
+                <br />
+                　また、運用側のシステムも構築し、不正利用ユーザーのBANや通報された投稿の管理など、サービスの健全性を維持するための管理体制を整えました。これにより、安全で快適なSNS環境の提供に貢献しました。
+                <br />
+                　このような経験を通じて、技術力だけでなく、ユーザー目線でのサービス改善や運用管理のスキルも培ってきました。
+                <br />
+                今後も、これらのスキルを活かしてさらなるチャレンジをしていきたいと考えています。
+                <br />
+                資格はAWS Certified Cloud Practitionerを取得。
               </>
             ) : (
               <>
-                I developed SNS using React, Laravel, etc. I also built infrastructure using AWS.
-                <br />I was able to increase the number of users to several hundred thousand.
+                I have been an engineer and manager in the development of "Kuruppu" (
+                <a href="https://crepu.net" target="_blank" rel="noopener noreferrer">
+                  https://crepu.net
+                </a>
+                ), a social networking service for otaku. The technology stack included React, TailwindCSS, and Laravel, and we also built the
+                infrastructure using AWS. <br />
+                As a result of the UI overhaul, we were able to dramatically increase the number of users from a few thousand to several hundred
+                thousand.
                 <br />
-                AWS Certified Cloud Practitioner.
+                In response to requests from users and product owners, we flexibly and quickly implemented new features to improve the service.
+                Specifically, we took on the entire process of SNS design, development, maintenance, and operation, providing a wide range of
+                functions.
+                <br />
+                　We developed a wide range of functions to improve the user experience, including posting functions, image posting, follow/follow
+                functions, mute/block functions, like functions, clipboard functions, user addition functions, building a subscription-based billing
+                system, implementing a timeline, and a reporting function. The company also built the operational side of the system.
+                <br />
+                　We also built an operational system and established a management system to maintain the health of the service, including banning of
+                abusive users and management of reported posts. This contributed to the provision of a safe and comfortable SNS environment.
+                <br />
+                　Through these experiences, we have developed not only technical skills but also skills in service improvement and operational
+                management from the user's perspective. I would like to continue to utilize these skills to take on further challenges in the future.
+                <br />I have earned the AWS Certified Cloud Practitioner certification.
               </>
             )}
           </p>
@@ -262,11 +300,15 @@ const TimelineComponent = () => {
           <h4 className="mb-1.5 text-xl font-semibold">{isJapanese ? "フリーランスエンジニア" : "freelance engineer"}</h4>
           <p className="mb-3 text-neutral-500 dark:text-neutral-300">
             {isJapanese ? (
-              <>フリーランスとして活動を開始。IT事業をメインにしつつ、いずれは都市開発事業に携わりたい。</>
+              <>
+                フリーランスとして活動を開始。
+                <br />
+                ReactやNext.jsなど最新の技術をキャッチアップしつつみんなが知っているようなサービスを開発したり、誰も傷つかないSNSを開発したい。
+              </>
             ) : (
               <>
-                I have started working as a freelancer, mainly in the IT business, but would eventually like to be involved in the urban development
-                business.
+                Started working as a freelancer. <br />I want to develop services that everyone knows while catching up with the latest technologies
+                such as React and Next.js, and develop social networking services that won't hurt anyone.
               </>
             )}
           </p>
