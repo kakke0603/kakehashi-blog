@@ -37,4 +37,13 @@
   .emoji img {
     @apply mt-2  h-8 w-8;
   }
+  table {
+    @apply w-full text-left border;
+  }
+  tr {
+    @apply border-b;
+  }
+  td {
+    @apply border-r;
+  }
 }
