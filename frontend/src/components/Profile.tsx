@@ -1,3 +1,4 @@
+/* eslint-disable */
 "use client";
 import { Link, User, Image } from "@nextui-org/react";
 import React from "react";
@@ -5,7 +6,6 @@ import { WideAdvertisements } from "./Advertisement/WideAdvertisements";
 import { useLang } from "../hooks/useLang";
 
 export default function Profile() {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const { isJapanese } = useLang();
   return (
     <div>
@@ -236,28 +236,29 @@ const TimelineComponent = () => {
           <p className="mb-3 text-neutral-500 dark:text-neutral-300">
             {isJapanese ? (
               <>
-                オタク向けSNS(くるっぷ)の開発。
+                <p>オタク向けSNS(くるっぷ)の開発。</p>
                 <a href="https://crepu.net" target="_blank" rel="noopener noreferrer">
                   https://crepu.net
                 </a>
                 <br />
-                React,Laravelなどで開発していました。AWSを使用したインフラ構築も行っていました。
+                <p>React,Laravelなどで開発していました。AWSを使用したインフラ構築も行っていました。</p>
                 <br />
-                ユーザー数を数千人から数十万人規模にまで引き上げることができました。
+                <p>ユーザー数を数千人から数十万人規模にまで引き上げることができました。</p>
                 <img src="crepu.png" />
                 <br />
-                AWS Certified Cloud Practitionerの取得。
+                <p>AWS Certified Cloud Practitionerの取得。</p>
               </>
             ) : (
               <>
-                I have been an engineer and manager in the development of "Kuruppu"
+                <p>I have been an engineer and manager in the development of "Kuruppu"</p>
                 <a href="https://crepu.net" target="_blank" rel="noopener noreferrer">
                   https://crepu.net
                 </a>
+                <br />
+                <p>I developed SNS using React, Laravel, etc. I also built infrastructure using AWS.</p>
                 <img src="crepu.png" />
                 <br />
-                I developed SNS using React, Laravel, etc. I also built infrastructure using AWS.
-                <br />I was able to increase the number of users to several hundred thousand.
+                <p>I was able to increase the number of users to several hundred thousand.</p>
               </>
             )}
           </p>
@@ -273,14 +274,18 @@ const TimelineComponent = () => {
           <p className="mb-3 text-neutral-500 dark:text-neutral-300">
             {isJapanese ? (
               <>
-                フリーランスとして活動を開始。
+                <p>フリーランスとして活動を開始。</p>
                 <br />
-                ReactやNext.jsなど最新の技術をキャッチアップしつつみんなが知っているようなサービスを開発したり、誰も傷つかないSNSを開発したい。
+                <p>ReactやNext.jsなど最新の技術をキャッチアップしつつみんなが知っているようなサービスを開発したり、誰も傷つかないSNSを開発したい。</p>
               </>
             ) : (
               <>
-                Started working as a freelancer. <br />I want to develop services that everyone knows while catching up with the latest technologies
-                such as React and Next.js, and develop social networking services that won't hurt anyone.
+                <p>Started working as a freelancer. </p>
+                <br />
+                <p>
+                  I want to develop services that everyone knows while catching up with the latest technologies such as React and Next.js, and develop
+                  social networking services that won't hurt anyone.
+                </p>
               </>
             )}
           </p>
