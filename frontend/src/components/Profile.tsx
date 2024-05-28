@@ -244,7 +244,6 @@ const TimelineComponent = () => {
                 <p>React,Laravelなどで開発していました。AWSを使用したインフラ構築も行っていました。</p>
                 <br />
                 <p>ユーザー数を数千人から数十万人規模にまで引き上げることができました。</p>
-                <img src="crepu.png" />
                 <br />
                 <p>AWS Certified Cloud Practitionerの取得。</p>
               </>
@@ -256,7 +255,6 @@ const TimelineComponent = () => {
                 </a>
                 <br />
                 <p>I developed SNS using React, Laravel, etc. I also built infrastructure using AWS.</p>
-                <img src="crepu.png" />
                 <br />
                 <p>I was able to increase the number of users to several hundred thousand.</p>
               </>
